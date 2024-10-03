@@ -1,0 +1,740 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TransactionItem&StateMachine_1",
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "TransactionField2&StateMachine_1",
+        "TransactionField1&StateMachine_1",
+        "TransactionID&StateMachine_1",
+        "dt_TransactionData&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1",
+        "ShouldStop&Sequence_25"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_OrchestratorQueueName",
+        "in_OrchestratorQueueFolder",
+        "dtItemsData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main_Copy.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TransactionItem&StateMachine_1",
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "TransactionField2&StateMachine_1",
+        "TransactionField1&StateMachine_1",
+        "TransactionID&StateMachine_1",
+        "dt_TransactionData&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "dtQuickCombo",
+        "in_OrchestratorQueueName",
+        "in_OrchestratorQueueFolder",
+        "dtItemsData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Username&Sequence_13",
+        "Password&Sequence_13",
+        "Owner&Sequence_13"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "dtQuickCombo",
+        "in_Config",
+        "dtItemsData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CFC/Login.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Username&Sequence_1",
+        "Owner&Sequence_1",
+        "Password&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CFC/ItemCreation/Item_Tab.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "POSNumber&Sequence_1",
+        "Search_Item_Name&Sequence_1",
+        "OnlineDescription&Sequence_1",
+        "OnlineName&Sequence_1",
+        "ShortName&Sequence_1",
+        "LongName&Sequence_1",
+        "ChitName&Sequence_1",
+        "LongAlternateName&Sequence_1",
+        "SlateRetailCategory&Sequence_1",
+        "TaxGroup&Sequence_1",
+        "ChitNameAlternate&Sequence_1",
+        "OnlineAvailable&Sequence_1",
+        "is_OnlineAvail_Checked&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "currentDataRow"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CFC/ItemCreation/Display_Tab.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Context_Panel_Value&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "currentDataRow"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CFC/ItemCreation/Dynamic_Modifier_Tab.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "index&Sequence_1",
+        "DeleteCount&Sequence_1",
+        "dataDiff&Sequence_1",
+        "RowDiff&Sequence_1",
+        "Web_Included&Sequence_30",
+        "dataDiff&Sequence_27",
+        "Web_Included&Sequence_28",
+        "Web_Included&Sequence_23",
+        "dataDiff&Sequence_19",
+        "dtDataDiff&Sequence_1",
+        "Included&Sequence_1",
+        "dtDynamicModifiers&Sequence_1",
+        "Modifier_Group&Sequence_1",
+        "ExtractDataTable&Sequence_1",
+        "Modifier_Item&Sequence_1",
+        "Dynamic_Modifier_Count&Sequence_1",
+        "Count&Sequence_1",
+        "rowCount&Sequence_1",
+        "_8&Sequence_5"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "currentDataRow"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CFC/Categories/Category_Rules.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExtractDataTable&Sequence_28",
+        "dtDrinksCategory&Sequence_1",
+        "dtSidesCategory&Sequence_1",
+        "dtBurgerCategory&Sequence_1",
+        "Search_Field_Exists&Sequence_1",
+        "Item_Tab_Appeared&Sequence_1",
+        "Item_Type&Sequence_1",
+        "Item_Name&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "currentDataRow",
+        "Item_ID"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CFC/ItemCreation/Modifier_Tab.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Modifier1&Sequence_1",
+        "Modifier2&Sequence_1",
+        "Modifier3&Sequence_1",
+        "Modifier4&Sequence_1",
+        "Modifier5&Sequence_1",
+        "ApplySurcharge&Sequence_1",
+        "CombinePrice&Sequence_1",
+        "Highlight&Sequence_1",
+        "PrintIndependent&Sequence_1",
+        "ContextPanel&Sequence_1",
+        "Print_Checked&Sequence_1",
+        "Highligh_Checked&Sequence_1",
+        "Combine_Checked&Sequence_1",
+        "Web_Surcharge&Sequence_1",
+        "Context_Checked&Sequence_1",
+        "Web_Surcharge&Sequence_17",
+        "Web_Surcharge&Sequence_22",
+        "Combine_Checked&Sequence_22",
+        "Web_Surcharge&Sequence_24",
+        "Combine_Checked&Sequence_24",
+        "Highligh_Checked&Sequence_24"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "currentDataRow"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CFC/ItemCreation/Pricing_Tab.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "PricingMethod&Sequence_1",
+        "is_Checked&Sequence_1",
+        "Allow_Price_Change&Sequence_1",
+        "Default_Price&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "currentDataRow"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CFC/ItemCreation/Print_Tab.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "is_Checked&Sequence_1",
+        "Print_On&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "currentDataRow"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllSettings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_SettingsAndConstants&Sequence_5",
+        "dt_Assets&Sequence_6",
+        "AssetValue&Sequence_11"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ConfigFile",
+        "in_ConfigSheets",
+        "out_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/KillAllProcesses.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "VariantName&Sequence_1",
+        "is_New_Item&Sequence_1",
+        "Json_Object&Sequence_1",
+        "Product_Array&Sequence_1",
+        "ItemType&Sequence_1",
+        "ProductVariant_Array&Sequence_1",
+        "Menu_Json_Data&Sequence_1",
+        "MenuList_Array&Sequence_1",
+        "dtMenuList&Sequence_1",
+        "API_Burger_Max_POSNumber&Sequence_1",
+        "Price&Sequence_1",
+        "SlateRetailCategory&Sequence_1",
+        "TaxGroup&Sequence_1",
+        "ChitName&Sequence_1",
+        "LongName&Sequence_1",
+        "ShortName&Sequence_1",
+        "defaultModifiers&Sequence_1",
+        "no_of_Modifiers&Sequence_1",
+        "Count&Sequence_1",
+        "ModifierGroup&Sequence_1",
+        "ModifierItem&Sequence_1",
+        "dtModifiers&Sequence_1",
+        "existVariant&Sequence_1",
+        "POSNumber&Sequence_1",
+        "VariantCode&Sequence_1",
+        "finalJson&Sequence_1",
+        "bundles_Array&Sequence_1",
+        "API_Menu_Create_Body&Sequence_1",
+        "ClientApplication&Sequence_1",
+        "ClientVersion&Sequence_1",
+        "ApiVersion&Sequence_1",
+        "MessageID&Sequence_1",
+        "Username&Sequence_1",
+        "Password&Sequence_1",
+        "dtNew_API_Items&Sequence_1",
+        "Create_Menu_Status&Sequence_1",
+        "Create_Menu_Response_Content&Sequence_1",
+        "Update_API_Response&Sequence_1",
+        "Update_API_Status&Sequence_1",
+        "dtLogger&Sequence_1",
+        "getPOSNumber&Sequence_1",
+        "getMenuListRow&Sequence_1",
+        "MenuItemUniqueID&Sequence_1",
+        "dtSingleMenuListRow&Sequence_1",
+        "dtSingleModifierGroup&Sequence_1",
+        "ModifierGroupUniqueID&Sequence_1",
+        "dtModifierGroup&Sequence_1",
+        "incrementalPOSNumber&Sequence_1",
+        "dtItems&Sequence_1",
+        "demoItems&Sequence_1",
+        "BundleCode&Sequence_47",
+        "BundleName&Sequence_47",
+        "BundlePrice&Sequence_47"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionItem",
+        "in_Config",
+        "dtItemData",
+        "Item_ID",
+        "dtQuickCombo"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/GetTransactionData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionNumber",
+        "in_Config",
+        "out_TransactionItem",
+        "out_TransactionField1",
+        "out_TransactionField2",
+        "out_TransactionID",
+        "io_dt_TransactionData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/CloseAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CFC/Categories/Category_Selection.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Category_Version&Sequence_1",
+        "Category_ID&Sequence_1",
+        "item_tab_found&Sequence_1",
+        "Category_Search&Sequence_1",
+        "Category_Name&Sequence_1",
+        "Item_search_exists&Sequence_1",
+        "Search_Field_Exists&Sequence_1",
+        "Item_Tab_Appeared&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "CurrentRow",
+        "Item_ID"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CFC/QuickCombo/Promotion_Tab.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Promotion_Name&Sequence_1",
+        "Promo_Active&Sequence_1",
+        "Bundle_Code&Sequence_1",
+        "startDate&Sequence_17"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "dtBundles",
+        "currentDataRow"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CFC/QuickCombo/QuickComboQS_Tab.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Context_Panel&Sequence_1",
+        "Conolidate_Component&Sequence_1",
+        "Allow_Components&Sequence_1",
+        "Group_Delete&Sequence_1",
+        "Upsell_Price_2&Sequence_1",
+        "Upsell_Name_2&Sequence_1",
+        "Upsell_Price_1&Sequence_1",
+        "Upsell_Name_1&Sequence_1",
+        "Regular_Price&Sequence_1",
+        "Regular_Name&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "currentDataRow"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CFC/QuickCombo/Promotions.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "demoBundles&Sequence_1",
+        "dtBundles&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "bundleChoice_Array",
+        "bundles_Array",
+        "dtItems",
+        "dtQuickCombo"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CFC/QuickCombo/ComponentsQS_Tab.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Original_Component_Name&Sequence_1",
+        "Component_1&Sequence_1",
+        "Items_1&Sequence_1",
+        "Component_2&Sequence_1",
+        "Items_2&Sequence_1",
+        "Count&Sequence_1",
+        "Component_3&Sequence_1",
+        "Component_Count&Sequence_1",
+        "Component_Row&Sequence_1",
+        "Component_Name&Sequence_1",
+        "dtItems&Sequence_1",
+        "Regular_Item&Sequence_1",
+        "RowCount&Sequence_1",
+        "Affect_Size&Sequence_1",
+        "Item_Highlight&Sequence_78",
+        "Item_Surcharge&Sequence_78",
+        "Upsell_Item_1&Sequence_78",
+        "Item_Highlight_1&Sequence_78",
+        "Item_Surcharge_1&Sequence_78",
+        "Size_Surcharge_1&Sequence_78",
+        "Upsell_Item_2&Sequence_78",
+        "Item_Highlight_2&Sequence_78",
+        "Items_Surcharge_2&Sequence_78",
+        "Size_Surcharge_2&Sequence_78",
+        "RowCount&Sequence_15",
+        "RowCount&Sequence_21",
+        "RowCount&Sequence_22"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "dtComponentItems",
+        "bundleChoices",
+        "currentDataRow"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SetTransactionStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "QueueRetry&Sequence_17",
+        "ScreenshotPath&Sequence_17"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_BusinessException",
+        "in_TransactionField1",
+        "in_TransactionField2",
+        "in_TransactionID",
+        "in_SystemException",
+        "in_Config",
+        "in_TransactionItem",
+        "io_RetryNumber",
+        "io_TransactionNumber",
+        "io_ConsecutiveSystemExceptions"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Practice.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExtractDataTable&Sequence_1",
+        "arr_Dynamic&Sequence_1",
+        "dtInput&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CFC/Input_Files/Excel_Data_Transition.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "responseAttachment&Sequence_1",
+        "Response_Code&Sequence_1",
+        "Json_Response&Sequence_1",
+        "dtItemsData&Sequence_1",
+        "txt&Sequence_1",
+        "dtBusinessData&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CFC/Input_Files/CFC_API.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "MGroupList_Array&Sequence_28",
+        "ModifierGroup_Json_Data&Sequence_28",
+        "ModifierGroup_ResponseStatus&Sequence_1",
+        "ModifierGroup_Content&Sequence_1",
+        "IF_Response_Content&Sequence_1",
+        "IF_Response_Status&Sequence_1",
+        "CreateCFC&Sequence_1",
+        "Username&Sequence_1",
+        "Password&Sequence_1",
+        "Create_Menu_Response&Sequence_1",
+        "Create_Menu_Status&Sequence_1",
+        "Create_CFC_JSON&Sequence_1",
+        "dtBurger&Sequence_1",
+        "POSNumber&Sequence_1",
+        "Name&Sequence_1",
+        "menuArray&Sequence_1",
+        "MenuList_Array&Sequence_1",
+        "Menu_Response&Sequence_1",
+        "ItemType&Sequence_1",
+        "dtQuickCombo&Sequence_1",
+        "dtItems&Sequence_1",
+        "arrProductVariants&Sequence_3",
+        "OnlineDescription&Sequence_3",
+        "OnlineName&Sequence_3",
+        "OnlineAvailable&Sequence_3",
+        "SlateRetailCategory&Sequence_3",
+        "TaxGroup&Sequence_3",
+        "LongAlternateName&Sequence_3",
+        "ChitNameAlternate&Sequence_3",
+        "ChitName&Sequence_3",
+        "LongName&Sequence_3",
+        "ShortName&Sequence_3",
+        "ProductArray&Sequence_1",
+        "Root_Path&Sequence_1",
+        "ResponseStatus&Sequence_1",
+        "ResponseHeaders&Sequence_1",
+        "MessageID&Sequence_1",
+        "ApiVersion&Sequence_1",
+        "ClientVersion&Sequence_1",
+        "ClientApplication&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "dtModfierGroup",
+        "Burger_LastPosNumber",
+        "dtMenuList",
+        "Menu_Json_Data",
+        "Json_Object"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CFC/ItemCreation/Ala_Carte_Item.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "currentDataRow"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CFC/QuickCombo/Get_QC_Data_API.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtMatchingIdentical&Sequence_31",
+        "dtMatchingRegLg&Sequence_1",
+        "Price&Sequence_1",
+        "dtMatchings&Sequence_1",
+        "Size_Surcharge_2&Sequence_1",
+        "Items_Surcharge_2&Sequence_1",
+        "Item_Highlight_2&Sequence_1",
+        "Upsell_Item_2&Sequence_1",
+        "Size_Surcharge_1&Sequence_1",
+        "Item_Surcharge_1&Sequence_1",
+        "Item_Highlight_1&Sequence_1",
+        "Upsell_Item_1&Sequence_1",
+        "Item_Surcharge&Sequence_1",
+        "Item_Highlight&Sequence_1",
+        "Affect_Size&Sequence_1",
+        "Regular_Item&Sequence_1",
+        "dtBundleChoices&Sequence_1",
+        "choiceCode&Sequence_1",
+        "menuDataRow&Sequence_1",
+        "variantName&Sequence_1",
+        "upcharge_Amount&Sequence_1",
+        "variantCode&Sequence_1",
+        "dtComponentItems&Sequence_1",
+        "dtUniqChoices&Sequence_1",
+        "dtBundleChoiceOutput&Sequence_1",
+        "splitVariantName&Sequence_1",
+        "Json_Object&Sequence_1",
+        "IF_Response_Content&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "dtMenuList",
+        "bundleChoice_Array",
+        "bundles_Array"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CFC/Input_Files/GetCFCMenu_API.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "MenuList_Array&Sequence_14",
+        "Menu_Json_Data&Sequence_1",
+        "ResponseStatus&Sequence_1",
+        "Menu_Response&Sequence_1",
+        "ResponseHeaders&Sequence_1",
+        "Password&Sequence_1",
+        "Username&Sequence_1",
+        "MessageID&Sequence_1",
+        "ApiVersion&Sequence_1",
+        "ClientVersion&Sequence_1",
+        "ClientApplication&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "dtMenuList"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CFC/PriceChanges/ItemPrice.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtZones&Sequence_1",
+        "dtPromoPrice&Sequence_1",
+        "dtItemPrice&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Tests/ProcessTestCase.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Config&Sequence_1",
+        "TransactionItem&Sequence_1",
+        "TransactionNumber&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/TakeScreenshot.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Screenshot&Sequence_1",
+        "ScreenshotFileInfo&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Folder",
+        "io_FilePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/RetryCurrentTransaction.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "io_RetryNumber",
+        "io_TransactionNumber",
+        "in_SystemException",
+        "in_QueueRetry"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CFC/ModifierGroup/ModifierTab.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "~Main_Copy.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TransactionItem&StateMachine_1",
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "TransactionField2&StateMachine_1",
+        "TransactionField1&StateMachine_1",
+        "TransactionID&StateMachine_1",
+        "dt_TransactionData&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_OrchestratorQueueName",
+        "in_OrchestratorQueueFolder",
+        "dtItemsData",
+        "dtQuickCombo"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Tests/MainTestCase.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "StatusFileName&Sequence_1",
+        "ExpectedDataFileName&Sequence_1",
+        "dt_ResultsData&Sequence_4",
+        "dt_ExpectedData&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

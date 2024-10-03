@@ -1,0 +1,2336 @@
+{
+  "products": [
+    {
+      "productCode": "100260",
+      "name": "Zinger Stacker® Burger",
+      "description": null,
+      "brandDistinctAttribute1": null,
+      "variants": [
+        {
+          "variantCode": "100264",
+          "name": "Zinger Stacker® Burger",
+          "regulatoryTags": [
+            
+          ],
+          "maxAllowedModifierWeight": null,
+          "nutritionInformation": [
+            
+          ],
+          "privateMetafields": [
+            
+          ],
+          "metafields": [
+            
+          ],
+          "brandTags": [
+            
+          ],
+          "promoTags": [
+            
+          ],
+          "price": {
+            "amount": 1095,
+            "currencyCode": "AUD"
+          },
+          "modifiable": true,
+          "brandDistinctAttribute1": null,
+          "brandDistinctAttribute2": null,
+          "brandDistinctAttribute3": null,
+          "selectedOptionValues": [
+            {
+              "optionTypeCode": "NO-OPTION",
+              "optionValueCode": "NO OPTION"
+            }
+          ],
+          "defaultModifiers": [
+            {
+              "slotCode": "11750",
+              "modifierCode": "200009",
+              "modifierWeightCode": "REGULAR"
+            },
+            {
+              "slotCode": "11750",
+              "modifierCode": "200004",
+              "modifierWeightCode": "REGULAR"
+            },
+            {
+              "slotCode": "11750",
+              "modifierCode": "200008",
+              "modifierWeightCode": "REGULAR"
+            }
+          ],
+          "slots": [
+            {
+              "slotCode": "11750",
+              "maxModifierWeight": 10,
+              "minModifierWeight": 0,
+              "weightPriceRanges": [
+                
+              ],
+              "modifiers": [
+                
+              ]
+            },
+            {
+              "slotCode": "EXTRAS",
+              "maxModifierWeight": 1,
+              "minModifierWeight": 0,
+              "weightPriceRanges": [
+                
+              ],
+              "modifiers": [
+                {
+                  "modifierCode": "200009",
+                  "weights": [
+                    {
+                      "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
+                      "price": {
+                        "amount": 50,
+                        "currencyCode": "AUD"
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "modifierCode": "200006",
+                  "weights": [
+                    {
+                      "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
+                      "price": {
+                        "amount": 50,
+                        "currencyCode": "AUD"
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "modifierCode": "200013",
+                  "weights": [
+                    {
+                      "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
+                      "price": {
+                        "amount": 100,
+                        "currencyCode": "AUD"
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "images": [
+            
+          ],
+          "availability": {
+            "schedule": [
+              
+            ]
+          }
+        }
+      ],
+      "availability": {
+        "schedule": [
+          
+        ]
+      }
+    },
+    {
+      "productCode": "100068",
+      "name": "Zinger Crunch Burger™",
+      "description": null,
+      "brandDistinctAttribute1": null,
+      "variants": [
+        {
+          "variantCode": "100068",
+          "name": "Zinger Crunch Burger™",
+          "regulatoryTags": [
+            
+          ],
+          "maxAllowedModifierWeight": null,
+          "nutritionInformation": [
+            
+          ],
+          "privateMetafields": [
+            
+          ],
+          "metafields": [
+            
+          ],
+          "brandTags": [
+            
+          ],
+          "promoTags": [
+            
+          ],
+          "price": {
+            "amount": 995,
+            "currencyCode": "AUD"
+          },
+          "modifiable": true,
+          "brandDistinctAttribute1": null,
+          "brandDistinctAttribute2": null,
+          "brandDistinctAttribute3": null,
+          "selectedOptionValues": [
+            {
+              "optionTypeCode": "NO-OPTION",
+              "optionValueCode": "NO OPTION"
+            }
+          ],
+          "defaultModifiers": [
+            
+          ],
+          "slots": [
+            {
+              "slotCode": "11750",
+              "maxModifierWeight": 1,
+              "minModifierWeight": 0,
+              "weightPriceRanges": [
+                
+              ],
+              "modifiers": [
+                
+              ]
+            },
+            {
+              "slotCode": "EXTRAS",
+              "maxModifierWeight": 1,
+              "minModifierWeight": 0,
+              "weightPriceRanges": [
+                
+              ],
+              "modifiers": [
+                
+              ]
+            }
+          ],
+          "images": [
+            
+          ],
+          "availability": {
+            "schedule": [
+              
+            ]
+          }
+        }
+      ],
+      "availability": {
+        "schedule": [
+          
+        ]
+      }
+    },
+    {
+      "productCode": "100062",
+      "name": "Zinger® Bacon & Cheese Burger",
+      "description": null,
+      "brandDistinctAttribute1": null,
+      "variants": [
+        {
+          "variantCode": "100062",
+          "name": "Zinger® Bacon & Cheese Burger",
+          "regulatoryTags": [
+            
+          ],
+          "maxAllowedModifierWeight": null,
+          "nutritionInformation": [
+            
+          ],
+          "privateMetafields": [
+            
+          ],
+          "metafields": [
+            
+          ],
+          "brandTags": [
+            
+          ],
+          "promoTags": [
+            
+          ],
+          "price": {
+            "amount": 895,
+            "currencyCode": "AUD"
+          },
+          "modifiable": true,
+          "brandDistinctAttribute1": null,
+          "brandDistinctAttribute2": null,
+          "brandDistinctAttribute3": null,
+          "selectedOptionValues": [
+            {
+              "optionTypeCode": "NO-OPTION",
+              "optionValueCode": "NO OPTION"
+            }
+          ],
+          "defaultModifiers": [
+            {
+              "slotCode": "11750",
+              "modifierCode": "200009",
+              "modifierWeightCode": "REGULAR"
+            },
+            {
+              "slotCode": "11750",
+              "modifierCode": "200013",
+              "modifierWeightCode": "REGULAR"
+            },
+            {
+              "slotCode": "11750",
+              "modifierCode": "200004",
+              "modifierWeightCode": "REGULAR"
+            },
+            {
+              "slotCode": "11750",
+              "modifierCode": "200008",
+              "modifierWeightCode": "REGULAR"
+            }
+          ],
+          "slots": [
+            {
+              "slotCode": "11750",
+              "maxModifierWeight": 10,
+              "minModifierWeight": 0,
+              "weightPriceRanges": [
+                
+              ],
+              "modifiers": [
+                
+              ]
+            },
+            {
+              "slotCode": "EXTRAS",
+              "maxModifierWeight": 10,
+              "minModifierWeight": 0,
+              "weightPriceRanges": [
+                
+              ],
+              "modifiers": [
+                {
+                  "modifierCode": "200009",
+                  "weights": [
+                    {
+                      "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
+                      "price": {
+                        "amount": 50,
+                        "currencyCode": "AUD"
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "modifierCode": "200006",
+                  "weights": [
+                    {
+                      "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
+                      "price": {
+                        "amount": 50,
+                        "currencyCode": "AUD"
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "modifierCode": "200013",
+                  "weights": [
+                    {
+                      "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
+                      "price": {
+                        "amount": 100,
+                        "currencyCode": "AUD"
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "images": [
+            
+          ],
+          "availability": {
+            "schedule": [
+              
+            ]
+          }
+        }
+      ],
+      "availability": {
+        "schedule": [
+          
+        ]
+      }
+    },
+    {
+      "productCode": "100057",
+      "name": "Double Tender™ Burger",
+      "description": null,
+      "brandDistinctAttribute1": null,
+      "variants": [
+        {
+          "variantCode": "100057",
+          "name": "Double Tender",
+          "regulatoryTags": [
+            
+          ],
+          "maxAllowedModifierWeight": null,
+          "nutritionInformation": [
+            
+          ],
+          "privateMetafields": [
+            
+          ],
+          "metafields": [
+            
+          ],
+          "brandTags": [
+            
+          ],
+          "promoTags": [
+            
+          ],
+          "price": {
+            "amount": 595,
+            "currencyCode": "AUD"
+          },
+          "modifiable": true,
+          "brandDistinctAttribute1": null,
+          "brandDistinctAttribute2": null,
+          "brandDistinctAttribute3": null,
+          "selectedOptionValues": [
+            {
+              "optionTypeCode": "NO-OPTION",
+              "optionValueCode": "NO OPTION"
+            }
+          ],
+          "defaultModifiers": [
+            {
+              "slotCode": "11750",
+              "modifierCode": "Pepper Mayo",
+              "modifierWeightCode": "REGULAR"
+            },
+            {
+              "slotCode": "11750",
+              "modifierCode": "200008",
+              "modifierWeightCode": "REGULAR"
+            }
+          ],
+          "slots": [
+            {
+              "slotCode": "11750",
+              "maxModifierWeight": 10,
+              "minModifierWeight": 0,
+              "weightPriceRanges": [
+                
+              ],
+              "modifiers": [
+                
+              ]
+            },
+            {
+              "slotCode": "EXTRAS",
+              "maxModifierWeight": 1,
+              "minModifierWeight": 0,
+              "weightPriceRanges": [
+                
+              ],
+              "modifiers": [
+                
+              ]
+            }
+          ],
+          "images": [
+            
+          ],
+          "availability": {
+            "schedule": [
+              
+            ]
+          }
+        }
+      ],
+      "availability": {
+        "schedule": [
+          
+        ]
+      }
+    },
+    {
+      "productCode": "100089",
+      "name": "Orig Crispy B&C Burger",
+      "description": null,
+      "brandDistinctAttribute1": null,
+      "variants": [
+        {
+          "variantCode": "100089",
+          "name": "Orig Crispy B&C Burger",
+          "regulatoryTags": [
+            
+          ],
+          "maxAllowedModifierWeight": null,
+          "nutritionInformation": [
+            
+          ],
+          "privateMetafields": [
+            
+          ],
+          "metafields": [
+            
+          ],
+          "brandTags": [
+            
+          ],
+          "promoTags": [
+            
+          ],
+          "price": {
+            "amount": 895,
+            "currencyCode": "AUD"
+          },
+          "modifiable": true,
+          "brandDistinctAttribute1": null,
+          "brandDistinctAttribute2": null,
+          "brandDistinctAttribute3": null,
+          "selectedOptionValues": [
+            {
+              "optionTypeCode": "NO-OPTION",
+              "optionValueCode": "NO OPTION"
+            }
+          ],
+          "defaultModifiers": [
+            {
+              "slotCode": "11750",
+              "modifierCode": "Pepper Mayo",
+              "modifierWeightCode": "REGULAR"
+            },
+            {
+              "slotCode": "11750",
+              "modifierCode": "200009",
+              "modifierWeightCode": "REGULAR"
+            },
+            {
+              "slotCode": "11750",
+              "modifierCode": "200013",
+              "modifierWeightCode": "REGULAR"
+            },
+            {
+              "slotCode": "11750",
+              "modifierCode": "200008",
+              "modifierWeightCode": "REGULAR"
+            }
+          ],
+          "slots": [
+            {
+              "slotCode": "11750",
+              "maxModifierWeight": 10,
+              "minModifierWeight": 0,
+              "weightPriceRanges": [
+                
+              ],
+              "modifiers": [
+                
+              ]
+            },
+            {
+              "slotCode": "EXTRAS",
+              "maxModifierWeight": 10,
+              "minModifierWeight": 0,
+              "weightPriceRanges": [
+                
+              ],
+              "modifiers": [
+                
+              ]
+            }
+          ],
+          "images": [
+            
+          ],
+          "availability": {
+            "schedule": [
+              
+            ]
+          }
+        }
+      ],
+      "availability": {
+        "schedule": [
+          
+        ]
+      }
+    },
+    {
+      "productCode": "100088",
+      "name": "Original Crispy Burger",
+      "description": null,
+      "brandDistinctAttribute1": null,
+      "variants": [
+        {
+          "variantCode": "100088",
+          "name": "Original Crispy Burger",
+          "regulatoryTags": [
+            
+          ],
+          "maxAllowedModifierWeight": null,
+          "nutritionInformation": [
+            
+          ],
+          "privateMetafields": [
+            
+          ],
+          "metafields": [
+            
+          ],
+          "brandTags": [
+            
+          ],
+          "promoTags": [
+            
+          ],
+          "price": {
+            "amount": 795,
+            "currencyCode": "AUD"
+          },
+          "modifiable": true,
+          "brandDistinctAttribute1": null,
+          "brandDistinctAttribute2": null,
+          "brandDistinctAttribute3": null,
+          "selectedOptionValues": [
+            {
+              "optionTypeCode": "NO-OPTION",
+              "optionValueCode": "NO OPTION"
+            }
+          ],
+          "defaultModifiers": [
+            {
+              "slotCode": "11750",
+              "modifierCode": "200001",
+              "modifierWeightCode": "REGULAR"
+            },
+            {
+              "slotCode": "11750",
+              "modifierCode": "200008",
+              "modifierWeightCode": "REGULAR"
+            }
+          ],
+          "slots": [
+            {
+              "slotCode": "11750",
+              "maxModifierWeight": 10,
+              "minModifierWeight": 0,
+              "weightPriceRanges": [
+                
+              ],
+              "modifiers": [
+                
+              ]
+            },
+            {
+              "slotCode": "EXTRAS",
+              "maxModifierWeight": 1,
+              "minModifierWeight": 0,
+              "weightPriceRanges": [
+                
+              ],
+              "modifiers": [
+                {
+                  "modifierCode": "200009",
+                  "weights": [
+                    {
+                      "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
+                      "price": {
+                        "amount": 50,
+                        "currencyCode": "AUD"
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "modifierCode": "200006",
+                  "weights": [
+                    {
+                      "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
+                      "price": {
+                        "amount": 50,
+                        "currencyCode": "AUD"
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "modifierCode": "200013",
+                  "weights": [
+                    {
+                      "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
+                      "price": {
+                        "amount": 100,
+                        "currencyCode": "AUD"
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "images": [
+            
+          ],
+          "availability": {
+            "schedule": [
+              
+            ]
+          }
+        }
+      ],
+      "availability": {
+        "schedule": [
+          
+        ]
+      }
+    },
+    {
+      "productCode": "100090",
+      "name": "Original Crispy BBQ Bacon Stacker® Burger",
+      "description": null,
+      "brandDistinctAttribute1": null,
+      "variants": [
+        {
+          "variantCode": "100090",
+          "name": "Orig Crispy Stacker",
+          "regulatoryTags": [
+            
+          ],
+          "maxAllowedModifierWeight": null,
+          "nutritionInformation": [
+            
+          ],
+          "privateMetafields": [
+            
+          ],
+          "metafields": [
+            
+          ],
+          "brandTags": [
+            
+          ],
+          "promoTags": [
+            
+          ],
+          "price": {
+            "amount": 1195,
+            "currencyCode": "AUD"
+          },
+          "modifiable": true,
+          "brandDistinctAttribute1": null,
+          "brandDistinctAttribute2": null,
+          "brandDistinctAttribute3": null,
+          "selectedOptionValues": [
+            {
+              "optionTypeCode": "NO-OPTION",
+              "optionValueCode": "NO OPTION"
+            }
+          ],
+          "defaultModifiers": [
+            {
+              "slotCode": "11750",
+              "modifierCode": "200001",
+              "modifierWeightCode": "REGULAR"
+            },
+            {
+              "slotCode": "11750",
+              "modifierCode": "200005",
+              "modifierWeightCode": "REGULAR"
+            },
+            {
+              "slotCode": "11750",
+              "modifierCode": "200009",
+              "modifierWeightCode": "REGULAR"
+            },
+            {
+              "slotCode": "11750",
+              "modifierCode": "200013",
+              "modifierWeightCode": "REGULAR"
+            },
+            {
+              "slotCode": "11750",
+              "modifierCode": "200008",
+              "modifierWeightCode": "REGULAR"
+            }
+          ],
+          "slots": [
+            {
+              "slotCode": "11750",
+              "maxModifierWeight": 10,
+              "minModifierWeight": 0,
+              "weightPriceRanges": [
+                
+              ],
+              "modifiers": [
+                
+              ]
+            },
+            {
+              "slotCode": "EXTRAS",
+              "maxModifierWeight": 10,
+              "minModifierWeight": 0,
+              "weightPriceRanges": [
+                
+              ],
+              "modifiers": [
+                {
+                  "modifierCode": "200009",
+                  "weights": [
+                    {
+                      "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
+                      "price": {
+                        "amount": 50,
+                        "currencyCode": "AUD"
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "modifierCode": "200006",
+                  "weights": [
+                    {
+                      "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
+                      "price": {
+                        "amount": 50,
+                        "currencyCode": "AUD"
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "modifierCode": "200013",
+                  "weights": [
+                    {
+                      "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
+                      "price": {
+                        "amount": 100,
+                        "currencyCode": "AUD"
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "images": [
+            
+          ],
+          "availability": {
+            "schedule": [
+              
+            ]
+          }
+        }
+      ],
+      "availability": {
+        "schedule": [
+          
+        ]
+      }
+    },
+    {
+      "productCode": "100250",
+      "name": "Zinger Burger",
+      "description": "",
+      "brandDistinctAttribute1": "Burger",
+      "variants": [
+        {
+          "variantCode": "100250",
+          "name": "Zinger Burger",
+          "regulatoryTags": [
+            "key=value"
+          ],
+          "maxAllowedModifierWeight": null,
+          "nutritionInformation": [
+            
+          ],
+          "privateMetafields": [
+            
+          ],
+          "metafields": [
+            
+          ],
+          "brandTags": [
+            
+          ],
+          "promoTags": [
+            
+          ],
+          "price": {
+            "amount": 645,
+            "currencyCode": "AUD"
+          },
+          "modifiable": true,
+          "brandDistinctAttribute1": null,
+          "brandDistinctAttribute2": null,
+          "brandDistinctAttribute3": null,
+          "selectedOptionValues": [
+            {
+              "optionTypeCode": "NO-OPTION",
+              "optionValueCode": "NO OPTION"
+            }
+          ],
+          "defaultModifiers": [
+            {
+              "slotCode": "11750",
+              "modifierCode": "200001",
+              "modifierWeightCode": "REGULAR"
+            },
+            {
+              "slotCode": "11750",
+              "modifierCode": "200008",
+              "modifierWeightCode": "REGULAR"
+            }
+          ],
+          "slots": [
+            {
+              "slotCode": "EXTRAS",
+              "maxModifierWeight": 10,
+              "minModifierWeight": 0,
+              "weightPriceRanges": [
+                
+              ],
+              "modifiers": [
+                {
+                  "modifierCode": "200009",
+                  "weights": [
+                    {
+                      "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
+                      "price": {
+                        "amount": 50,
+                        "currencyCode": "AUD"
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "modifierCode": "200013",
+                  "weights": [
+                    {
+                      "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
+                      "price": {
+                        "amount": 100,
+                        "currencyCode": "AUD"
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "slotCode": "11750",
+              "maxModifierWeight": 10,
+              "minModifierWeight": 0,
+              "weightPriceRanges": [
+                
+              ],
+              "modifiers": [
+                
+              ]
+            }
+          ],
+          "images": [
+            
+          ],
+          "availability": {
+            "schedule": [
+              
+            ]
+          }
+        }
+      ],
+      "availability": {
+        "schedule": [
+          
+        ]
+      }
+    },
+ 
+  ],
+  "bundles": [
+    {
+      "bundleCode": "1038",
+      "name": "Kids Meal with Snack Popcorn Chicken®",
+      "description": "Snack Popcorn Chicken with 1 Portion of Chips and 1 Bottle of Water.",
+      "brandDistinctAttribute1": null,
+      "pricingMode": "FIXED",
+      "pricingModeSettings": null,
+      "price": {
+        "amount": 625,
+        "currencyCode": "AUD"
+      },
+      "choices": [
+        {
+          "choiceCode": "Kids Meal Snack Popcorn Chicken",
+          "defaultVariantCode": "185002",
+          "defaultVariantCodes": [
+            "185002"
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        },
+        {
+          "choiceCode": "Kids Meal Sides",
+          "defaultVariantCode": "136005",
+          "defaultVariantCodes": [
+            "136005"
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        },
+        {
+          "choiceCode": "Kids Meal Drinks",
+          "defaultVariantCode": "141070",
+          "defaultVariantCodes": [
+            "141070"
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        }
+      ]
+    },
+    {
+      "bundleCode": "4002",
+      "name": "Zinger® Burger Box",
+      "description": "Burger with 3 Wicked Wings®, 1 Portion of Chips, 1 Regular Potato & Gravy and 1 Regular Drink.",
+      "brandDistinctAttribute1": null,
+      "pricingMode": "FIXED",
+      "pricingModeSettings": null,
+      "price": {
+        "amount": 1195,
+        "currencyCode": "AUD"
+      },
+      "choices": [
+        {
+          "choiceCode": "Zinger Burger Choice",
+          "defaultVariantCode": "100250",
+          "defaultVariantCodes": [
+            "100250"
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        },
+        {
+          "choiceCode": "Boxed Chicken Choice",
+          "defaultVariantCode": "1PC",
+          "defaultVariantCodes": [
+            "1PC"
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        },
+        {
+          "choiceCode": "Boxed 1st Sides",
+          "defaultVariantCodes": [
+            
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        },
+        {
+          "choiceCode": "Boxed 2nd Sides",
+          "defaultVariantCodes": [
+            
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        },
+        {
+          "choiceCode": "Boxed Drinks",
+          "defaultVariantCodes": [
+            
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        }
+      ]
+    },
+    {
+      "bundleCode": "1031",
+      "name": "Kids Meal with BBQ Slider",
+      "description": "Slider with 1 Regular Coleslaw and 1 Bottled Water.",
+      "brandDistinctAttribute1": null,
+      "pricingMode": "FIXED",
+      "pricingModeSettings": null,
+      "price": {
+        "amount": 625,
+        "currencyCode": "AUD"
+      },
+      "choices": [
+        {
+          "choiceCode": "Kids Meal Slider choices",
+          "defaultVariantCode": "120003",
+          "defaultVariantCodes": [
+            "120003"
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        },
+        {
+          "choiceCode": "Kids Meal Sides",
+          "defaultVariantCode": "RegularColeslaw",
+          "defaultVariantCodes": [
+            "RegularColeslaw"
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        },
+        {
+          "choiceCode": "Kids Meal Drinks",
+          "defaultVariantCode": "141070",
+          "defaultVariantCodes": [
+            "141070"
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        }
+      ]
+    },
+    {
+      "bundleCode": "1002",
+      "name": "Zinger® Burger Combo",
+      "description": "Burger with 1 Regular Chips and 1 Regular Drink.",
+      "brandDistinctAttribute1": null,
+      "pricingMode": "FIXED",
+      "pricingModeSettings": null,
+      "price": {
+        "amount": 1000,
+        "currencyCode": "AUD"
+      },
+      "choices": [
+        {
+          "choiceCode": "Zinger Burger Choice",
+          "defaultVariantCodes": [
+            
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        },
+        {
+          "choiceCode": "Combo Sides Choice",
+          "defaultVariantCode": "136005",
+          "defaultVariantCodes": [
+            "136005"
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        },
+        {
+          "choiceCode": "Combo Drinks",
+          "defaultVariantCode": "141007",
+          "defaultVariantCodes": [
+            "141007"
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        }
+      ]
+    },
+    {
+      "bundleCode": "1011",
+      "name": "Zinger® Crunch Bowl Combo",
+      "description": "Bowl with 1 Regular Chips and 1 Regular Drink.",
+      "brandDistinctAttribute1": null,
+      "pricingMode": "FIXED",
+      "pricingModeSettings": null,
+      "price": {
+        "amount": 1395,
+        "currencyCode": "AUD"
+      },
+      "choices": [
+        {
+          "choiceCode": "Zinger® Crunch Bowl choice",
+          "defaultVariantCode": "136067",
+          "defaultVariantCodes": [
+            "136067"
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        },
+        {
+          "choiceCode": "Combo Sides Choice",
+          "defaultVariantCode": "136005",
+          "defaultVariantCodes": [
+            "136005"
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        },
+        {
+          "choiceCode": "Combo Drinks",
+          "defaultVariantCode": "141007",
+          "defaultVariantCodes": [
+            "141007"
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        }
+      ]
+    },
+    {
+      "bundleCode": "8003",
+      "name": "Family Feast",
+      "description": "10 Pieces Original Recipe Chicken, 2 Large Chips, 1 Large Coleslaw, 1 Large Potato & Gravy and 1 1.25L Drink.",
+      "brandDistinctAttribute1": null,
+      "pricingMode": "FIXED",
+      "pricingModeSettings": null,
+      "price": {
+        "amount": 3795,
+        "currencyCode": "AUD"
+      },
+      "choices": [
+        {
+          "choiceCode": "ChickenPieceChoice",
+          "defaultVariantCode": "COB-OR-Breast",
+          "defaultVariantCodes": [
+            "COB-OR-Breast",
+            "COB-OR-Breast",
+            "COB-OR-Leg",
+            "COB-OR-Leg",
+            "COB-OR-Rib",
+            "COB-OR-Rib",
+            "COB-OR-Thigh",
+            "COB-OR-Thigh",
+            "COB-OR-Wing",
+            "COB-OR-Wing"
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 10,
+          "maxAllowedSelections": 10
+        },
+        {
+          "choiceCode": "SharedMealDrinksChoice",
+          "defaultVariantCode": "XLPepsiMax",
+          "defaultVariantCodes": [
+            "XLPepsiMax"
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        },
+        {
+          "choiceCode": "SharedMealSidesChoice",
+          "defaultVariantCode": "136015",
+          "defaultVariantCodes": [
+            "136015",
+            "136015",
+            "LargePotatoGravy",
+            "LargeColeslaw"
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 4,
+          "maxAllowedSelections": 4
+        }
+      ]
+    },
+    {
+      "bundleCode": "1053",
+      "name": "Zinger® Bacon & Cheese Burger Combo",
+      "description": "Burger with 1 Regular Chips and 1 Regular Drink.",
+      "brandDistinctAttribute1": null,
+      "pricingMode": "FIXED",
+      "pricingModeSettings": null,
+      "price": {
+        "amount": 1295,
+        "currencyCode": "AUD"
+      },
+      "choices": [
+        {
+          "choiceCode": "Zinger® Bacon & Cheese Burger choice",
+          "defaultVariantCode": "100062",
+          "defaultVariantCodes": [
+            "100062"
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        },
+        {
+          "choiceCode": "Combo Sides Choice",
+          "defaultVariantCode": "136005",
+          "defaultVariantCodes": [
+            "136005"
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        },
+        {
+          "choiceCode": "Combo Drinks",
+          "defaultVariantCode": "141007",
+          "defaultVariantCodes": [
+            "141007"
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        }
+      ]
+    },
+    {
+      "bundleCode": "1012",
+      "name": "Original Tenders™ Crunch Bowl Combo",
+      "description": "Bowl with 1 Regular Chips and 1 Regular Drink.",
+      "brandDistinctAttribute1": null,
+      "pricingMode": "FIXED",
+      "pricingModeSettings": null,
+      "price": {
+        "amount": 1395,
+        "currencyCode": "AUD"
+      },
+      "choices": [
+        {
+          "choiceCode": "Original Tenders™ Crunch Bowl choice",
+          "defaultVariantCode": "136066",
+          "defaultVariantCodes": [
+            "136066"
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        },
+        {
+          "choiceCode": "Combo Sides Choice",
+          "defaultVariantCode": "136005",
+          "defaultVariantCodes": [
+            "136005"
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        },
+        {
+          "choiceCode": "Combo Drinks",
+          "defaultVariantCode": "141007",
+          "defaultVariantCodes": [
+            "141007"
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        }
+      ]
+    }
+  ],
+  "bundleChoices": [
+    {
+      "choiceCode": "Combo Sides Choice",
+      "name": "Combo Sides Choice",
+      "isFixedPriceAllocation": false,
+      "brandTags": [
+        
+      ],
+      "products": [
+        
+      ],
+      "variants": [
+        {
+          "variantCode": "136005",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "136015",
+          "upcharge": {
+            "amount": 200,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "136025",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "136040",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "136026",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "136046",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        }
+      ]
+    },
+    {
+      "choiceCode": "Kids Meal Snack Popcorn Chicken",
+      "name": null,
+      "isFixedPriceAllocation": false,
+      "brandTags": [
+        
+      ],
+      "products": [
+        
+      ],
+      "variants": [
+        {
+          "variantCode": "185002",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        }
+      ]
+    },
+    {
+      "choiceCode": "Boxed Drinks",
+      "name": null,
+      "isFixedPriceAllocation": false,
+      "brandTags": [
+        
+      ],
+      "products": [
+        
+      ],
+      "variants": [
+        {
+          "variantCode": "141007",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141111",
+          "upcharge": {
+            "amount": 160,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141555",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141556",
+          "upcharge": {
+            "amount": 160,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141020",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141025",
+          "upcharge": {
+            "amount": 160,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141030",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141031",
+          "upcharge": {
+            "amount": 160,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141037",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141035",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141101",
+          "upcharge": {
+            "amount": 80,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141099",
+          "upcharge": {
+            "amount": 80,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141109",
+          "upcharge": {
+            "amount": 80,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141076",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141126",
+          "upcharge": {
+            "amount": 90,
+            "currencyCode": "AUD"
+          }
+        }
+      ]
+    },
+    {
+      "choiceCode": "Boxed 2nd Sides",
+      "name": null,
+      "isFixedPriceAllocation": false,
+      "brandTags": [
+        
+      ],
+      "products": [
+        
+      ],
+      "variants": [
+        {
+          "variantCode": "136005",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "136025",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "136040",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "136026",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "136046",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        }
+      ]
+    },
+    {
+      "choiceCode": "ChickenPieceChoice",
+      "name": null,
+      "isFixedPriceAllocation": false,
+      "brandTags": [
+        
+      ],
+      "products": [
+        
+      ],
+      "variants": [
+        {
+          "variantCode": "COB-HS-Breast",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "COB-OR-Breast",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "COB-HS-Leg",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "COB-OR-Leg",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "COB-HS-Rib",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "COB-OR-Rib",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "COB-HS-Thigh",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "COB-OR-Thigh",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "COB-HS-Wing",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "COB-OR-Wing",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        }
+      ]
+    },
+    {
+      "choiceCode": "Kids Meal Sides",
+      "name": "Kids Meal Sides",
+      "isFixedPriceAllocation": false,
+      "brandTags": [
+        
+      ],
+      "products": [
+        
+      ],
+      "variants": [
+        {
+          "variantCode": "136046",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "136026",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "RegularPotatoGravy",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "RegularColeslaw",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "136005",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        }
+      ]
+    },
+    {
+      "choiceCode": "Kids Meal Drinks",
+      "name": "Kids Meal Drinks",
+      "isFixedPriceAllocation": false,
+      "brandTags": [
+        
+      ],
+      "products": [
+        
+      ],
+      "variants": [
+        {
+          "variantCode": "141076",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141035",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141555",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141007",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141013",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141070",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141126",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141101",
+          "upcharge": {
+            "amount": 80,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141099",
+          "upcharge": {
+            "amount": 80,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141109",
+          "upcharge": {
+            "amount": 80,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141020",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141030",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        }
+      ]
+    },
+    {
+      "choiceCode": "SharedMealSidesChoice",
+      "name": null,
+      "isFixedPriceAllocation": false,
+      "brandTags": [
+        
+      ],
+      "products": [
+        
+      ],
+      "variants": [
+        {
+          "variantCode": "136015",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "LargePotatoGravy",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "LargeColeslaw",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        }
+      ]
+    },
+    {
+      "choiceCode": "Zinger® Crunch Bowl choice",
+      "name": null,
+      "isFixedPriceAllocation": false,
+      "brandTags": [
+        
+      ],
+      "products": [
+        
+      ],
+      "variants": [
+        {
+          "variantCode": "136067",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        }
+      ]
+    },
+    {
+      "choiceCode": "Zinger® Bacon & Cheese Burger choice",
+      "name": null,
+      "isFixedPriceAllocation": false,
+      "brandTags": [
+        
+      ],
+      "products": [
+        
+      ],
+      "variants": [
+        {
+          "variantCode": "100062",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        }
+      ]
+    },
+    {
+      "choiceCode": "Boxed 1st Sides",
+      "name": null,
+      "isFixedPriceAllocation": false,
+      "brandTags": [
+        
+      ],
+      "products": [
+        
+      ],
+      "variants": [
+        {
+          "variantCode": "136015",
+          "upcharge": {
+            "amount": 160,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "136005",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "136025",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "136040",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "136046",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "136026",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        }
+      ]
+    },
+    {
+      "choiceCode": "SharedMealDrinksChoice",
+      "name": null,
+      "isFixedPriceAllocation": false,
+      "brandTags": [
+        
+      ],
+      "products": [
+        
+      ],
+      "variants": [
+        {
+          "variantCode": "XLSunkistNoSugar",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "XLSunkist",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "XLSolo",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "XLPepsiMax",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "XLPepsi",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "XLMountDew",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "XL7up",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        }
+      ]
+    },
+    {
+      "choiceCode": "Kids Meal Slider choices",
+      "name": "Kids Meal Slider choices",
+      "isFixedPriceAllocation": false,
+      "brandTags": [
+        
+      ],
+      "products": [
+        
+      ],
+      "variants": [
+        {
+          "variantCode": "120002",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "120003",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        }
+      ]
+    },
+    {
+      "choiceCode": "Original Tenders™ Crunch Bowl choice",
+      "name": null,
+      "isFixedPriceAllocation": false,
+      "brandTags": [
+        
+      ],
+      "products": [
+        
+      ],
+      "variants": [
+        {
+          "variantCode": "136066",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        }
+      ]
+    },
+    {
+      "choiceCode": "Combo Drinks",
+      "name": null,
+      "isFixedPriceAllocation": false,
+      "brandTags": [
+        
+      ],
+      "products": [
+        
+      ],
+      "variants": [
+        {
+          "variantCode": "141007",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141111",
+          "upcharge": {
+            "amount": 160,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141555",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141556",
+          "upcharge": {
+            "amount": 160,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141020",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141025",
+          "upcharge": {
+            "amount": 160,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141030",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141031",
+          "upcharge": {
+            "amount": 160,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141037",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141035",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141070",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141013",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141101",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141099",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141109",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141076",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "141126",
+          "upcharge": {
+            "amount": 90,
+            "currencyCode": "AUD"
+          }
+        }
+      ]
+    },
+    {
+      "choiceCode": "Zinger Burger Choice",
+      "name": "Zinger Burger Choice",
+      "isFixedPriceAllocation": false,
+      "brandTags": [
+        
+      ],
+      "products": [
+        
+      ],
+      "variants": [
+        {
+          "variantCode": "100250",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        }
+      ]
+    },
+    {
+      "choiceCode": "Boxed Chicken Choice",
+      "name": null,
+      "isFixedPriceAllocation": false,
+      "brandTags": [
+        
+      ],
+      "products": [
+        
+      ],
+      "variants": [
+        {
+          "variantCode": "1PC",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "170102",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        },
+        {
+          "variantCode": "170703",
+          "upcharge": {
+            "amount": 0,
+            "currencyCode": "AUD"
+          }
+        }
+      ]
+    }
+  ]
+}

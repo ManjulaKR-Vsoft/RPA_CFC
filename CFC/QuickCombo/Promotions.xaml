@@ -1,0 +1,561 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Promotions" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="dtQuickCombo" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="dtItems" Type="InOutArgument(sd:DataTable)" />
+    <x:Property Name="bundles_Array" Type="InArgument(njl:JArray)" />
+    <x:Property Name="bundleChoice_Array" Type="InArgument(njl:JArray)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>886,3208</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Promotions_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>System.Numerics</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Promotions" sap:VirtualizedContainerService.HintSize="896,3063" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dtBundles" />
+      <Variable x:TypeArguments="s:String[]" Name="demoBundles">
+        <Variable.Default>
+          <VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="{}{&quot;Burger Feast&quot;, &quot;Original Crispy BBQ Bacon Stacker® Burger Combo&quot;}" />
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:BuildDataTable DataTable="[dtBundles]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="834,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;BundleCode&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Name&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Login - Invoke Workflow File (CFC\Login.xaml)" sap:VirtualizedContainerService.HintSize="834,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="CFC\Login.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="834,57" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,136" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Sequence - Test Data" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="388,48" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+              <ueab:ExcelProcessScopeX.Body>
+                <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="602,901" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="540,813" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="C:\Users\MKR7550\Documents\Sample_Input_File.xlsx">
+                      <ueab:ExcelApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="506,481" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="444,201" sap2010:WorkflowViewState.IdRef="ReadRangeX_1" Range="[Excel.Sheet(&quot;QuickCombo&quot;)]" SaveTo="[dtQuickCombo]" />
+                            <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="444,192" sap2010:WorkflowViewState.IdRef="ReadRangeX_2" Range="[Excel.Sheet(&quot;Items&quot;)]" SaveTo="[dtItems]" />
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelApplicationCard.Body>
+                    </ueab:ExcelApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelProcessScopeX.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ueab:ExcelProcessScopeX>
+          </Sequence>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <If Condition="[bundles_Array.Count &gt;= 1]" sap:VirtualizedContainerService.HintSize="834,2622" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="800,2209" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Aloha Configuration Center : Yum Restaurants Australia UAT" sap:VirtualizedContainerService.HintSize="738,2121" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="IfNotOpen" ScopeGuid="48b3ef0e-398d-41f3-85e7-c75f62ac40b9" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="704,1807" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="642,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,754" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Maintenance Labor'" sap:VirtualizedContainerService.HintSize="354,225" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="48b3ef0e-398d-41f3-85e7-c75f62ac40b9" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable CVScreenId="a75bc082-16cf-4c74-b531-aa1ee32c1c93" CvTextArea="119, 135, 71, 12" CvTextArgument="Maintenance" CvType="Text" DesignTimeRectangle="110, 132, 88, 20" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd cls='WindowsForms10.Window.*' idx='3' /&gt;&lt;ctrl name='Maintenance' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd cls='WindowsForms10.Window.*' /&gt;&lt;ctrl name='Maintenance' role='menu item' automationid='' check:fulltext='Maintenance&amp;#xD;&amp;#xA;Labor&amp;#xD;&amp;#xA;Employees&amp;#xD;&amp;#xA;Terminated Employees&amp;#xD;&amp;#xA;Jobcodes&amp;#xD;&amp;#xA;Job Groups&amp;#xD;&amp;#xA;Break Rules&amp;#xD;&amp;#xA;Pos Access Levels&amp;#xD;&amp;#xA;Labor Groups&amp;#xD;&amp;#xA;Performance Measures&amp;#xD;&amp;#xA;Termination Reasons&amp;#xD;&amp;#xA;Security Roles&amp;#xD;&amp;#xA;Pay Adjustments&amp;#xD;&amp;#xA;Punch Edit Reasons&amp;#xD;&amp;#xA;State&amp;#xD;&amp;#xA;County&amp;#xD;&amp;#xA;Minor Exemptions&amp;#xD;&amp;#xA;Users&amp;#xD;&amp;#xA;Menu&amp;#xD;&amp;#xA;Items&amp;#xD;&amp;#xA;Item Routing&amp;#xD;&amp;#xA;Item Cook Times&amp;#xD;&amp;#xA;Item Cost&amp;#xD;&amp;#xA;Categories&amp;#xD;&amp;#xA;Modifier Codes&amp;#xD;&amp;#xA;Modifier Groups&amp;#xD;&amp;#xA;Designated Modifier Groups&amp;#xD;&amp;#xA;Size Groups&amp;#xD;&amp;#xA;Taxes&amp;#xD;&amp;#xA;Tax Type&amp;#xD;&amp;#xA;Flex Tax Rule&amp;#xD;&amp;#xA;Tax Group&amp;#xD;&amp;#xA;Tax Locale&amp;#xD;&amp;#xA;Surcharge&amp;#xD;&amp;#xA;Screen Designer&amp;#xD;&amp;#xA;Quick Service Screen Designer&amp;#xD;&amp;#xA;Pricing&amp;#xD;&amp;#xA;Price Level&amp;#xD;&amp;#xA;Price Changes&amp;#xD;&amp;#xA;Payments&amp;#xD;&amp;#xA;Tenders&amp;#xD;&amp;#xA;Tender Groups&amp;#xD;&amp;#xA;Comps&amp;#xD;&amp;#xA;Comp Codes&amp;#xD;&amp;#xA;Comp Employees&amp;#xD;&amp;#xA;House Accounts&amp;#xD;&amp;#xA;Foreign Currencies&amp;#xD;&amp;#xA;Promotions&amp;#xD;&amp;#xA;Coins and Bills&amp;#xD;&amp;#xA;Business&amp;#xD;&amp;#xA;Store&amp;#xD;&amp;#xA;Aloha Application Loader&amp;#xD;&amp;#xA;Hierarchies&amp;#xD;&amp;#xA;Corporate Administration&amp;#xD;&amp;#xA;Default Favorites&amp;#xD;&amp;#xA;Fiscal Calendar Settings&amp;#xD;&amp;#xA;Report Settings&amp;#xD;&amp;#xA;Custom FOH Reports&amp;#xD;&amp;#xA;Store Payments Configuration Inquiry&amp;#xD;&amp;#xA;Store Hours&amp;#xD;&amp;#xA;System Settings&amp;#xD;&amp;#xA;Activation Schedules&amp;#xD;&amp;#xA;Event Schedule&amp;#xD;&amp;#xA;Debug Event&amp;#xD;&amp;#xA;Order Mode&amp;#xD;&amp;#xA;Order Entry Queue&amp;#xD;&amp;#xA;Revenue Center&amp;#xD;&amp;#xA;Day Part&amp;#xD;&amp;#xA;Concept&amp;#xD;&amp;#xA;Void Reasons&amp;#xD;&amp;#xA;No Sale Reasons&amp;#xD;&amp;#xA;Deposit Reasons&amp;#xD;&amp;#xA;Petty Cash Account&amp;#xD;&amp;#xA;Routing Level&amp;#xD;&amp;#xA;Volume Level&amp;#xD;&amp;#xA;Media Files&amp;#xD;&amp;#xA;Skins&amp;#xD;&amp;#xA;Tags&amp;#xD;&amp;#xA;Integrations&amp;#xD;&amp;#xA;Filter Text (19.1)&amp;#xD;&amp;#xA;Hardware&amp;#xD;&amp;#xA;Terminals&amp;#xD;&amp;#xA;Cash Drawers&amp;#xD;&amp;#xA;Printers&amp;#xD;&amp;#xA;Printer Groups&amp;#xD;&amp;#xA;Labels&amp;#xD;&amp;#xA;Video Groups&amp;#xD;&amp;#xA;Video Queues&amp;#xD;&amp;#xA;Video Controllers&amp;#xD;&amp;#xA;Display Boards&amp;#xD;&amp;#xA;Print Designer&amp;#xD;&amp;#xA;Fiscal Devices&amp;#xD;&amp;#xA;Payment Device&amp;#xD;&amp;#xA;Payment Devices&amp;#xD;&amp;#xA;Payment Device Settings&amp;#xD;&amp;#xA;Messaging&amp;#xD;&amp;#xA;Main Screen Message&amp;#xD;&amp;#xA;Guest Check Message&amp;#xD;&amp;#xA;Barcode Messages&amp;#xD;&amp;#xA;Clock In Message&amp;#xD;&amp;#xA;Survey&amp;#xD;&amp;#xA;Interactive Messages&amp;#xD;&amp;#xA;Break Reminder Messages&amp;#xD;&amp;#xA;Waive Break Messages&amp;#xD;&amp;#xA;Movie&amp;#xD;&amp;#xA;Guest Experience&amp;#xD;&amp;#xA;Loyalty Providers&amp;#xD;&amp;#xA;Campaign Rulebook&amp;#xD;&amp;#xA;QuickCount&amp;#xD;&amp;#xA;Tracking Item' /&gt;" Guid="bfc0ffab-a3e0-4a01-9752-9c284666dc60" InformativeScreenshot="f85e8e01ad77d87ac3418a66e783ee9c.png" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' ctrlname='MainForm' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                          <uix:NClick.VerifyOptions>
+                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionOptions.Retry>
+                              <uix:VerifyExecutionOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionOptions.Timeout>
+                            </uix:VerifyExecutionOptions>
+                          </uix:NClick.VerifyOptions>
+                        </uix:NClick>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Payments Tenders'" sap:VirtualizedContainerService.HintSize="354,225" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="48b3ef0e-398d-41f3-85e7-c75f62ac40b9" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable CVScreenId="a75bc082-16cf-4c74-b531-aa1ee32c1c93" CvTextArea="177, 274, 53, 12" CvTextArgument="Available" CvType="Text" DesignTimeRectangle="110, 263, 163, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd cls='WindowsForms10.Window.*' idx='3' /&gt;&lt;ctrl name='Maintenance' role='menu item' /&gt;&lt;ctrl name='Payments' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd cls='WindowsForms10.Window.*' /&gt;&lt;ctrl name='Maintenance' role='menu item' /&gt;&lt;ctrl name='Payments' role='menu item' automationid='' check:fulltext='Payments&amp;#xD;&amp;#xA;Tenders&amp;#xD;&amp;#xA;Tender Groups&amp;#xD;&amp;#xA;Comps&amp;#xD;&amp;#xA;Comp Codes&amp;#xD;&amp;#xA;Comp Employees&amp;#xD;&amp;#xA;House Accounts&amp;#xD;&amp;#xA;Foreign Currencies&amp;#xD;&amp;#xA;Promotions&amp;#xD;&amp;#xA;Coins and Bills' /&gt;" Guid="03c5193f-6ab4-4441-bdbe-96fdd22ce8ec" InformativeScreenshot="abf8f06345e30cf804f759b32a5cd292.png" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' ctrlname='MainForm' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                          <uix:NClick.VerifyOptions>
+                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionOptions.Retry>
+                              <uix:VerifyExecutionOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionOptions.Timeout>
+                            </uix:VerifyExecutionOptions>
+                          </uix:NClick.VerifyOptions>
+                        </uix:NClick>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Promotions'" sap:VirtualizedContainerService.HintSize="354,216" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="48b3ef0e-398d-41f3-85e7-c75f62ac40b9" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="273, 419, 173, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd cls='WindowsForms10.Window.*' idx='3' /&gt;&lt;ctrl name='Maintenance' role='menu item' /&gt;&lt;ctrl name='Payments' role='menu item' /&gt;&lt;ctrl name='Promotions' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd cls='WindowsForms10.Window.*' /&gt;&lt;ctrl name='Maintenance' role='menu item' /&gt;&lt;ctrl name='Payments' role='menu item' /&gt;&lt;ctrl name='Promotions' role='menu item' automationid='' check:fulltext='Promotions' /&gt;" Guid="997bd2d2-3f3d-4e3f-aca1-b04121a8f705" InformativeScreenshot="79c27d7289f1ac1870330daa0fc5f8c0.png" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' ctrlname='MainForm' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                          <uix:NClick.VerifyOptions>
+                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionOptions.Retry>
+                              <uix:VerifyExecutionOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionOptions.Timeout>
+                            </uix:VerifyExecutionOptions>
+                          </uix:NClick.VerifyOptions>
+                        </uix:NClick>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Maintenance Labor'" sap:VirtualizedContainerService.HintSize="642,225" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="48b3ef0e-398d-41f3-85e7-c75f62ac40b9" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable CVScreenId="9e3dc6b4-0df4-4ee0-86c6-c4577e8171e1" CvTextArea="119, 135, 71, 12" CvTextArgument="Maintenance" CvType="Text" DesignTimeRectangle="110, 132, 88, 20" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd cls='WindowsForms10.Window.*' idx='3' /&gt;&lt;ctrl name='Maintenance' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd cls='WindowsForms10.Window.*' /&gt;&lt;ctrl name='Maintenance' role='menu item' automationid='' check:fulltext='Maintenance&amp;#xD;&amp;#xA;Labor&amp;#xD;&amp;#xA;Employees&amp;#xD;&amp;#xA;Terminated Employees&amp;#xD;&amp;#xA;Jobcodes&amp;#xD;&amp;#xA;Job Groups&amp;#xD;&amp;#xA;Break Rules&amp;#xD;&amp;#xA;Pos Access Levels&amp;#xD;&amp;#xA;Labor Groups&amp;#xD;&amp;#xA;Performance Measures&amp;#xD;&amp;#xA;Termination Reasons&amp;#xD;&amp;#xA;Security Roles&amp;#xD;&amp;#xA;Pay Adjustments&amp;#xD;&amp;#xA;Punch Edit Reasons&amp;#xD;&amp;#xA;State&amp;#xD;&amp;#xA;County&amp;#xD;&amp;#xA;Minor Exemptions&amp;#xD;&amp;#xA;Users&amp;#xD;&amp;#xA;Menu&amp;#xD;&amp;#xA;Items&amp;#xD;&amp;#xA;Item Routing&amp;#xD;&amp;#xA;Item Cook Times&amp;#xD;&amp;#xA;Item Cost&amp;#xD;&amp;#xA;Categories&amp;#xD;&amp;#xA;Modifier Codes&amp;#xD;&amp;#xA;Modifier Groups&amp;#xD;&amp;#xA;Designated Modifier Groups&amp;#xD;&amp;#xA;Size Groups&amp;#xD;&amp;#xA;Taxes&amp;#xD;&amp;#xA;Tax Type&amp;#xD;&amp;#xA;Flex Tax Rule&amp;#xD;&amp;#xA;Tax Group&amp;#xD;&amp;#xA;Tax Locale&amp;#xD;&amp;#xA;Surcharge&amp;#xD;&amp;#xA;Screen Designer&amp;#xD;&amp;#xA;Quick Service Screen Designer&amp;#xD;&amp;#xA;Pricing&amp;#xD;&amp;#xA;Price Level&amp;#xD;&amp;#xA;Price Changes&amp;#xD;&amp;#xA;Payments&amp;#xD;&amp;#xA;Tenders&amp;#xD;&amp;#xA;Tender Groups&amp;#xD;&amp;#xA;Comps&amp;#xD;&amp;#xA;Comp Codes&amp;#xD;&amp;#xA;Comp Employees&amp;#xD;&amp;#xA;House Accounts&amp;#xD;&amp;#xA;Foreign Currencies&amp;#xD;&amp;#xA;Promotions&amp;#xD;&amp;#xA;Coins and Bills&amp;#xD;&amp;#xA;Business&amp;#xD;&amp;#xA;Store&amp;#xD;&amp;#xA;Aloha Application Loader&amp;#xD;&amp;#xA;Hierarchies&amp;#xD;&amp;#xA;Corporate Administration&amp;#xD;&amp;#xA;Default Favorites&amp;#xD;&amp;#xA;Fiscal Calendar Settings&amp;#xD;&amp;#xA;Report Settings&amp;#xD;&amp;#xA;Custom FOH Reports&amp;#xD;&amp;#xA;Store Payments Configuration Inquiry&amp;#xD;&amp;#xA;Store Hours&amp;#xD;&amp;#xA;System Settings&amp;#xD;&amp;#xA;Activation Schedules&amp;#xD;&amp;#xA;Event Schedule&amp;#xD;&amp;#xA;Debug Event&amp;#xD;&amp;#xA;Order Mode&amp;#xD;&amp;#xA;Order Entry Queue&amp;#xD;&amp;#xA;Revenue Center&amp;#xD;&amp;#xA;Day Part&amp;#xD;&amp;#xA;Concept&amp;#xD;&amp;#xA;Void Reasons&amp;#xD;&amp;#xA;No Sale Reasons&amp;#xD;&amp;#xA;Deposit Reasons&amp;#xD;&amp;#xA;Petty Cash Account&amp;#xD;&amp;#xA;Routing Level&amp;#xD;&amp;#xA;Volume Level&amp;#xD;&amp;#xA;Media Files&amp;#xD;&amp;#xA;Skins&amp;#xD;&amp;#xA;Tags&amp;#xD;&amp;#xA;Integrations&amp;#xD;&amp;#xA;Filter Text (19.1)&amp;#xD;&amp;#xA;Hardware&amp;#xD;&amp;#xA;Terminals&amp;#xD;&amp;#xA;Cash Drawers&amp;#xD;&amp;#xA;Printers&amp;#xD;&amp;#xA;Printer Groups&amp;#xD;&amp;#xA;Labels&amp;#xD;&amp;#xA;Video Groups&amp;#xD;&amp;#xA;Video Queues&amp;#xD;&amp;#xA;Video Controllers&amp;#xD;&amp;#xA;Display Boards&amp;#xD;&amp;#xA;Print Designer&amp;#xD;&amp;#xA;Fiscal Devices&amp;#xD;&amp;#xA;Payment Device&amp;#xD;&amp;#xA;Payment Devices&amp;#xD;&amp;#xA;Payment Device Settings&amp;#xD;&amp;#xA;Messaging&amp;#xD;&amp;#xA;Main Screen Message&amp;#xD;&amp;#xA;Guest Check Message&amp;#xD;&amp;#xA;Barcode Messages&amp;#xD;&amp;#xA;Clock In Message&amp;#xD;&amp;#xA;Survey&amp;#xD;&amp;#xA;Interactive Messages&amp;#xD;&amp;#xA;Break Reminder Messages&amp;#xD;&amp;#xA;Waive Break Messages&amp;#xD;&amp;#xA;Movie&amp;#xD;&amp;#xA;Guest Experience&amp;#xD;&amp;#xA;Loyalty Providers&amp;#xD;&amp;#xA;Campaign Rulebook&amp;#xD;&amp;#xA;QuickCount&amp;#xD;&amp;#xA;Tracking Item' /&gt;" Guid="4af1545a-1135-4c7b-899d-56942446bb69" InformativeScreenshot="ac9188181288e858d5f798c4cd08f4d9.png" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' ctrlname='MainForm' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Payments Tenders'" sap:VirtualizedContainerService.HintSize="642,225" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="48b3ef0e-398d-41f3-85e7-c75f62ac40b9" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable CVScreenId="9e3dc6b4-0df4-4ee0-86c6-c4577e8171e1" CvTextArea="199, 268, 34, 11" CvTextArgument="Owner" CvType="Text" DesignTimeRectangle="110, 263, 163, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd cls='WindowsForms10.Window.*' idx='3' /&gt;&lt;ctrl name='Maintenance' role='menu item' /&gt;&lt;ctrl name='Payments' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd cls='WindowsForms10.Window.*' /&gt;&lt;ctrl name='Maintenance' role='menu item' /&gt;&lt;ctrl name='Payments' role='menu item' automationid='' check:fulltext='Payments&amp;#xD;&amp;#xA;Tenders&amp;#xD;&amp;#xA;Tender Groups&amp;#xD;&amp;#xA;Comps&amp;#xD;&amp;#xA;Comp Codes&amp;#xD;&amp;#xA;Comp Employees&amp;#xD;&amp;#xA;House Accounts&amp;#xD;&amp;#xA;Foreign Currencies&amp;#xD;&amp;#xA;Promotions&amp;#xD;&amp;#xA;Coins and Bills' /&gt;" Guid="2ebf35b6-c1e2-4004-9988-03ec22494cc2" InformativeScreenshot="ba60e5d5257dab3306fa5ce753e7bf63.png" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' ctrlname='MainForm' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Promotions'" sap:VirtualizedContainerService.HintSize="642,225" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="48b3ef0e-398d-41f3-85e7-c75f62ac40b9" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable CVScreenId="9e3dc6b4-0df4-4ee0-86c6-c4577e8171e1" CvTextArea="291, 428, 55, 12" CvTextArgument="to override" CvType="Text" DesignTimeRectangle="273, 419, 173, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd cls='WindowsForms10.Window.*' idx='3' /&gt;&lt;ctrl name='Maintenance' role='menu item' /&gt;&lt;ctrl name='Payments' role='menu item' /&gt;&lt;ctrl name='Promotions' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd cls='WindowsForms10.Window.*' /&gt;&lt;ctrl name='Maintenance' role='menu item' /&gt;&lt;ctrl name='Payments' role='menu item' /&gt;&lt;ctrl name='Promotions' role='menu item' automationid='' check:fulltext='Promotions' /&gt;" Guid="158fa0ee-7bbf-48f7-9d2b-b40bf7ecd3fe" InformativeScreenshot="c54a2c4dbe86f37a2fefe2dcbceb5bdb.png" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' ctrlname='MainForm' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                  <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="642,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="642,57" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,754" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0.5" DelayBefore="0.5" DisplayName="Click 'WindowsForms10.Window.b…'" sap:VirtualizedContainerService.HintSize="354,225" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="48b3ef0e-398d-41f3-85e7-c75f62ac40b9" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable CVScreenId="9e3dc6b4-0df4-4ee0-86c6-c4577e8171e1" CvElementArea="993, 214, 18, 21" CvType="Button" DesignTimeRectangle="992, 212, 18, 24" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='commandPanel' /&gt;&lt;wnd ctrlname='buttonFlowLayout' /&gt;&lt;wnd ctrlname='buttonNew' /&gt;&lt;wnd ctrlname='cmdDropDown' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='commandPanel' /&gt;&lt;wnd ctrlname='buttonFlowLayout' /&gt;&lt;wnd ctrlname='buttonNew' /&gt;&lt;wnd ctrlname='cmdDropDown' /&gt;" Guid="b99e5ea8-b411-4ceb-984d-d3ffec18f9c3" InformativeScreenshot="992c34300ccf6b68e3cd8f768225c372.png" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' ctrlname='MainForm' /&gt;&lt;wnd ctrlname='ConfigApplet' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                          <uix:NClick.VerifyOptions>
+                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionOptions.Retry>
+                              <uix:VerifyExecutionOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionOptions.Timeout>
+                            </uix:VerifyExecutionOptions>
+                          </uix:NClick.VerifyOptions>
+                        </uix:NClick>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0.5" DelayBefore="0.5" DisplayName="Click 'Quick Combo QS'" sap:VirtualizedContainerService.HintSize="354,225" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="48b3ef0e-398d-41f3-85e7-c75f62ac40b9" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable CVScreenId="66e7ae0e-b886-4742-b803-5f73d9cae900" CvTextArea="19, 141, 81, 12" CvTextArgument="Quick Combo QS" CvType="Text" DesignTimeRectangle="19, 139, 149, 16" DesignTimeScaleFactor="1" ElementType="ListItem" FullSelectorArgument="&lt;wnd ctrlname='popupContainerControl' /&gt;&lt;wnd ctrlname='DropDownButtonPopupUserControl' /&gt;&lt;wnd ctrlname='contentContainerPanel' /&gt;&lt;wnd ctrlname='AppletNewAndCopyObjectOptionsPanel' /&gt;&lt;wnd ctrlname='typesPanelControl' /&gt;&lt;ctrl name='Bogo' role='list' /&gt;&lt;ctrl name='Quick Combo QS' role='list item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='popupContainerControl' /&gt;&lt;wnd ctrlname='DropDownButtonPopupUserControl' /&gt;&lt;wnd ctrlname='contentContainerPanel' /&gt;&lt;wnd ctrlname='AppletNewAndCopyObjectOptionsPanel' /&gt;&lt;wnd ctrlname='typesPanelControl' /&gt;&lt;ctrl name='Bogo' role='list' /&gt;&lt;ctrl name='Quick Combo QS' role='list item' automationid='' check:text='Quick Combo QS' /&gt;" Guid="826d5b1c-4867-4ce8-86ad-a6d5bc1d08dc" InformativeScreenshot="c1c23f47cb5e71941803c019261d5017.png" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' cls='WindowsForms10.Window.*' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                          <uix:NClick.VerifyOptions>
+                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionOptions.Retry>
+                              <uix:VerifyExecutionOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionOptions.Timeout>
+                            </uix:VerifyExecutionOptions>
+                          </uix:NClick.VerifyOptions>
+                        </uix:NClick>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0.5" DelayBefore="0.5" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="354,216" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="48b3ef0e-398d-41f3-85e7-c75f62ac40b9" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable CVScreenId="66e7ae0e-b886-4742-b803-5f73d9cae900" CvElementArea="38, 229, 74, 23" CvTextArea="66, 235, 17, 11" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="38, 229, 75, 23" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='popupContainerControl' /&gt;&lt;wnd ctrlname='DropDownButtonPopupUserControl' /&gt;&lt;wnd ctrlname='buttonPanel' /&gt;&lt;wnd ctrlname='cmdOk' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='popupContainerControl' /&gt;&lt;wnd ctrlname='DropDownButtonPopupUserControl' /&gt;&lt;wnd ctrlname='buttonPanel' /&gt;&lt;wnd ctrlname='cmdOk' check:text='OK' /&gt;" Guid="694dc30e-15b8-452b-a614-8a14202c5f57" InformativeScreenshot="4f1819cd809afc16b861f26ce1c371f5.png" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' cls='WindowsForms10.Window.*' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                          <uix:NClick.VerifyOptions>
+                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionOptions.Retry>
+                              <uix:VerifyExecutionOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionOptions.Timeout>
+                            </uix:VerifyExecutionOptions>
+                          </uix:NClick.VerifyOptions>
+                        </uix:NClick>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                  <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="642,122" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                  <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each currentJToken" sap:VirtualizedContainerService.HintSize="642,634" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[bundles_Array]">
+                    <ui:ForEach.Body>
+                      <ActivityAction x:TypeArguments="njl:JToken">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="njl:JToken" Name="currentJToken" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="608,488" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <If Condition="[demoBundles.Contains(currentJToken(&quot;name&quot;).ToString.Trim)]" sap:VirtualizedContainerService.HintSize="546,400" sap2010:WorkflowViewState.IdRef="If_3">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <If.Then>
+                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,136" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Sequence DisplayName="Sequence - Promos" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Promotion_Tab - Invoke Workflow File (CFC\QuickCombo\Promotion_Tab.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="CFC\QuickCombo\Promotion_Tab.xaml">
+                                    <ui:InvokeWorkflowFile.Arguments>
+                                      <InArgument x:TypeArguments="njl:JToken" x:Key="currentDataRow">[currentJToken]</InArgument>
+                                      <InArgument x:TypeArguments="sd:DataTable" x:Key="dtBundles">[dtBundles]</InArgument>
+                                    </ui:InvokeWorkflowFile.Arguments>
+                                  </ui:InvokeWorkflowFile>
+                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="QuickComboQS_Tab - Invoke Workflow File (CFC\QuickCombo\QuickComboQS_Tab.xaml)" sap:VirtualizedContainerService.HintSize="388,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="CFC\QuickCombo\QuickComboQS_Tab.xaml">
+                                    <ui:InvokeWorkflowFile.Arguments>
+                                      <InArgument x:TypeArguments="njl:JToken" x:Key="currentDataRow">[currentJToken]</InArgument>
+                                    </ui:InvokeWorkflowFile.Arguments>
+                                  </ui:InvokeWorkflowFile>
+                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ComponentsQS_Tab - Invoke Workflow File (CFC\QuickCombo\ComponentsQS_Tab.xaml)" sap:VirtualizedContainerService.HintSize="388,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="CFC\QuickCombo\ComponentsQS_Tab.xaml">
+                                    <ui:InvokeWorkflowFile.Arguments>
+                                      <InArgument x:TypeArguments="njl:JToken" x:Key="currentDataRow">[currentJToken]</InArgument>
+                                      <InArgument x:TypeArguments="njl:JArray" x:Key="bundleChoices" />
+                                      <InArgument x:TypeArguments="sd:DataTable" x:Key="dtComponentItems">[dtItems]</InArgument>
+                                    </ui:InvokeWorkflowFile.Arguments>
+                                  </ui:InvokeWorkflowFile>
+                                </Sequence>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:ForEach.Body>
+                  </ui:ForEach>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="642,50" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtQuickCombo]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                          <ui:ForEachRow.Body>
+                            <ActivityAction x:TypeArguments="sd:DataRow">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,691" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Promotion_Tab - Invoke Workflow File (CFC\QuickCombo\Promotion_Tab.xaml)" sap:VirtualizedContainerService.HintSize="354,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="CFC\QuickCombo\Promotion_Tab.xaml">
+                                  <ui:InvokeWorkflowFile.Arguments>
+                                    <InArgument x:TypeArguments="sd:DataRow" x:Key="currentDataRow">[CurrentRow]</InArgument>
+                                  </ui:InvokeWorkflowFile.Arguments>
+                                </ui:InvokeWorkflowFile>
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="QuickComboQS_Tab - Invoke Workflow File (CFC\QuickCombo\QuickComboQS_Tab.xaml)" sap:VirtualizedContainerService.HintSize="354,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="CFC\QuickCombo\QuickComboQS_Tab.xaml">
+                                  <ui:InvokeWorkflowFile.Arguments>
+                                    <InArgument x:TypeArguments="sd:DataRow" x:Key="currentDataRow">[CurrentRow]</InArgument>
+                                  </ui:InvokeWorkflowFile.Arguments>
+                                </ui:InvokeWorkflowFile>
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ComponentsQS_Tab - Invoke Workflow File (CFC\QuickCombo\ComponentsQS_Tab.xaml)" sap:VirtualizedContainerService.HintSize="354,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="CFC\QuickCombo\ComponentsQS_Tab.xaml">
+                                  <ui:InvokeWorkflowFile.Arguments>
+                                    <InArgument x:TypeArguments="sd:DataRow" x:Key="currentDataRow">[CurrentRow]</InArgument>
+                                    <InArgument x:TypeArguments="sd:DataTable" x:Key="dtItems">[dtItems]</InArgument>
+                                  </ui:InvokeWorkflowFile.Arguments>
+                                </ui:InvokeWorkflowFile>
+                              </Sequence>
+                            </ActivityAction>
+                          </ui:ForEachRow.Body>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:ForEachRow>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="171, 0, 1024, 769" FilePath="C:\BootDrv\CFC\ShellBins\aemshell.exe" IconBase64="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" InformativeScreenshot="2f4d99b316e08940de169988f2464c51.png" Selector="&lt;wnd app='aemshell.exe' ctrlname='MainForm' /&gt;" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;There are no data for Quick combo&quot;]" />
+        </Sequence>
+      </If.Else>
+    </If>
+  </Sequence>
+</Activity>
