@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>679,2884</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>959,2981</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Promotion_Tab_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -127,7 +127,7 @@
       <AssemblyReference>netstandard</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Promotion_Tab" sap:VirtualizedContainerService.HintSize="654,2819" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Promotion_Tab" sap:VirtualizedContainerService.HintSize="654,2876" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="Taco Burger Combo" Name="Promotion_Name" />
       <Variable x:TypeArguments="x:String" Default="Yes" Name="Promo_Active" />
@@ -146,7 +146,7 @@
               <OutArgument x:TypeArguments="x:String">[Promotion_Name]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[if(Not String.IsNullOrWhiteSpace(currentDataRow("name").ToString.Trim), currentDataRow("name").ToString.Trim, "")]</InArgument>
+              <InArgument x:TypeArguments="x:String">[if(Not String.IsNullOrWhiteSpace(currentDataRow("brandDistinctAttribute1").ToString.Trim), currentDataRow("brandDistinctAttribute1").ToString.Trim, currentDataRow("name").ToString.Trim)]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
@@ -168,13 +168,13 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Aloha Configuration Center : Yum Restaurants Australia UAT" sap:VirtualizedContainerService.HintSize="592,2078" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="IfNotOpen" ScopeGuid="48b3ef0e-398d-41f3-85e7-c75f62ac40b9" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Aloha Configuration Center : Yum Restaurants Australia UAT" sap:VirtualizedContainerService.HintSize="592,2135" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="IfNotOpen" ScopeGuid="48b3ef0e-398d-41f3-85e7-c75f62ac40b9" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="558,1755" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="558,1812" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -318,6 +318,62 @@
                 </uix:NClick.VerifyOptions>
               </uix:NClick>
             </Sequence>
+            <If Condition="[Not String.IsNullOrWhiteSpace(Bundle_Code)]" sap:VirtualizedContainerService.HintSize="496,57" sap2010:WorkflowViewState.IdRef="If_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,365" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Number'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,277" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="48b3ef0e-398d-41f3-85e7-c75f62ac40b9" Text="[Bundle_Code]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable CVScreenId="74d25f39-6ecc-4077-a423-dfe6a9260b87" CvElementArea="880, 284, 19, 20" CvTextArea="605, 288, 25, 11" CvTextArgument="1105" CvType="Button" DesignTimeRectangle="603, 284, 296, 20" DesignTimeScaleFactor="1" ElementType="Cell" FullSelectorArgument="&lt;wnd ctrlname='ConfigApplet' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Promo' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Tab Control' /&gt;&lt;wnd ctrlname='TabPageFieldGroup1' /&gt;&lt;wnd ctrlname='AeMSplitterPanel' /&gt;&lt;wnd ctrlname='splitContainerControl' /&gt;&lt;wnd ctrlname='AeMVerticalGrid' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;ctrl name='Record 0' role='row' /&gt;&lt;ctrl name='Number Record 0' role='cell' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='ConfigApplet' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Promo' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Tab Control' /&gt;&lt;wnd ctrlname='TabPageFieldGroup1' /&gt;&lt;wnd ctrlname='AeMSplitterPanel' /&gt;&lt;wnd ctrlname='splitContainerControl' /&gt;&lt;wnd ctrlname='AeMVerticalGrid' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;ctrl name='Record 0' role='row' /&gt;&lt;ctrl name='Number Record 0' role='cell' automationid='' /&gt;" Guid="190e8099-9435-4dd0-9163-1072b6bfaa8e" InformativeScreenshot="b801028d166d925cd30c5df26ef1bbe2.png" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' ctrlname='MainForm' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target CVScreenId="74d25f39-6ecc-4077-a423-dfe6a9260b87" CvTextArea="199, 288, 39, 11" CvTextArgument="Number" CvType="Text" DesignTimeRectangle="201, 284, 400, 20" FullSelectorArgument="&lt;wnd ctrlname='ConfigApplet' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Promo' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Tab Control' /&gt;&lt;wnd ctrlname='TabPageFieldGroup1' /&gt;&lt;wnd ctrlname='AeMSplitterPanel' /&gt;&lt;wnd ctrlname='splitContainerControl' /&gt;&lt;wnd ctrlname='AeMVerticalGrid' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;ctrl name='Number' role='column header' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='ConfigApplet' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Promo' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Tab Control' /&gt;&lt;wnd ctrlname='TabPageFieldGroup1' /&gt;&lt;wnd ctrlname='AeMSplitterPanel' /&gt;&lt;wnd ctrlname='splitContainerControl' /&gt;&lt;wnd ctrlname='AeMVerticalGrid' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;ctrl name='Number' role='column header' automationid='' check:text='Number' /&gt;" Guid="5c60ce3f-aeac-4872-b7ed-16057805fadb" SearchSteps="Selector, FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <uix:NTypeInto.VerifyOptions>
+                      <uix:VerifyExecutionTypeIntoOptions DisplayName="Cell 'Number'" Mode="Appears">
+                        <uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionTypeIntoOptions.Retry>
+                        <uix:VerifyExecutionTypeIntoOptions.Target>
+                          <uix:TargetAnchorable CVScreenId="74d25f39-6ecc-4077-a423-dfe6a9260b87" CvElementArea="880, 284, 19, 20" CvTextArea="605, 288, 25, 11" CvTextArgument="1105" CvType="Button" DesignTimeRectangle="603, 284, 296, 20" DesignTimeScaleFactor="1" ElementType="Cell" FullSelectorArgument="&lt;wnd ctrlname='ConfigApplet' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Promo' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Tab Control' /&gt;&lt;wnd ctrlname='TabPageFieldGroup1' /&gt;&lt;wnd ctrlname='AeMSplitterPanel' /&gt;&lt;wnd ctrlname='splitContainerControl' /&gt;&lt;wnd ctrlname='AeMVerticalGrid' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;ctrl name='Record 0' role='row' /&gt;&lt;ctrl name='Number Record 0' role='cell' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='ConfigApplet' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Promo' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Tab Control' /&gt;&lt;wnd ctrlname='TabPageFieldGroup1' /&gt;&lt;wnd ctrlname='AeMSplitterPanel' /&gt;&lt;wnd ctrlname='splitContainerControl' /&gt;&lt;wnd ctrlname='AeMVerticalGrid' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;ctrl name='Record 0' role='row' /&gt;&lt;ctrl name='Number Record 0' role='cell' automationid='' /&gt;" Guid="2eccfa55-23e6-4dd7-9018-beb6a18bcc75" InformativeScreenshot="76d79d043d6474c34a118032290bb490.png" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' ctrlname='MainForm' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="74d25f39-6ecc-4077-a423-dfe6a9260b87" CvTextArea="199, 288, 39, 11" CvTextArgument="Number" CvType="Text" DesignTimeRectangle="201, 284, 400, 20" FullSelectorArgument="&lt;wnd ctrlname='ConfigApplet' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Promo' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Tab Control' /&gt;&lt;wnd ctrlname='TabPageFieldGroup1' /&gt;&lt;wnd ctrlname='AeMSplitterPanel' /&gt;&lt;wnd ctrlname='splitContainerControl' /&gt;&lt;wnd ctrlname='AeMVerticalGrid' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;ctrl name='Number' role='column header' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='ConfigApplet' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Promo' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Tab Control' /&gt;&lt;wnd ctrlname='TabPageFieldGroup1' /&gt;&lt;wnd ctrlname='AeMSplitterPanel' /&gt;&lt;wnd ctrlname='splitContainerControl' /&gt;&lt;wnd ctrlname='AeMVerticalGrid' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;ctrl name='Number' role='column header' automationid='' check:text='Number' /&gt;" Guid="070ca521-6a28-4684-9479-2ab1fe763fc8" SearchSteps="Selector, FuzzySelector, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:VerifyExecutionTypeIntoOptions.Target>
+                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      </uix:VerifyExecutionTypeIntoOptions>
+                    </uix:NTypeInto.VerifyOptions>
+                  </uix:NTypeInto>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
             <If Condition="[Not String.IsNullOrWhiteSpace(Promotion_Name)]" DisplayName="If  - Promotion Name" sap:VirtualizedContainerService.HintSize="496,57" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
