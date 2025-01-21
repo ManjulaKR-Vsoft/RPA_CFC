@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1364,9413</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1364,9416</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ComponentsQS_Tab_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -135,7 +135,7 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ComponentsQS_Tab" sap:VirtualizedContainerService.HintSize="1374,9348" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ComponentsQS_Tab" sap:VirtualizedContainerService.HintSize="1374,9351" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Component_1" />
       <Variable x:TypeArguments="s:String[]" Name="Items_1" />
@@ -211,13 +211,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Aloha Configuration Center : Yum Restaurants Australia UAT" sap:VirtualizedContainerService.HintSize="1312,9176" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="cb9f854b-3872-4823-be22-91840cec0233" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Aloha Configuration Center : Yum Restaurants Australia UAT" sap:VirtualizedContainerService.HintSize="1312,9179" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="cb9f854b-3872-4823-be22-91840cec0233" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1278,8862" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1278,8865" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -255,27 +255,27 @@
                 <InArgument x:TypeArguments="x:Int32">1</InArgument>
               </Assign.Value>
             </Assign>
-            <If Condition="[currentDataRow(&quot;choices&quot;).Count &gt;= 1]" sap:VirtualizedContainerService.HintSize="1216,8120" sap2010:WorkflowViewState.IdRef="If_18">
+            <If Condition="[currentDataRow(&quot;choices&quot;).Count &gt;= 1]" sap:VirtualizedContainerService.HintSize="1216,8123" sap2010:WorkflowViewState.IdRef="If_18">
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1182,7696" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1182,7699" sap2010:WorkflowViewState.IdRef="Sequence_58">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each currentJToken" sap:VirtualizedContainerService.HintSize="1120,7113" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[currentDataRow(&quot;choices&quot;)]">
+                  <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each currentJToken" sap:VirtualizedContainerService.HintSize="1120,7116" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[currentDataRow(&quot;choices&quot;)]">
                     <ui:ForEach.Body>
                       <ActivityAction x:TypeArguments="njl:JToken">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="njl:JToken" Name="currentJToken" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1086,6967" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1086,6970" sap2010:WorkflowViewState.IdRef="Sequence_57">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign sap:VirtualizedContainerService.HintSize="1024,113" sap2010:WorkflowViewState.IdRef="Assign_25">
+                          <Assign sap:VirtualizedContainerService.HintSize="1024,114" sap2010:WorkflowViewState.IdRef="Assign_25">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">[Component_Name]</OutArgument>
                             </Assign.To>
@@ -283,7 +283,7 @@
                               <InArgument x:TypeArguments="x:String">[Left(currentJToken("choiceCode").ToString.Trim, 20).Trim]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <Assign sap:VirtualizedContainerService.HintSize="1024,113" sap2010:WorkflowViewState.IdRef="Assign_41">
+                          <Assign sap:VirtualizedContainerService.HintSize="1024,114" sap2010:WorkflowViewState.IdRef="Assign_41">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">[Original_Component_Name]</OutArgument>
                             </Assign.To>
@@ -291,7 +291,7 @@
                               <InArgument x:TypeArguments="x:String">[currentJToken("choiceCode").ToString.Trim]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <Sequence DisplayName="Sequence - Component and Items" sap:VirtualizedContainerService.HintSize="1024,6653" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                          <Sequence DisplayName="Sequence - Component and Items" sap:VirtualizedContainerService.HintSize="1024,6654" sap2010:WorkflowViewState.IdRef="Sequence_61">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -306,7 +306,7 @@
                                 <InArgument x:TypeArguments="x:Int32">0</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <Assign sap:VirtualizedContainerService.HintSize="962,113" sap2010:WorkflowViewState.IdRef="Assign_27">
+                            <Assign sap:VirtualizedContainerService.HintSize="962,114" sap2010:WorkflowViewState.IdRef="Assign_27">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:Int32">[RowCount]</OutArgument>
                               </Assign.To>
@@ -1293,7 +1293,7 @@
                                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
-                                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Yes'" sap:VirtualizedContainerService.HintSize="354,216" sap2010:WorkflowViewState.IdRef="NClick_18" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cb9f854b-3872-4823-be22-91840cec0233" Timeout="10" Version="V3">
+                                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Yes'" sap:VirtualizedContainerService.HintSize="354,216" sap2010:WorkflowViewState.IdRef="NClick_18" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cb9f854b-3872-4823-be22-91840cec0233" Timeout="5" Version="V3">
                                                                 <uix:NClick.Target>
                                                                   <uix:TargetAnchorable CVScreenId="681d8714-f7f3-40a2-aff6-e7735a719c94" CvElementArea="30, 114, 74, 22" CvTextArea="59, 120, 16, 11" CvTextArgument="Yes" CvType="Button" DesignTimeRectangle="30, 114, 75, 23" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='6' title='&amp;amp;Yes' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='6' title='&amp;amp;Yes' check:text='&amp;amp;Yes' /&gt;" Guid="2c127ef3-e783-4c37-93b5-be84213d74c8" InformativeScreenshot="ec71478fcfefde50ecd791f76f004151.png" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' cls='#32770' title='Confirm remove' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                                                                 </uix:NClick.Target>
