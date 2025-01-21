@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>959,2833</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>933,2954</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Delete_Items_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -60,6 +60,7 @@
       <x:String>System.Numerics</x:String>
       <x:String>UiPath.Shared.Activities.Business</x:String>
       <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -134,7 +135,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Delete_Items" sap:VirtualizedContainerService.HintSize="766,2768" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Delete_Items" sap:VirtualizedContainerService.HintSize="766,2889" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="Count" />
       <Variable x:TypeArguments="x:Int32" Name="MaxRowCount" />
@@ -153,14 +154,14 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="704,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Delete Items for the Modifier Group&quot;]" />
-    <Sequence sap:VirtualizedContainerService.HintSize="704,168" sap2010:WorkflowViewState.IdRef="Sequence_20">
+    <Sequence sap:VirtualizedContainerService.HintSize="704,195" sap2010:WorkflowViewState.IdRef="Sequence_20">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,48" sap2010:WorkflowViewState.IdRef="CommentOut_15">
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,75" sap2010:WorkflowViewState.IdRef="CommentOut_15">
         <ui:CommentOut.Body>
           <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,265" sap2010:WorkflowViewState.IdRef="Sequence_52">
             <sap:WorkflowViewStateService.ViewState>
@@ -179,20 +180,20 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:CommentOut>
     </Sequence>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Aloha Configuration Center : Yum Restaurants Australia UAT" sap:VirtualizedContainerService.HintSize="704,2339" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="c66aa101-4906-48d1-bcdc-4bfa3d0bf341" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Aloha Configuration Center : Yum Restaurants Australia UAT" sap:VirtualizedContainerService.HintSize="704,2433" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="c66aa101-4906-48d1-bcdc-4bfa3d0bf341" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="670,2025" sap2010:WorkflowViewState.IdRef="Sequence_19">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="670,2079" sap2010:WorkflowViewState.IdRef="Sequence_19">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="608,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="608,84" sap2010:WorkflowViewState.IdRef="CommentOut_1">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="654,180" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
@@ -210,7 +211,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="608,57" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="608,84" sap2010:WorkflowViewState.IdRef="CommentOut_2">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,193" sap2010:WorkflowViewState.IdRef="Sequence_16">
                   <sap:WorkflowViewStateService.ViewState>
@@ -615,7 +616,7 @@
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:RepeatNumberOfTimesX>
                       </Sequence>
-                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtSortedRows]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtSortedRows]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="546,1258" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
                         <ui:ForEachRow.Body>
                           <ActivityAction x:TypeArguments="sd:DataRow">
                             <ActivityAction.Argument>
