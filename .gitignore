@@ -1,0 +1,15 @@
+# Ignore all .json files
+IF_Menu_Response_MD_test.json
+IF_Menu_Response_Modified.json
+IF_Menu_Response_Modified.txt
+IF_Menu_Response_Bundle_Update.json
+IF_Menu_Response_demo_Nov.json
+IF_Menu_Response - slot modified_1.json
+
+#ignore unwanted xamls
+Self_Practice_with_Mod7.xaml
+Self_Practice.xaml
+Practice.xaml
+
+# Ignore all testing csvs
+Input_Data.csv

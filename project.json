@@ -15,7 +15,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "24.10.1.0",
-  "projectVersion": "1.0.1",
+  "projectVersion": "1.0.9",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -43,7 +43,15 @@
     },
     "processOptions": {
       "ignoredFiles": [
-        "Main.xaml"
+        "Main.xaml",
+        "Practice.xaml",
+        "Self_Practice_with_Mod7.xaml",
+        "Self_Practice.xaml",
+        "MenuList.csv",
+        "ModifierGroupList.csv",
+        "Modifiers.csv",
+        "CFC/API/Call_CFC_ModifierGroup.xaml",
+        "CFC/ItemCreation/ItemCreation_Process_OCt14.xaml"
       ]
     },
     "fileInfoCollection": [
