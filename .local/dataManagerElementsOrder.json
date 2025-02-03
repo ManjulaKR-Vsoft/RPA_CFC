@@ -62,6 +62,11 @@
       "Path": "Framework/InitAllApplications.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "Archive_Folder_Exist&Sequence_9",
+        "Archive_Folder_Path&Sequence_9",
+        "SMTP_Password&Sequence_32",
+        "SMTP_Username&Sequence_32",
+        "Report_Receivers&Sequence_32",
         "listOfFiles&Sequence_9",
         "Username&Sequence_13",
         "Password&Sequence_13",
@@ -294,6 +299,11 @@
       "Path": "Framework/Process.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "Log_Path_Exist&Sequence_1",
+        "Log_Path&Sequence_1",
+        "Log_Path&Sequence_152",
+        "File_Name&Sequence_1",
+        "IF_Response_Status&Sequence_173",
         "is_New_Item&Sequence_1",
         "Json_Object&Sequence_1",
         "Product_Array&Sequence_1",
@@ -447,6 +457,7 @@
       "Path": "CFC/QuickCombo/Promotions.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "File_Name&Sequence_1",
         "Price&Sequence_1",
         "PromotionUniqueID&Sequence_1",
         "Report_Receivers&Sequence_28",
@@ -461,6 +472,7 @@
         "dtBundles&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "Log_Path",
         "dtCFC_Promo",
         "bundleChoice_Array",
         "bundles_Array",
@@ -538,6 +550,12 @@
       "Path": "Practice.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dtModifierLogger&Sequence_19",
+        "Log_Path&Sequence_1",
+        "File_Name&Sequence_1",
+        "SMTP_Password&Sequence_18",
+        "SMTP_Username&Sequence_18",
+        "Report_Receivers&Sequence_18",
         "promotionJObject&Sequence_13",
         "promotionResponseStatus&Sequence_13",
         "promotionResponse&Sequence_13",
@@ -581,6 +599,7 @@
       "Path": "CFC/Input_Files/CFC_API.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "Json_Object&Sequence_1",
         "CFC_Password&Sequence_1",
         "CFC_Username&Sequence_1",
         "CFC_Response&Sequence_9",
@@ -625,7 +644,6 @@
         "arrProductVariants&Sequence_3"
       ],
       "ArgumentsSectionElementsOrder": [
-        "Json_Object",
         "Menu_Json_Data",
         "Burger_LastPosNumber",
         "dtModfierGroup",
@@ -648,8 +666,9 @@
       "Path": "CFC/QuickCombo/Get_QC_Data_API.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "IF_Response_Content&Sequence_1",
         "Json_Object&Sequence_1",
+        "IF_Response_Status&Sequence_11",
+        "IF_Response_Content&Sequence_1",
         "dtBundleChoices&Sequence_1",
         "choiceCode&Sequence_1",
         "menuDataRow&Sequence_1",
@@ -686,6 +705,7 @@
         "dtMatchingIdentical&Sequence_31"
       ],
       "ArgumentsSectionElementsOrder": [
+        "Log_Path",
         "dtMenuList",
         "bundleChoice_Array",
         "bundles_Array"
@@ -771,11 +791,7 @@
       "Path": "CFC/ModifierGroup/ModifierTab.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "ModifierGroup_Name&Sequence_1",
-        "SMTP_Password&Sequence_105",
-        "SMTP_Username&Sequence_105",
-        "Report_Receivers&Sequence_105",
-        "dtModifierLogger&Sequence_1",
+        "File_Name&Sequence_1",
         "slots_Array&Sequence_1",
         "IF_Response_Content&Sequence_1",
         "ProductVariant_Array&Sequence_1",
@@ -820,16 +836,22 @@
         "ClientApplication&Sequence_1",
         "ApiVersion&Sequence_1",
         "ClientVersion&Sequence_1",
+        "dtModifierLogger&Sequence_1",
+        "ModifierGroup_Name&Sequence_1",
         "IF_Menu&Sequence_48",
         "getMenuListRow&Sequence_19",
-        "MenuList_Array&Sequence_72"
+        "MenuList_Array&Sequence_72",
+        "SMTP_Password&Sequence_105",
+        "SMTP_Username&Sequence_105",
+        "Report_Receivers&Sequence_105"
       ],
       "ArgumentsSectionElementsOrder": [
         "Json_Object",
         "dtModifierGroup",
         "dtMenuList",
         "ItemType",
-        "LastPOSNumber"
+        "LastPOSNumber",
+        "Log_Path"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -1500,6 +1522,77 @@
       ],
       "ArgumentsSectionElementsOrder": [
         "dtMenuList"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SendEmail.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Configuration/Get_SMTP_Config.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Email_Body&Sequence_1",
+        "Email_To&Sequence_1",
+        "Email_Subject&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "SMTP_Password",
+        "SMTP_Username",
+        "Report_Receivers"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Configuration/EmailWithoutAttachment.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "SMTP_Password&Sequence_1",
+        "SMTP_Username&Sequence_1",
+        "Report_Receivers&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Email_Body",
+        "Email_Subject",
+        "Email_to"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Configuration/EmailWithAttachment.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Email_To&Sequence_1",
+        "SMTP_Password&Sequence_1",
+        "SMTP_Username&Sequence_1",
+        "Report_Receivers&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Log_File_Path",
+        "Email_Body",
+        "Email_Subject"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CFC/API/IF_API.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ProductArray&Sequence_1",
+        "IF_Response_Content&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "IF_Response_Status",
+        "Json_Object"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

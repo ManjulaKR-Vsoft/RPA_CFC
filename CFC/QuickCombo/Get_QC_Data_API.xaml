@@ -3,11 +3,12 @@
     <x:Property Name="bundles_Array" Type="OutArgument(njl:JArray)" />
     <x:Property Name="bundleChoice_Array" Type="OutArgument(njl:JArray)" />
     <x:Property Name="dtMenuList" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="Log_Path" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1239,4758</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1239,4541</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Get_QC_Data_API_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -124,10 +125,9 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Get_QC_Data_API" sap:VirtualizedContainerService.HintSize="891,4693" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Get_QC_Data_API" sap:VirtualizedContainerService.HintSize="891,4476" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="IF_Response_Content" />
-      <Variable x:TypeArguments="njl:JObject" Name="Json_Object" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtBundleChoices" />
       <Variable x:TypeArguments="x:String" Name="choiceCode" />
       <Variable x:TypeArguments="sd:DataRow" Name="menuDataRow" />
@@ -154,6 +154,7 @@
       <Variable x:TypeArguments="x:String" Name="Price" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtMatchingRegLg" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtCFC_Promo" />
+      <Variable x:TypeArguments="njl:JObject" Name="Json_Object" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -162,7 +163,7 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:BuildDataTable DataTable="[dtComponentItems]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="829,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;choiceCode&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Regular_Item&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Affect_Size&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Item_Highlight&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Item_Surcharge&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Upsell_Item_1&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Item_Highlight_1&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Item_Surcharge_1&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Size_Surcharge_1&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Upsell_Item_2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Item_Highlight_2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Items_Surcharge_2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Size_Surcharge_2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
     <ui:BuildDataTable DataTable="[dtCFC_Promo]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="829,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_3" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;PromotionID&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Combo_Name&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PromotionUniqueID&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-    <Sequence DisplayName="Get Promotions from CFC API" sap:VirtualizedContainerService.HintSize="829,2565" sap2010:WorkflowViewState.IdRef="Sequence_43">
+    <Sequence DisplayName="Get Promotions from CFC API" sap:VirtualizedContainerService.HintSize="829,2538" sap2010:WorkflowViewState.IdRef="Sequence_43">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="Promotion_Response" />
         <Variable x:TypeArguments="x:Int32" Name="Promotion_Status" />
@@ -175,7 +176,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="767,84" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="767,57" sap2010:WorkflowViewState.IdRef="CommentOut_6">
         <ui:CommentOut.Body>
           <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,181" sap2010:WorkflowViewState.IdRef="Sequence_44">
             <sap:WorkflowViewStateService.ViewState>
@@ -328,13 +329,16 @@
       </If>
     </Sequence>
     <Sequence DisplayName="Sequence - Yum Menu Data" sap:VirtualizedContainerService.HintSize="829,799" sap2010:WorkflowViewState.IdRef="Sequence_11">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:Int32" Name="IF_Response_Status" />
+      </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,84" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="CommentOut_5">
         <ui:CommentOut.Body>
           <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,283" sap2010:WorkflowViewState.IdRef="Sequence_42">
             <sap:WorkflowViewStateService.ViewState>
@@ -356,13 +360,36 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:CommentOut>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="IF_API - Invoke Workflow File (CFC\API\IF_API.xaml)" sap:VirtualizedContainerService.HintSize="434,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="CFC\API\IF_API.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <OutArgument x:TypeArguments="njl:JObject" x:Key="Json_Object">[Json_Object]</OutArgument>
+          <OutArgument x:TypeArguments="x:Int32" x:Key="IF_Response_Status">[IF_Response_Status]</OutArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
       <ui:ReadCsvFile PathResource="{x:Null}" DataTable="[dtMenuList]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Read CSV" FilePath="MenuList.csv" sap:VirtualizedContainerService.HintSize="434,186" sap2010:WorkflowViewState.IdRef="ReadCsvFile_2" />
-      <ui:ReadTextFile File="{x:Null}" Content="[IF_Response_Content]" DisplayName="Read Text File" FileName="IF_Menu_Response" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-      <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[Json_Object]" JsonString="[IF_Response_Content]" />
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="CommentOut_10">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,313" sap2010:WorkflowViewState.IdRef="Sequence_56">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ReadTextFile File="{x:Null}" Content="[IF_Response_Content]" DisplayName="Read Text File" FileName="IF_Menu_Response" sap:VirtualizedContainerService.HintSize="354,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+            <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[Json_Object]" JsonString="[IF_Response_Content]" />
+          </Sequence>
+        </ui:CommentOut.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:CommentOut>
       <ui:DeserializeJsonArray DisplayName="Deserialize JSON Array" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="DeserializeJsonArray_1" JsonArray="[bundles_Array]" JsonString="[Json_Object(&quot;bundles&quot;).ToString]" />
       <ui:DeserializeJsonArray DisplayName="Deserialize JSON Array" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="DeserializeJsonArray_2" JsonArray="[bundleChoice_Array]" JsonString="[Json_Object(&quot;bundleChoices&quot;).ToString]" />
     </Sequence>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="829,247" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="829,57" sap2010:WorkflowViewState.IdRef="CommentOut_9">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,136" sap2010:WorkflowViewState.IdRef="Sequence_53">
           <sap:WorkflowViewStateService.ViewState>
@@ -382,6 +409,12 @@
           </Sequence>
         </Sequence>
       </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
     <Sequence DisplayName="Sequence - Parse BundleChoice and variants" sap:VirtualizedContainerService.HintSize="829,57" sap2010:WorkflowViewState.IdRef="Sequence_54">
       <sap:WorkflowViewStateService.ViewState>
@@ -1553,6 +1586,7 @@
               <InArgument x:TypeArguments="njl:JArray" x:Key="bundles_Array">[bundles_Array]</InArgument>
               <InArgument x:TypeArguments="njl:JArray" x:Key="bundleChoice_Array">[bundleChoice_Array]</InArgument>
               <InArgument x:TypeArguments="sd:DataTable" x:Key="dtCFC_Promo">[dtCFC_Promo]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="Log_Path">[Log_Path]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
         </Sequence>

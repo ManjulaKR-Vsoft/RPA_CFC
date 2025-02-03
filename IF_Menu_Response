@@ -516,10 +516,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 50,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 },
@@ -528,10 +532,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 100,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 }
@@ -757,10 +765,27 @@
       ],
       "availability": {
         "daypartCodes": [
-          
+          "Weekday Lunch"
         ],
         "schedule": [
-          
+          {
+            "occasion": "DELIVERY",
+            "timeFrame": {
+              "startDate": null,
+              "endDate": null,
+              "blackout": false,
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "duration": "11:50:00",
+              "intervalStartTime": "00:00:00",
+              "weight": 1
+            }
+          }
         ]
       }
     },
@@ -1322,10 +1347,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 50,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 },
@@ -1334,10 +1363,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 50,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 },
@@ -1346,10 +1379,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 100,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 }
@@ -9773,10 +9810,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 50,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 },
@@ -9785,10 +9826,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 50,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 },
@@ -9797,10 +9842,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 100,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 }
@@ -10346,10 +10395,29 @@
       ],
       "availability": {
         "daypartCodes": [
-          
+          "Weekday Lunch"
         ],
         "schedule": [
-          
+          {
+            "occasion": "DELIVERY",
+            "timeFrame": {
+              "startDate": null,
+              "endDate": null,
+              "blackout": false,
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "duration": "23:58:00",
+              "intervalStartTime": "00:00:00",
+              "weight": 0
+            }
+          }
         ]
       }
     },
@@ -11237,10 +11305,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 50,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 },
@@ -11249,10 +11321,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 50,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 },
@@ -11261,10 +11337,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 100,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 }
@@ -12780,10 +12860,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 50,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 },
@@ -12792,10 +12876,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 50,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 },
@@ -12804,10 +12892,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 100,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 }
@@ -13598,10 +13690,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 50,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 },
@@ -13610,10 +13706,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 50,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 },
@@ -13622,10 +13722,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 100,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 }
@@ -14636,10 +14740,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 50,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 },
@@ -14648,10 +14756,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 50,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 },
@@ -14660,10 +14772,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 100,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 }
@@ -15853,10 +15969,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 50,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 },
@@ -15865,10 +15985,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 50,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 },
@@ -15877,10 +16001,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 100,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 }
@@ -16235,10 +16363,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 50,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 },
@@ -16247,10 +16379,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 50,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 },
@@ -16259,10 +16395,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 100,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 }
@@ -17263,10 +17403,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 50,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 },
@@ -17275,10 +17419,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 50,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 },
@@ -17287,10 +17435,14 @@
                   "weights": [
                     {
                       "modifierWeightCode": "REGULAR",
+                      "isExcludedFromVariant": false,
                       "price": {
                         "amount": 100,
                         "currencyCode": "AUD"
-                      }
+                      },
+                      "nutritionInformation": [
+                        
+                      ]
                     }
                   ]
                 }
@@ -18634,6 +18786,7 @@
       "bundleCode": "1023",
       "name": "10 Wicked Wings® Combo",
       "description": "Wicked Wings® with 1 Regular Chips and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         "Combo"
       ],
@@ -18711,6 +18864,7 @@
       "bundleCode": "1060",
       "name": "SLIDER STACK CMB",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -18788,6 +18942,7 @@
       "bundleCode": "1028",
       "name": "1 Piece Combo",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -18865,6 +19020,7 @@
       "bundleCode": "8003",
       "name": " Family Feast® ",
       "description": "10 Pieces Original Recipe Chicken, 2 Large Chips, 1 Large Coleslaw, 1 Large Potato & Gravy and 1 1.25L Drink.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -18975,6 +19131,7 @@
       "bundleCode": "1038",
       "name": "KIDS POPCORN",
       "description": "Snack Popcorn Chicken with 1 Portion of Chips and 1 Bottle of Water.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -19052,6 +19209,7 @@
       "bundleCode": "7020",
       "name": "BUCKET FOR ONE",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -19164,6 +19322,7 @@
       "bundleCode": "1008",
       "name": "Original Crispy Burger Combo",
       "description": "Burger with 1 Regular Chips and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -19241,6 +19400,7 @@
       "bundleCode": "1007",
       "name": "Zinger Stacker® Burger Combo",
       "description": "Burger with 1 Regular Chips and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -19317,6 +19477,7 @@
       "bundleCode": "7098",
       "name": "Favourites Box Malls",
       "description": "1 Piece Original Recipe Chicken, 1 Wicked Wing, 1 Original Tender, 1 Snack Popcorn, 1 Slider, 1 Portion of Chips, 1 Regular Potato & Gravy and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -19452,6 +19613,7 @@
       "bundleCode": "7116",
       "name": "GO BUCKET 2WW",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -19518,6 +19680,7 @@
       "bundleCode": "7012",
       "name": "Lunch for Two",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -19619,6 +19782,7 @@
       "bundleCode": "8039",
       "name": "Value Feast",
       "description": "4 Pieces Original Recipe Chicken, 4 Original Tenders, 10 Nuggets, 1 Large Chips, 1 Large Potato & Gravy and 2 Dipping Sauces. ",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -19720,6 +19884,7 @@
       "bundleCode": "9064",
       "name": "Boneless Stacked Pack",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -19799,6 +19964,7 @@
       "bundleCode": "1044",
       "name": "Original Tower Combo",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -19864,6 +20030,7 @@
       "bundleCode": "4020",
       "name": "Original Crispy Bacon & Cheese Burger Box",
       "description": "Burger with 1 Piece Original Recipe Chicken, 1 Portion of Chips, 1 Regular Potato & Gravy and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -19964,6 +20131,7 @@
       "bundleCode": "1021",
       "name": "Snack Popcorn Chicken® Combo",
       "description": "Popcorn Chicken® with 1 Regular Chips and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -20041,6 +20209,7 @@
       "bundleCode": "1059",
       "name": "POP CRNCH BOWL CMB",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -20106,6 +20275,7 @@
       "bundleCode": "7015",
       "name": "Wicked Wings Lunch",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -20172,6 +20342,7 @@
       "bundleCode": "8036",
       "name": "Fried Night Footy Feast",
       "description": "6 Pieces Original Recipe Chicken, 8 Original Tenders, 6 Nuggets, 1 Regular Popcorn Chicken, 2 Large Chips and 1 Dipping Sauces. ",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -20285,6 +20456,7 @@
       "bundleCode": "1022",
       "name": "3 Piece Combo",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -20362,6 +20534,7 @@
       "bundleCode": "9055",
       "name": "$9.95 Wicked Double Meal",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -20439,6 +20612,7 @@
       "bundleCode": "7118",
       "name": "GO BUCK 3 NUGG",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -20505,6 +20679,7 @@
       "bundleCode": "9056",
       "name": "Kentucky Fest",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -20583,6 +20758,7 @@
       "bundleCode": "9068",
       "name": "6 Wicked Wings Reg Chips",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -20649,6 +20825,7 @@
       "bundleCode": "4008",
       "name": "Original Crunch Twister® Box",
       "description": "Twister with 1 Snack Popcorn, 1 Portion of Chips, 1 Regular Potato & Gravy and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -20749,6 +20926,7 @@
       "bundleCode": "7008",
       "name": "2 Piece & Mousse Combo",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -20838,6 +21016,7 @@
       "bundleCode": "9069",
       "name": "2 Sliders 1 Reg Chips",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -20916,6 +21095,7 @@
       "bundleCode": "4010",
       "name": "Original Crispy Burger Box",
       "description": "Burger with 1 Piece Original Recipe Chicken, 1 Portion of Chips, 1 Regular Potato & Gravy and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -21016,6 +21196,7 @@
       "bundleCode": "9066",
       "name": "$15 Kentucky Feaster",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -21107,6 +21288,7 @@
       "bundleCode": "1046",
       "name": "Triple Stacker Combo",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -21184,6 +21366,7 @@
       "bundleCode": "7120",
       "name": "GO BUCK HOT CRISPY",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -21251,6 +21434,7 @@
       "bundleCode": "9053",
       "name": "$8.95 Double Burger Meal",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -21340,6 +21524,7 @@
       "bundleCode": "7024",
       "name": "ZING & NUGS FOR 2",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -21463,6 +21648,7 @@
       "bundleCode": "1047",
       "name": "Zinger Chipster Combo",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -21539,6 +21725,7 @@
       "bundleCode": "3004",
       "name": "5 Original Tenders™ Combo",
       "description": "Original Tenders™ & Dipping Sauces with 1 Regular Chips and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -21616,6 +21803,7 @@
       "bundleCode": "8022",
       "name": "Giant Feast SA/WA",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -21739,6 +21927,7 @@
       "bundleCode": "1037",
       "name": "Kids Meal with Nuggets",
       "description": "4 Nuggets and 1 Dipping Sauce with 1 Portion of Chips and 1 Bottle of Water.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -21816,6 +22005,7 @@
       "bundleCode": "4003",
       "name": "Double Tender Box",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -21916,6 +22106,7 @@
       "bundleCode": "3003",
       "name": "3 Original Tenders™ Combo",
       "description": "Original Tenders™ & Dipping Sauces with 1 Regular Chips and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         "Combo"
       ],
@@ -21993,6 +22184,7 @@
       "bundleCode": "8014",
       "name": "Giant Feast",
       "description": "15 Pieces Original Recipe Chicken, 18 Nuggets, 3 Large Chips, 1 Large Potato & Gravy, 2 Regular Gravy, 1 1.25L Drink and 3 Dipping Sauces.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -22113,6 +22305,7 @@
       "bundleCode": "bundle.product.bonelessstkpk|12345",
       "name": "$10 Boneless Stack Pack",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -22192,6 +22385,7 @@
       "bundleCode": "1030",
       "name": "21 Piece Combo",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -22269,6 +22463,7 @@
       "bundleCode": "7011",
       "name": " 2 Zinger Burger, 2 Reg Chips, 2 Mousse ",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -22370,6 +22565,7 @@
       "bundleCode": "1027",
       "name": "6 Pieces Combo Hot & Crispy™ ",
       "description": "3 Pieces of Hot & Crispy with 1 Regular Chips and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         "Combo"
       ],
@@ -22446,6 +22642,7 @@
       "bundleCode": "4021",
       "name": "Original Crispy BBQ Bacon Stacker® Burger Box",
       "description": "Burger with 1 Piece Original Recipe Chicken, 1 Portion of Chips, 1 Regular Potato & Gravy and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         "Boxed Meal"
       ],
@@ -22546,6 +22743,7 @@
       "bundleCode": "1006",
       "name": "Original Crunch Twister® Combo",
       "description": "Twister with 1 Regular Chips and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -22623,6 +22821,7 @@
       "bundleCode": "7016",
       "name": "Wicked Wings Feast",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -22700,6 +22899,7 @@
       "bundleCode": "1078",
       "name": "6 Piece Combo",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -22777,6 +22977,7 @@
       "bundleCode": "7023",
       "name": "ZING CMB & OR",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -22866,6 +23067,7 @@
       "bundleCode": "4005",
       "name": "Zinger Stacker® Burger Box Hot & Crispy™ ",
       "description": "Burger with 2 Pieces of Hot & Crispy™ Boneless, 1 Portion of Chips, 1 Regular Potato & Gravy and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -22966,6 +23168,7 @@
       "bundleCode": "9043",
       "name": "GO BUCK & OC BURG r",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -23033,6 +23236,7 @@
       "bundleCode": "1024",
       "name": "3 Wicked Wings® Combo",
       "description": "Wicked Wings® with 1 Regular Chips and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         "Combo"
       ],
@@ -23109,6 +23313,7 @@
       "bundleCode": "9063",
       "name": "Zinger Bowl and 2 Sliders",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -23188,6 +23393,7 @@
       "bundleCode": "7010",
       "name": "2 Double Tender Burgers Combos",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -23299,6 +23505,7 @@
       "bundleCode": "1014",
       "name": "Regular Popcorn Chicken® Combo",
       "description": "Popcorn Chicken® with 1 Regular Chips and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -23375,6 +23582,7 @@
       "bundleCode": "4002",
       "name": "Zinger® Burger Box",
       "description": "Burger with 3 Wicked Wings®, 1 Portion of Chips, 1 Regular Potato & Gravy and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -23481,6 +23689,7 @@
       "bundleCode": "1005",
       "name": "Double Tender™ Burger Combo",
       "description": "Burger with 1 Regular Chips and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -23557,6 +23766,7 @@
       "bundleCode": "1032",
       "name": "Original Crispy Bacon & Cheese Burger Combo",
       "description": "Burger with 1 Regular Chips and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -23633,6 +23843,7 @@
       "bundleCode": "1048",
       "name": "Popcorn & Twister Combo",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -23710,6 +23921,7 @@
       "bundleCode": "1015",
       "name": "Maxi Popcorn Chicken® Combo",
       "description": "Popcorn Chicken® with 1 Regular Chips and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -23787,6 +23999,7 @@
       "bundleCode": "4009",
       "name": "Zinger® Crunch Twister® Box",
       "description": "Twister with 1 Snack Popcorn, 1 Portion of Chips, 1 Regular Potato & Gravy and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -23887,6 +24100,7 @@
       "bundleCode": "3001",
       "name": "6 Nugget Combo",
       "description": "Nuggets & Dipping Sauce with 1 Regular Chips and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         "Combo"
       ],
@@ -23964,6 +24178,7 @@
       "bundleCode": "7007",
       "name": "2 Sliders",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -24031,6 +24246,7 @@
       "bundleCode": "3002",
       "name": "10 Nugget Combo",
       "description": "Nuggets & Dipping Sauce with 1 Regular Chips and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         "Combo"
       ],
@@ -24108,6 +24324,7 @@
       "bundleCode": "1016",
       "name": "6 Wicked Wings® Combo",
       "description": "Wicked Wings® with 1 Regular Chips and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         "Combo"
       ],
@@ -24185,6 +24402,7 @@
       "bundleCode": "1010",
       "name": "Zinger® Crunch Burger™ Combo ",
       "description": "Burger with 1 Regular Chips and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -24261,6 +24479,7 @@
       "bundleCode": "4007",
       "name": "Zinger® Crunch Burger™ Box Hot & Crispy™ ",
       "description": "Burger with 2 Pieces of Hot & Crispy™ Boneless, 1 Portion of Chips, 1 Regular Potato & Gravy and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -24361,6 +24580,7 @@
       "bundleCode": "7006",
       "name": "Choc Mousse Snack Popcorn",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -24428,6 +24648,7 @@
       "bundleCode": "1031",
       "name": "Kids Meal with BBQ Slider",
       "description": "Slider with 1 Regular Coleslaw and 1 Bottled Water.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -24505,6 +24726,7 @@
       "bundleCode": "1026",
       "name": "3 Pieces Combo Hot & Crispy™ ",
       "description": "3 Pieces of Hot & Crispy with 1 Regular Chips and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         "Combo"
       ],
@@ -24581,6 +24803,7 @@
       "bundleCode": "8011",
       "name": "ADD ON : 2 Large Sides $6.95",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -24646,6 +24869,7 @@
       "bundleCode": "4004",
       "name": "Zinger® Burger Box Hot & Crispy™",
       "description": "Burger with 2 Pieces of Hot & Crispy™ Boneless, 1 Portion of Chips, 1 Regular Potato & Gravy and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         "Boxed Meal"
       ],
@@ -24746,6 +24970,7 @@
       "bundleCode": "1002",
       "name": "Zinger® Burger Combo",
       "description": "Burger with 1 Regular Chips and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -24822,6 +25047,7 @@
       "bundleCode": "4012",
       "name": "FILLETS OC BOX",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -24910,6 +25136,7 @@
       "bundleCode": "4036",
       "name": "Zinger Bacon & Cheese Box",
       "description": "Burger with 2 Pieces of Hot & Crispy™ Boneless, 1 Portion of Chips, 1 Regular Potato & Gravy and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -25010,6 +25237,7 @@
       "bundleCode": "7117",
       "name": "GO BUCK 1 TENDER",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -25076,6 +25304,7 @@
       "bundleCode": "1011",
       "name": "Zinger® Crunch Bowl Combo",
       "description": "Bowl with 1 Regular Chips and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -25153,6 +25382,7 @@
       "bundleCode": "1053",
       "name": "Zinger® Bacon & Cheese Burger Combo",
       "description": "Burger with 1 Regular Chips and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -25230,6 +25460,7 @@
       "bundleCode": "9054",
       "name": "Go Nugget Bucket Gravy",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -25296,6 +25527,7 @@
       "bundleCode": "7025",
       "name": "BONELESS PK FOR 2",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -25398,6 +25630,7 @@
       "bundleCode": "8052",
       "name": "Giant Feast SA SB",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -25521,6 +25754,7 @@
       "bundleCode": "8050",
       "name": "BONELESS DINNER",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -25623,6 +25857,7 @@
       "bundleCode": "9057",
       "name": "$15 Twister Meal for 2",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -25724,6 +25959,7 @@
       "bundleCode": "4026",
       "name": "Crispy Stacker Tower Box",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -25823,6 +26059,7 @@
       "bundleCode": "7009",
       "name": "20 Nuggets 2 Reg Chips",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -25890,6 +26127,7 @@
       "bundleCode": "6001",
       "name": "2 Piece Box",
       "description": "2 Pieces Original Recipe Chicken, 1 Dinner Roll, 1 Portion of Chips, 1 Regular Potato & Gravy and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -25990,6 +26228,7 @@
       "bundleCode": "1012",
       "name": "Original Tenders™ Crunch Bowl Combo",
       "description": "Bowl with 1 Regular Chips and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -26067,6 +26306,7 @@
       "bundleCode": "7013",
       "name": "Mates Lunch for Two",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -26180,6 +26420,7 @@
       "bundleCode": "7017",
       "name": "2 Zinger Burger Combos",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -26291,6 +26532,7 @@
       "bundleCode": "7001",
       "name": "Original Tenders™ Box",
       "description": "3 Tenders, 1 Snack Popcorn, 1 Portion of Chips, 1 Regular Potato & Gravy, 1 Aioli Dipping Sauce and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         "Boxed Meal"
       ],
@@ -26391,6 +26633,7 @@
       "bundleCode": "7026",
       "name": "2 for 1 LGE CHIPS",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -26458,6 +26701,7 @@
       "bundleCode": "8038",
       "name": "Burger Feast",
       "description": "4 Burgers, 6 Nuggets, 1 Regular Popcorn Chicken, 2 Large Chips and 1 Dipping Sauce.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -26607,6 +26851,7 @@
       "bundleCode": "9058",
       "name": "$15 Chicken Feaster",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -26698,6 +26943,7 @@
       "bundleCode": "9067",
       "name": "$3 Freeze & 3 Nuggets",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -26765,6 +27011,7 @@
       "bundleCode": "6002",
       "name": "3 Piece Box",
       "description": "3 Pieces Original Recipe Chicken, 1 Dinner Roll, 1 Portion of Chips, 1 Regular Potato & Gravy and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         "Boxed Meal"
       ],
@@ -26865,6 +27112,7 @@
       "bundleCode": "7115",
       "name": "GO BUCKET POP",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -26932,6 +27180,7 @@
       "bundleCode": "1033",
       "name": "Original Crispy BBQ Bacon Stacker® Burger Combo",
       "description": "Burger with 1 Regular Chips and 1 Regular Drink.",
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -27008,6 +27257,7 @@
       "bundleCode": "7022",
       "name": "OC BURGS CHIPS NUGS",
       "description": null,
+      "legalText": null,
       "brandTags": [
         
       ],
@@ -27126,6 +27376,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -27146,6 +27402,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -27164,6 +27426,12 @@
       "name": "Dipping Sauces",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -27221,6 +27489,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -27253,6 +27527,12 @@
       "name": "Boxed Chicken Choice - Snack Popcorn Chicken",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -27324,6 +27604,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -27342,6 +27628,12 @@
       "name": "10 Wicked Wings",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -27364,6 +27656,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -27382,6 +27680,12 @@
       "name": null,
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -27404,6 +27708,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -27424,6 +27734,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -27442,6 +27758,12 @@
       "name": "Regular Sides Choice",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -27478,6 +27800,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -27496,6 +27824,12 @@
       "name": null,
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -27546,6 +27880,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -27564,6 +27904,12 @@
       "name": null,
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -27586,6 +27932,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -27604,6 +27956,12 @@
       "name": "3 PC Original Recipe Choice",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -27626,6 +27984,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -27644,6 +28008,12 @@
       "name": null,
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -27666,6 +28036,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -27686,6 +28062,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -27704,6 +28086,12 @@
       "name": "Boxed 3rd Sides",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -27738,6 +28126,12 @@
       "name": "Sliders Choice",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -27781,6 +28175,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -27799,6 +28199,12 @@
       "name": "Combo 2nd Burger Choice",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -27891,6 +28297,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -27909,6 +28321,12 @@
       "name": "4 PC Choice",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -27931,6 +28349,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -27951,6 +28375,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -27969,6 +28399,12 @@
       "name": null,
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -28005,6 +28441,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -28023,6 +28465,12 @@
       "name": "3 PC H&C CMB",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -28045,6 +28493,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -28065,6 +28519,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -28083,6 +28543,12 @@
       "name": "Boxed Chicken Choice - 3 Wicked Wings",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -28154,6 +28620,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -28188,6 +28660,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -28206,6 +28684,12 @@
       "name": "Tenders",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -28235,6 +28719,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -28253,6 +28743,12 @@
       "name": "Kids Meal Sides",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -28282,6 +28778,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -28300,6 +28802,12 @@
       "name": null,
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -28322,6 +28830,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -28342,6 +28856,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -28360,6 +28880,12 @@
       "name": null,
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -28387,6 +28913,12 @@
       "name": "Kids Meal Drinks",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -28430,6 +28962,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -28448,6 +28986,12 @@
       "name": "SNK POPCORN CMB",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -28470,6 +29014,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -28488,6 +29038,12 @@
       "name": null,
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -28510,6 +29066,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -28530,6 +29092,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -28548,6 +29116,12 @@
       "name": null,
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -28575,6 +29149,12 @@
       "name": "Shared Meals 2nd Burger Choice",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -28667,6 +29247,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -28685,6 +29271,12 @@
       "name": null,
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -28707,6 +29299,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -28725,6 +29323,12 @@
       "name": "Combo 2nd Drinks choice",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -28768,6 +29372,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -28786,6 +29396,12 @@
       "name": "Shared Meals 3rd Burger Choice",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -28878,6 +29494,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -28912,6 +29534,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -28930,6 +29558,12 @@
       "name": "5 Original Tenders",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -28952,6 +29586,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -28970,6 +29610,12 @@
       "name": null,
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -28992,6 +29638,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -29010,6 +29662,12 @@
       "name": "15 PC Choice",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -29032,6 +29690,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -29050,6 +29714,12 @@
       "name": null,
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -29093,6 +29763,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -29118,6 +29794,12 @@
       "name": "Kids Meal Slider choices",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -29154,6 +29836,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -29181,6 +29869,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -29199,6 +29893,12 @@
       "name": null,
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -29221,6 +29921,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -29239,6 +29945,12 @@
       "name": "Shared Meals 3rd  Side choice",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -29266,6 +29978,12 @@
       "name": "Combo Drinks",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -29309,6 +30027,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -29329,6 +30053,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -29347,6 +30077,12 @@
       "name": null,
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -29423,6 +30159,12 @@
       "name": "Shared Meals 4th Burger Choice",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -29515,6 +30257,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -29605,6 +30353,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -29637,6 +30391,12 @@
       "name": "Combo 1st Drinks choice",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -29678,6 +30438,12 @@
       "name": null,
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -29749,6 +30515,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -29781,6 +30553,12 @@
       "name": "Combo 1st Burger Choice",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -29873,6 +30651,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -29893,6 +30677,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -29911,6 +30701,12 @@
       "name": "Combo 2nd Sides Choice",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -29947,6 +30743,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -29981,6 +30783,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -29999,6 +30807,12 @@
       "name": "Original Crispy BBQ Bacon Stacker® Burger Choice",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -30021,6 +30835,12 @@
       "brandTags": [
         
       ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
+        
+      ],
       "products": [
         
       ],
@@ -30039,6 +30859,12 @@
       "name": "Boxed Chicken Choice - 1 PC Original Tender",
       "isFixedPriceAllocation": false,
       "brandTags": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "privateMetafields": [
         
       ],
       "products": [
@@ -30132,6 +30958,11 @@
           "bundleCode": "1047"
         }
       ],
+      "visibility": {
+        "daypartCodes": [
+          
+        ]
+      },
       "subcategories": [
         
       ]
@@ -30155,6 +30986,11 @@
       "items": [
         
       ],
+      "visibility": {
+        "daypartCodes": [
+          
+        ]
+      },
       "subcategories": [
         
       ]
@@ -30225,6 +31061,11 @@
           "bundleCode": "1011"
         }
       ],
+      "visibility": {
+        "daypartCodes": [
+          
+        ]
+      },
       "subcategories": [
         
       ]
@@ -30313,6 +31154,11 @@
           "bundleCode": "1002"
         }
       ],
+      "visibility": {
+        "daypartCodes": [
+          
+        ]
+      },
       "subcategories": [
         
       ]
@@ -30350,6 +31196,11 @@
           "bundleCode": "8036"
         }
       ],
+      "visibility": {
+        "daypartCodes": [
+          
+        ]
+      },
       "subcategories": [
         
       ]
@@ -30411,6 +31262,11 @@
           "bundleCode": "4002"
         }
       ],
+      "visibility": {
+        "daypartCodes": [
+          
+        ]
+      },
       "subcategories": [
         
       ]
@@ -30463,6 +31319,11 @@
           "productCode": "100250"
         }
       ],
+      "visibility": {
+        "daypartCodes": [
+          
+        ]
+      },
       "subcategories": [
         
       ]
@@ -30500,6 +31361,11 @@
           "productCode": "136046"
         }
       ],
+      "visibility": {
+        "daypartCodes": [
+          
+        ]
+      },
       "subcategories": [
         
       ]
@@ -30552,6 +31418,11 @@
           "productCode": "141126"
         }
       ],
+      "visibility": {
+        "daypartCodes": [
+          
+        ]
+      },
       "subcategories": [
         
       ]
@@ -30640,6 +31511,11 @@
           "productCode": "PROD_AUS_01"
         }
       ],
+      "visibility": {
+        "daypartCodes": [
+          
+        ]
+      },
       "subcategories": [
         
       ]
@@ -35920,6 +36796,47 @@
     }
   ],
   "dayparts": [
-    
+    {
+      "schedule": [
+        {
+          "occasion": "DRIVE_THRU",
+          "timeFrame": {
+            "startDate": null,
+            "endDate": null,
+            "blackout": false,
+            "days": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "duration": "02:00:00",
+            "intervalStartTime": "12:00:00",
+            "weight": 0
+          }
+        },
+        {
+          "occasion": "CARRYOUT",
+          "timeFrame": {
+            "startDate": null,
+            "endDate": null,
+            "blackout": false,
+            "days": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "duration": "02:00:00",
+            "intervalStartTime": "12:00:00",
+            "weight": 0
+          }
+        }
+      ],
+      "daypartCode": "Weekday Lunch",
+      "name": "Weekday Lunch"
+    }
   ]
 }

@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>943,1621</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1239,1612</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>TakeScreenshot_2</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -102,7 +102,7 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Capture a screenshot, log its name and location and save it with the PNG extension.&#xA;If no specific filepath is passed as argument, it saves the image in the folder specified by in_Folder." DisplayName="Take and Save Screenshot" sap:VirtualizedContainerService.HintSize="530,1556" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Capture a screenshot, log its name and location and save it with the PNG extension.&#xA;If no specific filepath is passed as argument, it saves the image in the folder specified by in_Folder." DisplayName="Take and Save Screenshot" sap:VirtualizedContainerService.HintSize="530,1547" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:Image" Name="Screenshot" />
       <Variable x:TypeArguments="si:FileInfo" Name="ScreenshotFileInfo" />
@@ -127,9 +127,9 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:TakeScreenshot>
-    <If Condition="[String.IsNullOrEmpty(io_FilePath)]" DisplayName="If no screenshot filepath" sap:VirtualizedContainerService.HintSize="468,387" sap2010:WorkflowViewState.IdRef="If_3">
+    <If Condition="[String.IsNullOrEmpty(io_FilePath)]" DisplayName="If no screenshot filepath" sap:VirtualizedContainerService.HintSize="468,377" sap2010:WorkflowViewState.IdRef="If_3">
       <If.Then>
-        <Assign DisplayName="Initialize screenshot filepath" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="Assign_5">
+        <Assign DisplayName="Initialize screenshot filepath" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_5">
           <Assign.To>
             <OutArgument x:TypeArguments="x:String">[io_FilePath]</OutArgument>
           </Assign.To>
@@ -138,8 +138,17 @@
           </Assign.Value>
         </Assign>
       </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
     </If>
-    <Assign DisplayName="Initialize ScreenshotFileInfo" sap:VirtualizedContainerService.HintSize="468,113" sap2010:WorkflowViewState.IdRef="Assign_6">
+    <Assign DisplayName="Initialize ScreenshotFileInfo" sap:VirtualizedContainerService.HintSize="468,114" sap2010:WorkflowViewState.IdRef="Assign_6">
       <Assign.To>
         <OutArgument x:TypeArguments="si:FileInfo">[ScreenshotFileInfo]</OutArgument>
       </Assign.To>
@@ -180,9 +189,7 @@
           <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="system exception" DisplayName="Send SMTP Mail Message" Email="mkr7550@yum.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="354,169" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Password="welcometoKFC!123m" Port="587" SecureConnection="Auto" Server="smtp.office365.com" Subject="CFC Automation Exception" To="mkr7550@yum.com">
             <ui:SendMail.Files>
               <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                <InArgument x:TypeArguments="x:String">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="io_FilePath" />
-                </InArgument>
+                <InArgument x:TypeArguments="x:String">[io_FilePath]</InArgument>
               </scg:List>
             </ui:SendMail.Files>
           </ui:SendMail>

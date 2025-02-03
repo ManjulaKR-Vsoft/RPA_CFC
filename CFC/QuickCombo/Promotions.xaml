@@ -5,11 +5,12 @@
     <x:Property Name="bundles_Array" Type="InArgument(njl:JArray)" />
     <x:Property Name="bundleChoice_Array" Type="InArgument(njl:JArray)" />
     <x:Property Name="dtCFC_Promo" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="Log_Path" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1239,8048</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1239,8525</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Promotions_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -145,7 +146,7 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Promotions" sap:VirtualizedContainerService.HintSize="992,7983" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Promotions" sap:VirtualizedContainerService.HintSize="992,8460" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtBundles" />
       <Variable x:TypeArguments="s:String[]" Default="[{&quot;Burger Feast&quot;, &quot;Original Crispy BBQ Bacon Stacker® Burger Combo&quot;}]" Name="demoBundles" />
@@ -156,6 +157,7 @@
       <Variable x:TypeArguments="sd:DataTable" Name="dtBundleLogs" />
       <Variable x:TypeArguments="x:String" Name="PromotionUniqueID" />
       <Variable x:TypeArguments="x:String" Name="Price" />
+      <Variable x:TypeArguments="x:String" Name="File_Name" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -165,12 +167,13 @@
     <ui:BuildDataTable DataTable="[dtBundles]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="930,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;BundleCode&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Name&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
     <ui:BuildDataTable DataTable="[dtNewBundles]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="930,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;PromotionID&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;PromotionName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
     <ui:BuildDataTable DataTable="[dtBundleLogs]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="930,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_3" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Action&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;POSNumber&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Name&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Price&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Status&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="930,165" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="AeMShell.exe" />
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Login - Invoke Workflow File (CFC\Login.xaml)" sap:VirtualizedContainerService.HintSize="930,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="CFC\Login.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="930,57" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="930,84" sap2010:WorkflowViewState.IdRef="CommentOut_2">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,136" sap2010:WorkflowViewState.IdRef="Sequence_10">
           <sap:WorkflowViewStateService.ViewState>
@@ -235,7 +238,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <If Condition="[bundles_Array.Count &gt;= 1]" sap:VirtualizedContainerService.HintSize="930,6365" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[bundles_Array.Count &gt;= 1]" sap:VirtualizedContainerService.HintSize="930,6533" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -243,26 +246,26 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="896,5943" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="896,6111" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Aloha Configuration Center : Yum Restaurants Australia UAT" sap:VirtualizedContainerService.HintSize="834,5010" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="IfNotOpen" ScopeGuid="48b3ef0e-398d-41f3-85e7-c75f62ac40b9" Version="V2">
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Aloha Configuration Center : Yum Restaurants Australia UAT" sap:VirtualizedContainerService.HintSize="834,5064" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="IfNotOpen" ScopeGuid="48b3ef0e-398d-41f3-85e7-c75f62ac40b9" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="800,4687" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="800,4741" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="738,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="738,84" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                     <ui:CommentOut.Body>
                       <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,754" sap2010:WorkflowViewState.IdRef="Sequence_5">
                         <sap:WorkflowViewStateService.ViewState>
@@ -370,7 +373,7 @@
                     </uix:NClick.VerifyOptions>
                   </uix:NClick>
                   <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="738,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
-                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="738,57" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="738,84" sap2010:WorkflowViewState.IdRef="CommentOut_7">
                     <ui:CommentOut.Body>
                       <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,754" sap2010:WorkflowViewState.IdRef="Sequence_16">
                         <sap:WorkflowViewStateService.ViewState>
@@ -732,15 +735,23 @@
             </sap:WorkflowViewStateService.ViewState>
           </uix:NApplicationCard>
           <ui:AppendWriteCsvFile PathResource="{x:Null}" AddHeaders="True" CsvAction="Write" DataTable="[dtNewBundles]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Write CSV" FilePath="Reports\Combos\NewBundlesCreated.csv" sap:VirtualizedContainerService.HintSize="834,234" sap2010:WorkflowViewState.IdRef="AppendWriteCsvFile_1" ShouldQuote="True" />
-          <Sequence DisplayName="Wrtite Logs" sap:VirtualizedContainerService.HintSize="834,611" sap2010:WorkflowViewState.IdRef="Sequence_30">
+          <Sequence DisplayName="Wrtite Logs" sap:VirtualizedContainerService.HintSize="834,725" sap2010:WorkflowViewState.IdRef="Sequence_30">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:CopyFile ContinueOnError="{x:Null}" Destination="Reports\Logs" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="388,186" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="Data\Bundles_log_Template.xlsx" />
-            <ui:RenameFileX DisplayName="Rename File" FilePath="[&quot;Reports\Logs\&quot;+&quot;Bundles_log_Template.xlsx&quot;]" sap:VirtualizedContainerService.HintSize="388,175" sap2010:WorkflowViewState.IdRef="RenameFileX_1" KeepExtension="True" NewName="Bundles_Log.xlsx" />
-            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dtBundleLogs]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,139" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="[&quot;Reports\Logs\&quot;+&quot;Bundles_Log.xlsx&quot;]" />
+            <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[File_Name]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">["Bundles_Logs_"+DateTime.Now.ToString("ddMMyyyy_HHmmss")+".xlsx"]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:CopyFile ContinueOnError="{x:Null}" Destination="Reports\Logs" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="434,186" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="Data\Bundles_log_Template.xlsx" />
+            <ui:RenameFileX DisplayName="Rename File" FilePath="[&quot;Reports\Logs\&quot;+&quot;Bundles_log_Template.xlsx&quot;]" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="RenameFileX_1" KeepExtension="True" NewName="[Log_Path+File_Name]" />
+            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dtBundleLogs]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="[Log_Path+File_Name]" />
           </Sequence>
         </Sequence>
       </If.Then>
@@ -755,44 +766,92 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[dtBundleLogs.Rows.Count &gt;= 1]" sap:VirtualizedContainerService.HintSize="930,993" sap2010:WorkflowViewState.IdRef="If_5">
-      <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,729" sap2010:WorkflowViewState.IdRef="Sequence_28">
-          <Sequence.Variables>
-            <Variable x:TypeArguments="x:String" Name="SMTP_Username" />
-            <Variable x:TypeArguments="ss:SecureString" Name="SMTP_Password" />
-            <Variable x:TypeArguments="x:String" Name="Report_Receivers" />
-          </Sequence.Variables>
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Report_Receivers" CacheStrategy="None" DisplayName="Get Asset" FolderPath="manjula.raju@yum.com's workspace" sap:VirtualizedContainerService.HintSize="354,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
-            <ui:GetRobotAsset.Value>
-              <OutArgument x:TypeArguments="x:String">[Report_Receivers]</OutArgument>
-            </ui:GetRobotAsset.Value>
-          </ui:GetRobotAsset>
-          <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="SMTP_Credentials" CacheStrategy="None" DisplayName="Get Credential" FolderPath="manjula.raju@yum.com's workspace" sap:VirtualizedContainerService.HintSize="354,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[SMTP_Password]" Username="[SMTP_Username]" />
-          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="354,122" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[Report_Receivers]" />
-          <ui:SendMail Bcc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="&lt;p&gt;Dear Team,&lt;/p&gt;&lt;p&gt;Please find attached the log of all created and exsiting bundles of Yum in CFC.&lt;/p&gt;&lt;p&gt;Thanks&lt;br&gt;RPA Team&lt;/p&gt;" Cc="mkadagarasa@vsoftconsulting.com" DisplayName="Send SMTP Mail Message" Email="[SMTP_Username]" EnableSSL="True" From="prospectsource@vsoftconsulting.com" sap:VirtualizedContainerService.HintSize="354,169" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="True" Name="RPA CFC Automation" Port="587" SecureConnection="Auto" SecurePassword="[SMTP_Password]" Server="smtp.office365.com" Subject="Bundles Logger" To="[Report_Receivers]">
-            <ui:SendMail.Files>
-              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                <InArgument x:TypeArguments="x:String">Reports\Logs\Bundles_Log.xlsx</InArgument>
-              </scg:List>
-            </ui:SendMail.Files>
-          </ui:SendMail>
-        </Sequence>
-      </If.Then>
-      <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_29">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-        </Sequence>
-      </If.Else>
-    </If>
+    <Sequence DisplayName="Send Email Bundle Logs" sap:VirtualizedContainerService.HintSize="930,1110" sap2010:WorkflowViewState.IdRef="Sequence_33">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If Condition="[dtBundleLogs.Rows.Count &gt;= 1]" sap:VirtualizedContainerService.HintSize="548,999" sap2010:WorkflowViewState.IdRef="If_5">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If.Then>
+          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="514,735" sap2010:WorkflowViewState.IdRef="Sequence_28">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="SMTP_Username" />
+              <Variable x:TypeArguments="ss:SecureString" Name="SMTP_Password" />
+              <Variable x:TypeArguments="x:String" Name="Report_Receivers" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,84" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,551" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Report_Receivers" CacheStrategy="None" DisplayName="Get Asset" FolderPath="manjula.raju@yum.com's workspace" sap:VirtualizedContainerService.HintSize="354,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+                    <ui:GetRobotAsset.Value>
+                      <OutArgument x:TypeArguments="x:String">[Report_Receivers]</OutArgument>
+                    </ui:GetRobotAsset.Value>
+                  </ui:GetRobotAsset>
+                  <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="SMTP_Credentials" CacheStrategy="None" DisplayName="Get Credential" FolderPath="manjula.raju@yum.com's workspace" sap:VirtualizedContainerService.HintSize="354,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[SMTP_Password]" Username="[SMTP_Username]" />
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[Report_Receivers]" />
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="EmailWithAttachment - Invoke Workflow File (Configuration\EmailWithAttachment.xaml)" sap:VirtualizedContainerService.HintSize="452,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="Configuration\EmailWithAttachment.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="Email_Subject">Bundles Logger</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Email_Body">&lt;p&gt;Dear Team,&lt;/p&gt;&lt;p&gt;Please find attached the log of all created and exsiting bundles of Yum in CFC.&lt;/p&gt;&lt;p&gt;Thanks&lt;br&gt;RPA Team&lt;/p&gt;</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Log_File_Path">[Log_Path+File_Name]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,359" sap2010:WorkflowViewState.IdRef="CommentOut_10">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,257" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:SendMail Bcc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="&lt;p&gt;Dear Team,&lt;/p&gt;&lt;p&gt;Please find attached the log of all created and exsiting bundles of Yum in CFC.&lt;/p&gt;&lt;p&gt;Thanks&lt;br&gt;RPA Team&lt;/p&gt;" Cc="mkadagarasa@vsoftconsulting.com" DisplayName="Send SMTP Mail Message" Email="[SMTP_Username]" EnableSSL="True" From="prospectsource@vsoftconsulting.com" sap:VirtualizedContainerService.HintSize="354,169" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="True" Name="RPA CFC Automation" Port="587" SecureConnection="Auto" SecurePassword="[SMTP_Password]" Server="smtp.office365.com" Subject="Bundles Logger" To="[Report_Receivers]">
+                    <ui:SendMail.Files>
+                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                        <InArgument x:TypeArguments="x:String">Reports\Logs\Bundles_Log.xlsx</InArgument>
+                      </scg:List>
+                    </ui:SendMail.Files>
+                  </ui:SendMail>
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_29">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </If.Else>
+      </If>
+    </Sequence>
   </Sequence>
 </Activity>
