@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>959,3851</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1239,3626</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Edit_ModifierGroup_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -134,7 +134,7 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Edit_ModifierGroup" sap:VirtualizedContainerService.HintSize="768,3786" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Edit_ModifierGroup" sap:VirtualizedContainerService.HintSize="1282,3440" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtTestData" />
     </Sequence.Variables>
@@ -143,8 +143,25 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BuildDataTable DataTable="[dtTestData]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="706,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;MD_ID&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;MD_Name&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;MD_ID&gt;16060&lt;/MD_ID&gt;&#xA;    &lt;MD_Name&gt;Test1&lt;/MD_Name&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;MD_ID&gt;16065&lt;/MD_ID&gt;&#xA;    &lt;MD_Name&gt;Test1&lt;/MD_Name&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;MD_ID&gt;16066&lt;/MD_ID&gt;&#xA;    &lt;MD_Name&gt;Test1&lt;/MD_Name&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;MD_ID&gt;16067&lt;/MD_ID&gt;&#xA;    &lt;MD_Name&gt;Test1&lt;/MD_Name&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;MD_ID&gt;16068&lt;/MD_ID&gt;&#xA;    &lt;MD_Name&gt;Test1&lt;/MD_Name&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="706,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="Sequence_19">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:BuildDataTable DataTable="[dtTestData]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="354,83" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;MD_ID&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;MD_Name&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;MD_ID&gt;16060&lt;/MD_ID&gt;&#xA;    &lt;MD_Name&gt;Test1&lt;/MD_Name&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;MD_ID&gt;16065&lt;/MD_ID&gt;&#xA;    &lt;MD_Name&gt;Test1&lt;/MD_Name&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;MD_ID&gt;16066&lt;/MD_ID&gt;&#xA;    &lt;MD_Name&gt;Test1&lt;/MD_Name&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;MD_ID&gt;16067&lt;/MD_ID&gt;&#xA;    &lt;MD_Name&gt;Test1&lt;/MD_Name&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;MD_ID&gt;16068&lt;/MD_ID&gt;&#xA;    &lt;MD_Name&gt;Test1&lt;/MD_Name&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,136" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
@@ -210,19 +227,19 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Aloha Configuration Center : Yum Restaurants Australia UAT" sap:VirtualizedContainerService.HintSize="706,3549" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="IfNotOpen" ScopeGuid="339e3462-a0df-4abd-8c2f-9cb81065ea9a" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Aloha Configuration Center : Yum Restaurants Australia UAT" sap:VirtualizedContainerService.HintSize="518,3303" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="IfNotOpen" ScopeGuid="339e3462-a0df-4abd-8c2f-9cb81065ea9a" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="672,3235" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484,2989" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="610,57" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="CommentOut_3">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,496" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <sap:WorkflowViewStateService.ViewState>
@@ -305,14 +322,14 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <Sequence sap:VirtualizedContainerService.HintSize="610,3038" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <Sequence sap:VirtualizedContainerService.HintSize="450,2820" sap2010:WorkflowViewState.IdRef="Sequence_12">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '16060 5'" sap:VirtualizedContainerService.HintSize="548,225" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="339e3462-a0df-4abd-8c2f-9cb81065ea9a" Version="V3">
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '16060 5'" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="339e3462-a0df-4abd-8c2f-9cb81065ea9a" Version="V3">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable CVScreenId="adc06077-2662-45e0-a9fd-8365c5fb0cb7" CvElementArea="287, 186, 621, 20" CvType="InputBox" DesignTimeRectangle="290, 186, 615, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;wnd ctrlname='ConfigApplet' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='acmLookupEditPanel' /&gt;&lt;ctrl role='editable text' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='ConfigApplet' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='acmLookupEditPanel' /&gt;&lt;ctrl role='editable text' automationid='' /&gt;" Guid="9ed624f4-83c0-4588-8edf-6c473d1692b0" InformativeScreenshot="fab7ceea59cafb3db5d0fe9d71683f8d.png" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' ctrlname='MainForm' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                 </uix:NClick.Target>
@@ -330,7 +347,7 @@
                   </uix:VerifyExecutionOptions>
                 </uix:NClick.VerifyOptions>
               </uix:NClick>
-              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Drag a'" sap:VirtualizedContainerService.HintSize="548,225" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="339e3462-a0df-4abd-8c2f-9cb81065ea9a" Version="V3">
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Drag a'" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="339e3462-a0df-4abd-8c2f-9cb81065ea9a" Version="V3">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable CVScreenId="82281d7a-695e-4f0f-bc83-310a366d6df7" CvTextArea="6, 13, 250, 14" CvTextArgument="Drag a column header here to group by that column" CvType="Text" DesignTimeRectangle="6, 13, 250, 14" DesignTimeScaleFactor="1" ElementType="Text" Guid="d735b3ce-5451-40f2-aba7-9202e4c5b7dc" InformativeScreenshot="e7e02ebb07f45dc61d46805a6d8c0e1d.png" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' cls='WindowsForms10.Window.*' idx='*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive" />
                 </uix:NClick.Target>
@@ -348,8 +365,8 @@
                   </uix:VerifyExecutionOptions>
                 </uix:NClick.VerifyOptions>
               </uix:NClick>
-              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="548,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
-              <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="548,247" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(ctrl)]f[u(ctrl)][u(hk)]" Version="V3">
+              <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="416,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
+              <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="416,247" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(ctrl)]f[u(ctrl)][u(hk)]" Version="V3">
                 <uix:NKeyboardShortcuts.VerifyOptions>
                   <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
                     <uix:VerifyExecutionOptions.Retry>
@@ -361,8 +378,8 @@
                   </uix:VerifyExecutionOptions>
                 </uix:NKeyboardShortcuts.VerifyOptions>
               </uix:NKeyboardShortcuts>
-              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="548,122" sap2010:WorkflowViewState.IdRef="Delay_2" />
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Enter text to search...'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="548,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="339e3462-a0df-4abd-8c2f-9cb81065ea9a" Text="[MD_ID+&quot;[k(enter)]&quot;]" Version="V3">
+              <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="416,122" sap2010:WorkflowViewState.IdRef="Delay_2" />
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Enter text to search...'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="339e3462-a0df-4abd-8c2f-9cb81065ea9a" Text="[MD_ID+&quot;[k(enter)]&quot;]" Version="V3">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable CVScreenId="056b5e43-c701-4b56-a8bc-73169f9c33d2" CvElementArea="39, 15, 352, 22" CvType="InputBox" DesignTimeRectangle="42, 19, 327, 14" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;wnd ctrlname='m_GridPopupContainerControl' /&gt;&lt;wnd ctrlname='m_HorizontalGrid' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;wnd ctrlname='m_GridPanel' /&gt;&lt;wnd ctrlname='m_GridControl' /&gt;&lt;wnd ctrlname='FindControl' /&gt;&lt;wnd ctrlname='layoutControl1' /&gt;&lt;wnd ctrlname='teFind' /&gt;&lt;wnd cls='WindowsForms10.EDIT.*' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='m_GridPopupContainerControl' /&gt;&lt;wnd ctrlname='m_HorizontalGrid' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;wnd ctrlname='m_GridPanel' /&gt;&lt;wnd ctrlname='m_GridControl' /&gt;&lt;wnd ctrlname='FindControl' /&gt;&lt;wnd ctrlname='layoutControl1' /&gt;&lt;wnd ctrlname='teFind' /&gt;&lt;wnd cls='WindowsForms10.EDIT.*' /&gt;" Guid="8e89e364-49b3-49ae-ab8a-e0b7e206c593" InformativeScreenshot="202c896db2b13fc06817fb96106c0b6b.png" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' cls='WindowsForms10.Window.*' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                 </uix:NTypeInto.Target>
@@ -377,8 +394,8 @@
                   </uix:VerifyExecutionTypeIntoOptions>
                 </uix:NTypeInto.VerifyOptions>
               </uix:NTypeInto>
-              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="548,122" sap2010:WorkflowViewState.IdRef="Delay_5" />
-              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '16060'" sap:VirtualizedContainerService.HintSize="548,225" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="339e3462-a0df-4abd-8c2f-9cb81065ea9a" Version="V3">
+              <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="416,122" sap2010:WorkflowViewState.IdRef="Delay_5" />
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '16060'" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="339e3462-a0df-4abd-8c2f-9cb81065ea9a" Version="V3">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable CVScreenId="d55d5846-4071-45ae-b355-40c9df765376" CvTextArea="120, 108, 33, 11" CvTextArgument="16060" CvType="Text" DesignTimeRectangle="20, 105, 134, 19" DesignTimeScaleFactor="1" ElementType="Cell" FullSelectorArgument="&lt;wnd ctrlname='m_GridPopupContainerControl' /&gt;&lt;wnd ctrlname='m_HorizontalGrid' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;wnd ctrlname='m_GridPanel' /&gt;&lt;wnd ctrlname='m_GridControl' /&gt;&lt;ctrl name='Row 1' role='row' /&gt;&lt;ctrl name='Number row0' role='cell' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='m_GridPopupContainerControl' /&gt;&lt;wnd ctrlname='m_HorizontalGrid' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;wnd ctrlname='m_GridPanel' /&gt;&lt;wnd ctrlname='m_GridControl' /&gt;&lt;ctrl name='Row 1' role='row' /&gt;&lt;ctrl name='Number row0' role='cell' automationid='' /&gt;" Guid="c90269b8-346b-4be1-a2e7-d4faea9681b3" InformativeScreenshot="0f3a497324fb4309170aede032dd9bd7.png" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' cls='WindowsForms10.Window.*' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                 </uix:NClick.Target>
@@ -393,8 +410,8 @@
                   </uix:VerifyExecutionOptions>
                 </uix:NClick.VerifyOptions>
               </uix:NClick>
-              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="548,122" sap2010:WorkflowViewState.IdRef="Delay_6" />
-              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Modifier'" sap:VirtualizedContainerService.HintSize="548,225" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="339e3462-a0df-4abd-8c2f-9cb81065ea9a" Version="V3">
+              <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="416,122" sap2010:WorkflowViewState.IdRef="Delay_6" />
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Modifier'" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="339e3462-a0df-4abd-8c2f-9cb81065ea9a" Version="V3">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable CVScreenId="29776581-c99a-418d-9c25-ff9dd713cf3f" CvElementArea="165, 213, 51, 21" CvTextArea="170, 216, 40, 12" CvTextArgument="Modifier" CvType="Button" DesignTimeRectangle="165, 213, 51, 20" DesignTimeScaleFactor="1" ElementType="TabPage" FullSelectorArgument="&lt;wnd ctrlname='ConfigApplet' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Modifier Groups' /&gt;&lt;ctrl name='Tab Control' role='page tab list' /&gt;&lt;ctrl name='Modifier' role='page tab' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='ConfigApplet' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Modifier Groups' /&gt;&lt;ctrl name='Tab Control' role='page tab list' /&gt;&lt;ctrl name='Modifier' role='page tab' automationid='' check:text='Modifier' /&gt;" Guid="e647d244-55da-4bda-8921-a99ad783ae7a" InformativeScreenshot="a22ef25a804971e0c77d216b210fe295.png" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' ctrlname='MainForm' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                 </uix:NClick.Target>
@@ -412,7 +429,7 @@
                   </uix:VerifyExecutionOptions>
                 </uix:NClick.VerifyOptions>
               </uix:NClick>
-              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Edit'" sap:VirtualizedContainerService.HintSize="548,225" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="339e3462-a0df-4abd-8c2f-9cb81065ea9a" Version="V3">
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Edit'" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="339e3462-a0df-4abd-8c2f-9cb81065ea9a" Version="V3">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable CVScreenId="af8aa114-acd3-4ea7-8528-a7aad6dee56a" CvElementArea="934, 249, 77, 25" CvTextArea="957, 254, 23, 13" CvTextArgument="Edit" CvType="Button" DesignTimeRectangle="934, 249, 76, 24" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='commandPanel' /&gt;&lt;wnd ctrlname='buttonFlowLayout' /&gt;&lt;wnd ctrlname='buttonEdit' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='commandPanel' /&gt;&lt;wnd ctrlname='buttonFlowLayout' /&gt;&lt;wnd ctrlname='buttonEdit' check:text='Edit' /&gt;" Guid="e7960056-de26-4ee7-a6b3-04d47f0131af" InformativeScreenshot="abe60473cf4abbe89fff1840cc3f97f9.png" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' ctrlname='MainForm' /&gt;&lt;wnd ctrlname='ConfigApplet' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                 </uix:NClick.Target>
@@ -427,8 +444,8 @@
                   </uix:VerifyExecutionOptions>
                 </uix:NClick.VerifyOptions>
               </uix:NClick>
-              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="548,122" sap2010:WorkflowViewState.IdRef="Delay_7" />
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Short name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="548,286" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="339e3462-a0df-4abd-8c2f-9cb81065ea9a" Text="[MD_Name+&quot;[k(enter)]&quot;]" Version="V3">
+              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="Delay_7" />
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Short name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,286" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="339e3462-a0df-4abd-8c2f-9cb81065ea9a" Text="[MD_Name+&quot;[k(enter)]&quot;]" Version="V3">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable CVScreenId="abd9307c-41b6-4365-b246-640960f7df39" CvTextArea="614, 327, 75, 12" CvTextArgument="6 PC Hot &amp; Cris" CvType="Text" DesignTimeRectangle="613, 325, 303, 19" DesignTimeScaleFactor="1" ElementType="Cell" FullSelectorArgument="&lt;wnd ctrlname='ConfigApplet' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Modifier Groups' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Tab Control' /&gt;&lt;wnd ctrlname='TabPageFieldGroup1' /&gt;&lt;wnd ctrlname='AeMSplitterPanel' /&gt;&lt;wnd ctrlname='splitContainerControl' /&gt;&lt;wnd ctrlname='AeMVerticalGrid' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;ctrl name='Record 0' role='row' /&gt;&lt;ctrl name='Short name Record 0' role='cell' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='ConfigApplet' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Modifier Groups' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Tab Control' /&gt;&lt;wnd ctrlname='TabPageFieldGroup1' /&gt;&lt;wnd ctrlname='AeMSplitterPanel' /&gt;&lt;wnd ctrlname='splitContainerControl' /&gt;&lt;wnd ctrlname='AeMVerticalGrid' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;ctrl name='Record 0' role='row' /&gt;&lt;ctrl name='Short name Record 0' role='cell' automationid='' /&gt;" Guid="46716471-d5c7-4b13-969b-472a3ecac8e1" InformativeScreenshot="8ee710f778ee3938f0da6a7967c65d36.png" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' ctrlname='MainForm' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                     <uix:TargetAnchorable.Anchors>
@@ -458,8 +475,8 @@
                   </uix:VerifyExecutionTypeIntoOptions>
                 </uix:NTypeInto.VerifyOptions>
               </uix:NTypeInto>
-              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="548,122" sap2010:WorkflowViewState.IdRef="Delay_8" />
-              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="548,240" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="Delay_8" />
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,50" sap2010:WorkflowViewState.IdRef="CommentOut_6">
                 <ui:CommentOut.Body>
                   <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,136" sap2010:WorkflowViewState.IdRef="Sequence_18">
                     <sap:WorkflowViewStateService.ViewState>
@@ -622,9 +639,15 @@
                     </Sequence>
                   </Sequence>
                 </ui:CommentOut.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
               </ui:CommentOut>
             </Sequence>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="610,50" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="450,50" sap2010:WorkflowViewState.IdRef="CommentOut_4">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,378" sap2010:WorkflowViewState.IdRef="Sequence_13">
                   <sap:WorkflowViewStateService.ViewState>

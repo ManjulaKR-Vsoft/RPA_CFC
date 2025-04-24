@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Practice" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1239,5642" sap2010:WorkflowViewState.IdRef="Practice_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:uast="clr-namespace:UiPath.Activities.System.Text;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Practice" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1239,5642" sap2010:WorkflowViewState.IdRef="Practice_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:uast="clr-namespace:UiPath.Activities.System.Text;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -58,6 +58,9 @@
       <x:String>UiPath.Mail</x:String>
       <x:String>UiPath.Mail.SMTP.Activities</x:String>
       <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -142,7 +145,7 @@
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Practice" sap:VirtualizedContainerService.HintSize="699,5577" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Practice" sap:VirtualizedContainerService.HintSize="1282,8417" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtInput" />
       <Variable x:TypeArguments="scg:IEnumerable(x:String)" Name="arr_Dynamic" />
@@ -153,6 +156,7 @@
       <Variable x:TypeArguments="x:String" Name="auth_token" />
       <Variable x:TypeArguments="x:String" Name="File_Name" />
       <Variable x:TypeArguments="x:String" Name="Log_Path" />
+      <Variable x:TypeArguments="x:String" Name="PromotionID" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -160,7 +164,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Write ItemLogs and Send Email" sap:VirtualizedContainerService.HintSize="637,2368" sap2010:WorkflowViewState.IdRef="Sequence_19">
+    <Sequence DisplayName="Write ItemLogs and Send Email" sap:VirtualizedContainerService.HintSize="692,5273" sap2010:WorkflowViewState.IdRef="Sequence_19">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dtModifierLogger" />
       </Sequence.Variables>
@@ -170,7 +174,663 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_9">
+      <Sequence DisplayName="Search Bundle" sap:VirtualizedContainerService.HintSize="658,2933" sap2010:WorkflowViewState.IdRef="Sequence_25">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="624,57" sap2010:WorkflowViewState.IdRef="CommentOut_10">
+          <ui:CommentOut.Body>
+            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_28">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_12">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[PromotionID]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">11017</InArgument>
+                </Assign.Value>
+              </Assign>
+            </Sequence>
+          </ui:CommentOut.Body>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:CommentOut>
+        <Assign sap:VirtualizedContainerService.HintSize="624,114" sap2010:WorkflowViewState.IdRef="Assign_11">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[PromotionID]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">4002</InArgument>
+          </Assign.Value>
+        </Assign>
+        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Aloha Configuration Center : Yum Restaurants Australia UAT" sap:VirtualizedContainerService.HintSize="624,2670" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="7e88363c-0106-42e8-884a-9326c6a0af6f" Version="V2">
+          <uix:NApplicationCard.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="590,2356" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '1001 FILLET'" sap:VirtualizedContainerService.HintSize="556,189" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7e88363c-0106-42e8-884a-9326c6a0af6f" Version="V3">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable CVScreenId="24c57650-69fa-4fd1-93b3-06afca5ad1c7" CvElementArea="225, 186, 686, 21" CvType="InputBox" DesignTimeRectangle="227, 186, 678, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;wnd ctrlname='ConfigApplet' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='acmLookupEditPanel' /&gt;&lt;ctrl role='editable text' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='ConfigApplet' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='acmLookupEditPanel' /&gt;&lt;ctrl role='editable text' automationid='' /&gt;" Guid="93b975b3-3378-408f-bc2b-b017de04389f" InformativeScreenshot="429ff94add2a46b2a17485a24fe0fb56.png" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' ctrlname='MainForm' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                  </uix:NClick.Target>
+                </uix:NClick>
+                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Drag a'" sap:VirtualizedContainerService.HintSize="556,225" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7e88363c-0106-42e8-884a-9326c6a0af6f" Version="V3">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable CVScreenId="5b2f6ae8-a77e-41a5-b043-269e0a635c1b" CvTextArea="7, 13, 249, 14" CvTextArgument="Drag a column header here to group by that column" CvType="Text" DesignTimeRectangle="7, 13, 249, 14" DesignTimeScaleFactor="1" ElementType="Text" Guid="00cd069e-7a16-412d-b113-cc27b17e924e" InformativeScreenshot="897a0824a566bdda8b60157af91fde64.png" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' cls='WindowsForms10.Window.*' idx='*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive" />
+                  </uix:NClick.Target>
+                  <uix:NClick.VerifyOptions>
+                    <uix:VerifyExecutionOptions DisplayName="Label 'Drag a'" Mode="Appears">
+                      <uix:VerifyExecutionOptions.Retry>
+                        <InArgument x:TypeArguments="x:Boolean" />
+                      </uix:VerifyExecutionOptions.Retry>
+                      <uix:VerifyExecutionOptions.Target>
+                        <uix:TargetAnchorable CVScreenId="5b2f6ae8-a77e-41a5-b043-269e0a635c1b" CvTextArea="7, 13, 249, 14" CvTextArgument="Drag a column header here to group by that column" CvType="Text" DesignTimeRectangle="7, 13, 249, 14" DesignTimeScaleFactor="1" ElementType="Text" Guid="41a5674f-28bc-44ab-908b-9a632491a403" InformativeScreenshot="897a0824a566bdda8b60157af91fde64.png" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' cls='WindowsForms10.Window.*' idx='*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive" />
+                      </uix:VerifyExecutionOptions.Target>
+                      <uix:VerifyExecutionOptions.Timeout>
+                        <InArgument x:TypeArguments="x:Double" />
+                      </uix:VerifyExecutionOptions.Timeout>
+                    </uix:VerifyExecutionOptions>
+                  </uix:NClick.VerifyOptions>
+                </uix:NClick>
+                <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="556,247" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(ctrl)]f[u(ctrl)][u(hk)]" Version="V3">
+                  <uix:NKeyboardShortcuts.VerifyOptions>
+                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                      <uix:VerifyExecutionOptions.Retry>
+                        <InArgument x:TypeArguments="x:Boolean" />
+                      </uix:VerifyExecutionOptions.Retry>
+                      <uix:VerifyExecutionOptions.Timeout>
+                        <InArgument x:TypeArguments="x:Double" />
+                      </uix:VerifyExecutionOptions.Timeout>
+                    </uix:VerifyExecutionOptions>
+                  </uix:NKeyboardShortcuts.VerifyOptions>
+                </uix:NKeyboardShortcuts>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Enter text to search...'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="556,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="7e88363c-0106-42e8-884a-9326c6a0af6f" Text="[PromotionID+&quot;[k(enter)]&quot;]" Version="V3">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable CVScreenId="bee5e35d-5141-478c-8f3d-b7a1171bbc30" CvElementArea="39, 16, 351, 21" CvType="InputBox" DesignTimeRectangle="42, 19, 327, 14" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;wnd ctrlname='m_GridPopupContainerControl' /&gt;&lt;wnd ctrlname='m_HorizontalGrid' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;wnd ctrlname='m_GridPanel' /&gt;&lt;wnd ctrlname='m_GridControl' /&gt;&lt;wnd ctrlname='FindControl' /&gt;&lt;wnd ctrlname='layoutControl1' /&gt;&lt;wnd ctrlname='teFind' /&gt;&lt;wnd cls='WindowsForms10.EDIT.*' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='m_GridPopupContainerControl' /&gt;&lt;wnd ctrlname='m_HorizontalGrid' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;wnd ctrlname='m_GridPanel' /&gt;&lt;wnd ctrlname='m_GridControl' /&gt;&lt;wnd ctrlname='FindControl' /&gt;&lt;wnd ctrlname='layoutControl1' /&gt;&lt;wnd ctrlname='teFind' /&gt;&lt;wnd cls='WindowsForms10.EDIT.*' /&gt;" Guid="216acf0a-962c-4f30-be80-ccb9bce62d03" InformativeScreenshot="6de23e529dc0dbb42f1173f14946149c.png" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' cls='WindowsForms10.Window.*' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                  </uix:NTypeInto.Target>
+                  <uix:NTypeInto.VerifyOptions>
+                    <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                      <uix:VerifyExecutionTypeIntoOptions.Retry>
+                        <InArgument x:TypeArguments="x:Boolean" />
+                      </uix:VerifyExecutionTypeIntoOptions.Retry>
+                      <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        <InArgument x:TypeArguments="x:Double" />
+                      </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    </uix:VerifyExecutionTypeIntoOptions>
+                  </uix:NTypeInto.VerifyOptions>
+                </uix:NTypeInto>
+                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="556,1347" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <TryCatch.Try>
+                    <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="554,948" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '1005;DBL TENDER'" sap:VirtualizedContainerService.HintSize="520,225" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7e88363c-0106-42e8-884a-9326c6a0af6f" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable CVScreenId="bd3958c0-6ccc-4d7d-b332-ea0ef1fcd7b8" CvElementArea="3, 106, 16, 19" CvTextArea="127, 108, 472, 13" CvTextArgument="1005 DBL TENDER CMB Quick Combo QS 1 Corporate Primary" CvType="ArrowButton" DesignTimeRectangle="3, 105, 696, 20" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='m_GridPopupContainerControl' /&gt;&lt;wnd ctrlname='m_HorizontalGrid' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;wnd ctrlname='m_GridPanel' /&gt;&lt;wnd ctrlname='m_GridControl' /&gt;&lt;ctrl name='Row 1' role='row' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='m_GridPopupContainerControl' /&gt;&lt;wnd ctrlname='m_HorizontalGrid' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;wnd ctrlname='m_GridPanel' /&gt;&lt;wnd ctrlname='m_GridControl' /&gt;&lt;ctrl name='Row 1' role='row' automationid='' /&gt;" Guid="e011c8fd-ad03-49c9-96c9-e2108aa74a2f" InformativeScreenshot="a9d42baf5b82e033b213becc41d283c3.png" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' cls='WindowsForms10.Window.*' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="Element '1005;DBL TENDER'" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Target>
+                              <uix:TargetAnchorable CVScreenId="bd3958c0-6ccc-4d7d-b332-ea0ef1fcd7b8" CvElementArea="3, 106, 16, 19" CvTextArea="127, 108, 472, 13" CvTextArgument="1005 DBL TENDER CMB Quick Combo QS 1 Corporate Primary" CvType="ArrowButton" DesignTimeRectangle="3, 105, 696, 20" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='m_GridPopupContainerControl' /&gt;&lt;wnd ctrlname='m_HorizontalGrid' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;wnd ctrlname='m_GridPanel' /&gt;&lt;wnd ctrlname='m_GridControl' /&gt;&lt;ctrl name='Row 1' role='row' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='m_GridPopupContainerControl' /&gt;&lt;wnd ctrlname='m_HorizontalGrid' /&gt;&lt;wnd ctrlname='contentPanel' /&gt;&lt;wnd ctrlname='m_GridPanel' /&gt;&lt;wnd ctrlname='m_GridControl' /&gt;&lt;ctrl name='Row 1' role='row' automationid='' /&gt;" Guid="f2f8c0d7-322d-4d69-a11b-2c8bab73c5e1" InformativeScreenshot="a9d42baf5b82e033b213becc41d283c3.png" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' cls='WindowsForms10.Window.*' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                            </uix:VerifyExecutionOptions.Target>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="520,57" sap2010:WorkflowViewState.IdRef="CommentOut_11">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,487" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Edit_Promotion_Tab - Invoke Workflow File (CFC\QuickCombo\Edit_Combos\Edit_Promotion_Tab.xaml)" sap:VirtualizedContainerService.HintSize="354,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="CFC\QuickCombo\Edit_Combos\Edit_Promotion_Tab.xaml">
+                              <ui:InvokeWorkflowFile.Arguments>
+                                <InArgument x:TypeArguments="njl:JToken" x:Key="currentDataRow">[currentDataRow]</InArgument>
+                                <InArgument x:TypeArguments="sd:DataTable" x:Key="dtBundles" />
+                              </ui:InvokeWorkflowFile.Arguments>
+                            </ui:InvokeWorkflowFile>
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Edit_QuickComboQS_Tab - Invoke Workflow File (CFC\QuickCombo\Edit_Combos\Edit_QuickComboQS_Tab.xaml)" sap:VirtualizedContainerService.HintSize="354,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="CFC\QuickCombo\Edit_Combos\Edit_QuickComboQS_Tab.xaml">
+                              <ui:InvokeWorkflowFile.Arguments>
+                                <InArgument x:TypeArguments="njl:JToken" x:Key="currentDataRow">[currentDataRow]</InArgument>
+                              </ui:InvokeWorkflowFile.Arguments>
+                            </ui:InvokeWorkflowFile>
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:CommentOut>
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="520,339" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,228" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Edit_ComponentsQS_Tab - Invoke Workflow File (CFC\QuickCombo\Edit_Combos\Edit_ComponentsQS_Tab.xaml)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="CFC\QuickCombo\Edit_Combos\Edit_ComponentsQS_Tab.xaml">
+                              <ui:InvokeWorkflowFile.Arguments>
+                                <InArgument x:TypeArguments="njl:JToken" x:Key="currentDataRow">[currentDataRow]</InArgument>
+                                <InArgument x:TypeArguments="njl:JArray" x:Key="bundleChoices" />
+                                <InArgument x:TypeArguments="sd:DataTable" x:Key="dtComponentItems">[dtComponentItems]</InArgument>
+                              </ui:InvokeWorkflowFile.Arguments>
+                            </ui:InvokeWorkflowFile>
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                      </ui:CommentOut>
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="520,57" sap2010:WorkflowViewState.IdRef="CommentOut_12">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,136" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Sequence DisplayName="Update YUM API" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="https://stage-yc-commerce.auth.us-east-1.amazoncognito.com/oauth2/token" sap:VirtualizedContainerService.HintSize="530,102" sap2010:WorkflowViewState.IdRef="HttpClient_11" Method="POST" Result="[auth_token]" StatusCode="[auth_token_status]" TimeoutMS="6000">
+                                <ui:HttpClient.Attachments>
+                                  <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                </ui:HttpClient.Attachments>
+                                <ui:HttpClient.Cookies>
+                                  <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                </ui:HttpClient.Cookies>
+                                <ui:HttpClient.Headers>
+                                  <InArgument x:TypeArguments="x:String" x:Key="Content-Type">application/x-www-form-urlencoded</InArgument>
+                                </ui:HttpClient.Headers>
+                                <ui:HttpClient.Parameters>
+                                  <InArgument x:TypeArguments="x:String" x:Key="Parameters">POST</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="client_id">3cl6ntgspnhdfaf80vo2m0vves</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="client_secret">16jkaco8shroutrg1jo20kltcsaeh685q6v743pbgctaqnqett1v</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="grant_type">client_credentials</InArgument>
+                                </ui:HttpClient.Parameters>
+                                <ui:HttpClient.UrlSegments>
+                                  <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                </ui:HttpClient.UrlSegments>
+                              </ui:HttpClient>
+                              <If Condition="[auth_token_status = 200]" sap:VirtualizedContainerService.HintSize="530,705" sap2010:WorkflowViewState.IdRef="If_5">
+                                <If.Then>
+                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,432" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_4" JsonObject="[access_token]" JsonString="[auth_token]" />
+                                    <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">[auth_token]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">[access_token("access_token").ToString.Trim]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="MessageBox_23" Text="[auth_token]" />
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Sequence>
+                                </If.Else>
+                              </If>
+                              <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="https://api.staging.yumconnect.dev/kfc_au_sandbox/business/graphql" sap:VirtualizedContainerService.HintSize="530,95" sap2010:WorkflowViewState.IdRef="HttpClient_18" Method="POST" TimeoutMS="6000">
+                                <ui:HttpClient.Attachments>
+                                  <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                </ui:HttpClient.Attachments>
+                                <ui:HttpClient.Cookies>
+                                  <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                </ui:HttpClient.Cookies>
+                                <ui:HttpClient.Headers>
+                                  <InArgument x:TypeArguments="x:String" x:Key="Content-Type">application/json</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="Authorization">Bearer eyJraWQiOiI3VjZneDIwQ2xjYjFhQWw5K2JwZE95b1Qyajk5azFodHhFMDFHMzg3c3dNPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIzY2w2bnRnc3BuaGRmYWY4MHZvMm0wdnZlcyIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoieXVtX3BsYXRmb3JtXC9ncmFwaF9hcGkiLCJhdXRoX3RpbWUiOjE3MzU4ODkzMjMsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX1hKZ2pOcGVGaCIsImV4cCI6MTczNTg5MjkyMywiaWF0IjoxNzM1ODg5MzIzLCJ2ZXJzaW9uIjoyLCJqdGkiOiIyZmJmNjUzNi02ZDYyLTQzMWQtOTk0OS1lMzdkYzZkNDMwZWEiLCJjbGllbnRfaWQiOiIzY2w2bnRnc3BuaGRmYWY4MHZvMm0wdnZlcyJ9.i5mKJE2HMz64TsXQsksiZYDH8LZLJIY4JWIHCXLIjPxoJrj0jDrb4LSXOi6zx4kB0lrUY-uNFSJDWFCVWEz4zRx_T5lvEs5bK_UFfYON6qhoT_wmUZgqSapJT-HHSBrI_9bsbve4qCUAy909UfBZa3zHTgmAOmRJ_zo07nd55USLaKG-HcUsrgOmFmYNjAJMpU7gK7h3bgxt8E7iQY2UtNQlENpDY1fAyMzt6BCKLaqJI3hCR1oPfzUSNM-psG5z1E83EREDQgKYnAdnJkdRzrHBAdxViafXgt4lHOsi6y0XQpJDei2914dn6wytxXptgBt5DWKahCm4DnNuw47mOw</InArgument>
+                                </ui:HttpClient.Headers>
+                                <ui:HttpClient.Parameters>
+                                  <InArgument x:TypeArguments="x:String" x:Key="Parameters">POST</InArgument>
+                                </ui:HttpClient.Parameters>
+                                <ui:HttpClient.UrlSegments>
+                                  <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                </ui:HttpClient.UrlSegments>
+                              </ui:HttpClient>
+                            </Sequence>
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:CommentOut>
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="520,210" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="484,108" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Sequence DisplayName="Update YUM API" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request - Get auth token" EnableSSLVerification="True" EndPoint="https://stage-yc-commerce.auth.us-east-1.amazoncognito.com/oauth2/token" sap:VirtualizedContainerService.HintSize="515,102" sap2010:WorkflowViewState.IdRef="HttpClient_12" Method="POST" Result="[auth_token]" StatusCode="[auth_token_status]" TimeoutMS="6000">
+                                <ui:HttpClient.Attachments>
+                                  <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                </ui:HttpClient.Attachments>
+                                <ui:HttpClient.Cookies>
+                                  <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                </ui:HttpClient.Cookies>
+                                <ui:HttpClient.Headers>
+                                  <InArgument x:TypeArguments="x:String" x:Key="Content-Type">application/x-www-form-urlencoded</InArgument>
+                                </ui:HttpClient.Headers>
+                                <ui:HttpClient.Parameters>
+                                  <InArgument x:TypeArguments="x:String" x:Key="Parameters">POST</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="client_id">3cl6ntgspnhdfaf80vo2m0vves</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="client_secret">16jkaco8shroutrg1jo20kltcsaeh685q6v743pbgctaqnqett1v</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="grant_type">client_credentials</InArgument>
+                                </ui:HttpClient.Parameters>
+                                <ui:HttpClient.UrlSegments>
+                                  <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                </ui:HttpClient.UrlSegments>
+                              </ui:HttpClient>
+                              <If Condition="[auth_token_status = 200]" sap:VirtualizedContainerService.HintSize="515,1882" sap2010:WorkflowViewState.IdRef="If_8">
+                                <If.Then>
+                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="513,1728" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="479,122" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_5" JsonObject="[access_token]" JsonString="[auth_token]" />
+                                    <Assign sap:VirtualizedContainerService.HintSize="479,114" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">[auth_token]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">[access_token("access_token").ToString.Trim]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="479,57" sap2010:WorkflowViewState.IdRef="CommentOut_13">
+                                      <ui:CommentOut.Body>
+                                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="541,289" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,201" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                                            <ui:MultipleAssign.AssignOperations>
+                                              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                                                  <ui:AssignOperation.To>
+                                                    <OutArgument x:TypeArguments="x:String">[bundleid]</OutArgument>
+                                                  </ui:AssignOperation.To>
+                                                  <ui:AssignOperation.Value>
+                                                    <InArgument x:TypeArguments="x:String">a512794c-f70d-44a5-8046-10dd467307c1</InArgument>
+                                                  </ui:AssignOperation.Value>
+                                                </ui:AssignOperation>
+                                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                                                  <ui:AssignOperation.To>
+                                                    <OutArgument x:TypeArguments="x:String">[bundlecode]</OutArgument>
+                                                  </ui:AssignOperation.To>
+                                                  <ui:AssignOperation.Value>
+                                                    <InArgument x:TypeArguments="x:String">[PromotionID]</InArgument>
+                                                  </ui:AssignOperation.Value>
+                                                </ui:AssignOperation>
+                                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                                                  <ui:AssignOperation.To>
+                                                    <OutArgument x:TypeArguments="x:String">[BundleMetaData]</OutArgument>
+                                                  </ui:AssignOperation.To>
+                                                  <ui:AssignOperation.Value>
+                                                    <InArgument x:TypeArguments="x:String">BundleMetaData</InArgument>
+                                                  </ui:AssignOperation.Value>
+                                                </ui:AssignOperation>
+                                              </scg:List>
+                                            </ui:MultipleAssign.AssignOperations>
+                                          </ui:MultipleAssign>
+                                        </Sequence>
+                                      </ui:CommentOut.Body>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:CommentOut>
+                                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,179" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+                                      <ui:MultipleAssign.AssignOperations>
+                                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                                            <ui:AssignOperation.To>
+                                              <OutArgument x:TypeArguments="x:String">[bundlecode]</OutArgument>
+                                            </ui:AssignOperation.To>
+                                            <ui:AssignOperation.Value>
+                                              <InArgument x:TypeArguments="x:String">[PromotionID]</InArgument>
+                                            </ui:AssignOperation.Value>
+                                          </ui:AssignOperation>
+                                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                                            <ui:AssignOperation.To>
+                                              <OutArgument x:TypeArguments="x:String">[BundleMetaData]</OutArgument>
+                                            </ui:AssignOperation.To>
+                                            <ui:AssignOperation.Value>
+                                              <InArgument x:TypeArguments="x:String">BundleMetaData</InArgument>
+                                            </ui:AssignOperation.Value>
+                                          </ui:AssignOperation>
+                                        </scg:List>
+                                      </ui:MultipleAssign.AssignOperations>
+                                    </ui:MultipleAssign>
+                                    <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[&quot;{&quot;&quot;query&quot;&quot;:&quot;&quot;query bundleDefinitionByCode ($bundleCode: ExternalID!) {\n    bundleDefinitionByCode (bundleCode: $bundleCode) {\n        bundleId\n        bundleCode\n        internalName\n        name\n        \n    }\n}&quot;&quot;,&quot;&quot;variables&quot;&quot;:{&quot;&quot;bundleCode&quot;&quot;:&quot;&quot;&quot;+ bundlecode +&quot;&quot;&quot;}}&quot;]" BodyFormat="application/xml" DisplayName="HTTP Request - Get bundleId" EnableSSLVerification="True" EndPoint="https://api.staging.yumconnect.dev/kfc_au_sandbox/business/graphql" sap:VirtualizedContainerService.HintSize="479,102" sap2010:WorkflowViewState.IdRef="HttpClient_13" Method="POST" Result="[promotionResponse]" StatusCode="[promotionResponseStatus]" TimeoutMS="6000">
+                                      <ui:HttpClient.Attachments>
+                                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                      </ui:HttpClient.Attachments>
+                                      <ui:HttpClient.Cookies>
+                                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                      </ui:HttpClient.Cookies>
+                                      <ui:HttpClient.Headers>
+                                        <InArgument x:TypeArguments="x:String" x:Key="Content-Type">application/json</InArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="Authorization">["Bearer "+auth_token]</InArgument>
+                                      </ui:HttpClient.Headers>
+                                      <ui:HttpClient.Parameters>
+                                        <InArgument x:TypeArguments="x:String" x:Key="Parameters">POST</InArgument>
+                                      </ui:HttpClient.Parameters>
+                                      <ui:HttpClient.UrlSegments>
+                                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                      </ui:HttpClient.UrlSegments>
+                                    </ui:HttpClient>
+                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="479,57" sap2010:WorkflowViewState.IdRef="CommentOut_14">
+                                      <ui:CommentOut.Body>
+                                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,181" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[&quot;mutation UpdateBundleDefinition {&#xA;    updateBundleDefinition(&#xA;        input: {&#xA;            bundleId: '&quot;+bundleid+&quot;'&#xA;            bundleCode: '&quot;+bundlecode+&quot;'&#xA;            metafields: {&#xA; &#xA;                key: 'Update',&#xA;                Namespace: '&quot;+BundleMetaData+&quot;',&#xA;                value: '0',&#xA;                valueType: Integer&#xA;            }&#xA;           &#xA;        }&#xA;    ) {&#xA;        ... on UpdateBundleDefinitionSuccess {&#xA;            bundle {&#xA;                bundleId&#xA;                bundleCode&#xA;                internalName&#xA;                name&#xA;                description&#xA;                brandDistinctAttribute2&#xA;                brandDistinctAttribute3&#xA;                slug&#xA;            }&#xA;        }&#xA;    }&#xA;}&quot;]" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="https://api.staging.yumconnect.dev/kfc_au_sandbox/business/graphql" sap:VirtualizedContainerService.HintSize="354,93" sap2010:WorkflowViewState.IdRef="HttpClient_14" Method="POST" Result="[updateResponse]" StatusCode="[UpdateStatusCode]" TimeoutMS="6000">
+                                            <ui:HttpClient.Attachments>
+                                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                            </ui:HttpClient.Attachments>
+                                            <ui:HttpClient.Cookies>
+                                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                            </ui:HttpClient.Cookies>
+                                            <ui:HttpClient.Headers>
+                                              <InArgument x:TypeArguments="x:String" x:Key="Content-Type">application/json</InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="Authorization">["Bearer "+auth_token]</InArgument>
+                                            </ui:HttpClient.Headers>
+                                            <ui:HttpClient.Parameters>
+                                              <InArgument x:TypeArguments="x:String" x:Key="Parameters">POST</InArgument>
+                                            </ui:HttpClient.Parameters>
+                                            <ui:HttpClient.UrlSegments>
+                                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                            </ui:HttpClient.UrlSegments>
+                                          </ui:HttpClient>
+                                        </Sequence>
+                                      </ui:CommentOut.Body>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:CommentOut>
+                                    <If Condition="[promotionResponseStatus=200]" sap:VirtualizedContainerService.HintSize="479,810" sap2010:WorkflowViewState.IdRef="If_7">
+                                      <If.Then>
+                                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,446" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_6" JsonObject="[promotionJObject]" JsonString="[promotionResponse]" />
+                                          <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_15">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:String">[bundleid]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:String">[promotionJObject("data")("bundleDefinitionByCode")("bundleId").ToString]</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                          <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[&quot;{&quot;&quot;query&quot;&quot;:&quot;&quot;mutation UpdateBundleDefinition { updateBundleDefinition( input: { bundleId: \&quot;&quot;&quot;+bundleid+&quot;\&quot;&quot;, bundleCode: \&quot;&quot;&quot;+bundlecode+&quot;\&quot;&quot;, metafields: { key: \&quot;&quot;Update\&quot;&quot;, namespace: \&quot;&quot;&quot;+BundleMetaData+&quot;\&quot;&quot;, value: \&quot;&quot;0\&quot;&quot;, valueType: INTEGER } } ) { ... on UpdateBundleDefinitionSuccess { bundle { bundleId bundleCode internalName name description brandDistinctAttribute2 brandDistinctAttribute3 slug } } } }&quot;&quot;, &quot;&quot;variables&quot;&quot;:{}}&quot;]" BodyFormat="application/json" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="https://api.staging.yumconnect.dev/kfc_au_sandbox/business/graphql" sap:VirtualizedContainerService.HintSize="434,102" sap2010:WorkflowViewState.IdRef="HttpClient_15" Method="POST" Result="[updateResponse]" StatusCode="[UpdateStatusCode]" TimeoutMS="6000">
+                                            <ui:HttpClient.Attachments>
+                                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                            </ui:HttpClient.Attachments>
+                                            <ui:HttpClient.Cookies>
+                                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                            </ui:HttpClient.Cookies>
+                                            <ui:HttpClient.Headers>
+                                              <InArgument x:TypeArguments="x:String" x:Key="Content-Type">application/json</InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="Authorization">["Bearer "+auth_token]</InArgument>
+                                            </ui:HttpClient.Headers>
+                                            <ui:HttpClient.Parameters>
+                                              <InArgument x:TypeArguments="x:String" x:Key="Parameters">POST</InArgument>
+                                            </ui:HttpClient.Parameters>
+                                            <ui:HttpClient.UrlSegments>
+                                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                            </ui:HttpClient.UrlSegments>
+                                          </ui:HttpClient>
+                                          <If Condition="[UpdateStatusCode=200]" sap:VirtualizedContainerService.HintSize="434,48" sap2010:WorkflowViewState.IdRef="If_6">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <If.Then>
+                                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,254" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Metadata for &quot;+bundlecode +&quot; is set to 0 in YUM admin &quot;]" />
+                                              </Sequence>
+                                            </If.Then>
+                                            <If.Else>
+                                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,254" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,166" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Metadata is not updated for the bundlecode &quot;+bundlecode+&quot;Error: &quot; +updateResponse]" />
+                                              </Sequence>
+                                            </If.Else>
+                                          </If>
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="468,226" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,166" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Unable to get the bundleId from yum admin &quot;+ promotionResponse]" />
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
+                                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="479,122" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="[UpdateStatusCode.ToString+&quot;-------------------------------&quot;+updateResponse]" />
+                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="479,57" sap2010:WorkflowViewState.IdRef="CommentOut_15">
+                                      <ui:CommentOut.Body>
+                                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,181" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[&quot;{&quot;&quot;query&quot;&quot;: &quot;&quot;mutation UpdateBundleDefinition { updateBundleDefinition(input: { bundleId: &quot;&quot;&quot; &amp; bundleid &amp; &quot;&quot;&quot;, bundleCode: &quot;&quot;&quot; &amp; bundlecode &amp; &quot;&quot;&quot;, metafields: { key: &quot;&quot;Update&quot;&quot;, namespace: &quot;&quot;&quot; &amp; BundleMetaData &amp; &quot;&quot;&quot;, value: &quot;&quot;0&quot;&quot;, valueType: INTEGER} }) { ... on UpdateBundleDefinitionSuccess { bundle { bundleId bundleCode internalName name description brandDistinctAttribute2 brandDistinctAttribute3 slug } } } }&quot;&quot;}&quot;]" BodyFormat="application/json" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="https://api.staging.yumconnect.dev/kfc_au_sandbox/business/graphql" sap:VirtualizedContainerService.HintSize="354,93" sap2010:WorkflowViewState.IdRef="HttpClient_16" Method="POST" Result="[updateResponse]" StatusCode="[UpdateStatusCode]" TimeoutMS="6000">
+                                            <ui:HttpClient.Attachments>
+                                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                            </ui:HttpClient.Attachments>
+                                            <ui:HttpClient.Cookies>
+                                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                            </ui:HttpClient.Cookies>
+                                            <ui:HttpClient.Headers>
+                                              <InArgument x:TypeArguments="x:String" x:Key="Content-Type">application/json</InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="Authorization">["Bearer "+auth_token]</InArgument>
+                                            </ui:HttpClient.Headers>
+                                            <ui:HttpClient.Parameters>
+                                              <InArgument x:TypeArguments="x:String" x:Key="Parameters">POST</InArgument>
+                                            </ui:HttpClient.Parameters>
+                                            <ui:HttpClient.UrlSegments>
+                                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                            </ui:HttpClient.UrlSegments>
+                                          </ui:HttpClient>
+                                        </Sequence>
+                                      </ui:CommentOut.Body>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:CommentOut>
+                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="479,48" sap2010:WorkflowViewState.IdRef="CommentOut_16">
+                                      <ui:CommentOut.Body>
+                                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,181" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[&quot;{\&quot;&quot;query\&quot;&quot;:\&quot;&quot;mutation UpdateBundleDefinition {   &quot;+&#xA;&quot;updateBundleDefinition(&quot;+&#xA;&quot;        input: {&quot;+&#xA;&quot;&#x9;&#x9;bundleId: \&quot;&quot;a512794c-f70d-44a5-8046-10dd467307c1\&quot;&quot;&quot;+&#xA;&quot;&#x9;&#x9;bundleCode: \&quot;&quot;4002\&quot;&quot;&quot;+&#xA;&quot;&#x9;&#x9;metafields: {&quot;+&#xA;&quot;&#x9;&#x9;key: \&quot;&quot;Update\&quot;&quot;,&quot;+&#xA;&quot;&#x9;&#x9;Namespace: \&quot;&quot;BundleMetaData\&quot;&quot;,&quot;+&#xA;&quot;&#x9;&#x9;value: \&quot;&quot;0\&quot;&quot;,&quot;+&#xA;&quot;&#x9;&#x9;valueType: Integer&quot;+&#xA;&quot;&#x9;&#x9;}&quot;+&#xA;&quot; }&quot;+&#xA;&quot;) {&quot;+&#xA;&quot;... on UpdateBundleDefinitionSuccess {&quot;+&#xA;&quot;&#x9;&#x9;bundle {&quot;+&#xA;&quot;&#x9;&#x9;bundleId&quot;+&#xA;&quot;&#x9;&#x9;bundleCode&quot;+&#xA;&quot;&#x9;&#x9;internalName&quot;+&#xA;&quot;&#x9;&#x9;name&quot;+&#xA;&quot;&#x9;&#x9;description&quot;+&#xA;&quot;&#x9;&#x9;brandDistinctAttribute2&quot;+&#xA;&quot;&#x9;&#x9;brandDistinctAttribute3&quot;+&#xA;&quot;&#x9;&#x9;slug&quot;+&#xA;&quot;&#x9;&#x9;}&#x9;&#x9;} &#x9;}&#x9;}\&quot;&quot;,\&quot;&quot;variables\&quot;&quot;:{}}&quot;]" BodyFormat="application/json" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="https://api.staging.yumconnect.dev/kfc_au_sandbox/business/graphql" sap:VirtualizedContainerService.HintSize="354,93" sap2010:WorkflowViewState.IdRef="HttpClient_17" Method="POST" Result="[updateResponse]" StatusCode="[UpdateStatusCode]" TimeoutMS="6000">
+                                            <ui:HttpClient.Attachments>
+                                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                            </ui:HttpClient.Attachments>
+                                            <ui:HttpClient.Cookies>
+                                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                            </ui:HttpClient.Cookies>
+                                            <ui:HttpClient.Headers>
+                                              <InArgument x:TypeArguments="x:String" x:Key="Content-Type">application/json</InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="Authorization">["Bearer "+auth_token]</InArgument>
+                                            </ui:HttpClient.Headers>
+                                            <ui:HttpClient.Parameters>
+                                              <InArgument x:TypeArguments="x:String" x:Key="Parameters">POST</InArgument>
+                                            </ui:HttpClient.Parameters>
+                                            <ui:HttpClient.UrlSegments>
+                                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                            </ui:HttpClient.UrlSegments>
+                                          </ui:HttpClient>
+                                        </Sequence>
+                                      </ui:CommentOut.Body>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:CommentOut>
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="513,25" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,166" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Unable to get the auth token&quot;+&quot;Error :&quot;+ auth_token]" />
+                                  </Sequence>
+                                </If.Else>
+                              </If>
+                            </Sequence>
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                      </ui:CommentOut>
+                    </Sequence>
+                  </TryCatch.Try>
+                  <TryCatch.Catches>
+                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="754,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ActivityAction x:TypeArguments="s:Exception">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                        </ActivityAction.Argument>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="554,143" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Promotion Update Error: &quot;+exception.Message]" />
+                      </ActivityAction>
+                    </Catch>
+                  </TryCatch.Catches>
+                  <TryCatch.Finally>
+                    <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="484,89" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Sequence>
+                  </TryCatch.Finally>
+                </TryCatch>
+              </Sequence>
+            </ActivityAction>
+          </uix:NApplicationCard.Body>
+          <uix:NApplicationCard.TargetApp>
+            <uix:TargetApp Area="171, 0, 1024, 735" FilePath="C:\BootDrv\CFC\ShellBins\aemshell.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAfzSURBVFhHtZaJU1XnGcb5NzrTSUVRNLgAKqghBlGyuEfFJCQ2LbHRtEkaq9VSSxQIYkUiyo6ArAIXcAkgKiAoi0QTq4nGxhrbaZMZLstl5957tqfPdxa4UOJ0OtNv5jd3O+d8v/u87/ed4yXXbP2p0rSkQ2n1hdLqR4KhtK0k4WQtlPbNJIJEQul4m+yEcnM3+YDsgdK5n0STGHKQHCB7oXb+FurN35B3SRTZAbXjDbKNbILaGtEx1LQpwEu+EtQh12yEem03eQ9qM09qeZ98CPX6R1Bv/I4H74Path9qezRPPsiLxXCCw1A/j4N6OwHqF4lQvzwG9U4y1LspUO+lQv0qE+rXOdAe5EF7WAjt21JojyqgPT4H7clF/rl9UJrXd3jJFcugXn4LWvOH0Fo+InugXd8L7cY+8ntobX8g0dDaD5IYaDcPQeuMhfZ5PLRbR6DdPgrtiyRoX34K7c5JaHfToN3LhCYmv8/Jv+HkD0uMyf9WBe27i9D+Xgf1LymQz60EBRh53XaoDYxqnF0er7ugNDDyRqYjuMZ0KKs2Mx0ha4m2HjBkhWjHVNEEU/SYKcqUmKguIJUHQT6/GfJnb5nsMKix+LlBrQd1grfHUS6R+l9CuRwF5cpOqFeFPEva9Otx4anpqg1RkKtDKFC2FFL1RsgX3iQUEFw0+R+EdJlxfmGI1VPs8jsU+xW0xt3QmphkfSTkqucocHYxpMr1kM5FTnBe8KaOIWYySewpgj8iNymt2gjIlSsoUBoIqWIdpKrXDaot3qCMwJKaKsTJ/yMxU+ZpQroUZS5ugWxbToFif7jL1lJiu4GNVL5mUGVhyVHosyhIdbsg1ew0pX4sMU8xCw+5C69CLABDoPRlSkQYlG/XmSRkew1ySyyUR7VQu+5C7X4A1f4V1H+2Qb4ep4up33dOzw+dPOawIeQpJRpfCLgLF8JVEA53yVaKmJwVbKPQNkiXuBH96xasoclOaM5BaK5haKoC+XaWnpY1NGmUv4nfJ5BvHvfoLTOt6k0QC8DLXbAAzswX4C561aB4C2VMyl6H2vOIV1X1C6uPGyG1JEBqOgTpWhzkznRItR/AzaSsodyvhNwca8DUBFLNux79xTIKKjdAOisE8v3gTH8erjObmIRJ4Wa4irZCuWfTL6q5RyE1xk6Wm5KWNeT2ZJZQlJJQTDBRSmL1l42NX7pYCDyLsTQK5G0gGw3yiY03EPtf9Ysq3zVTbDPcFHMXmklZaZlS1pBbj5tiLKFZRqO3pvSXaPySQHi5cudi8EgwJV6BK2cdXKfX67jruKW6hqApEqSGeEPKQqRlJSbSItZQ7pVDuhpDPuZ5pH4/J430SMuUY+OLBUABXzjilqLv41CMnHwJzqy1OtLVT/Qm08YG4K6JNsRymZKFZ1qUsYYol+YcGEe1fwP3hfen9Bclil/id4sokD0bjoRg2KNf0OlPXI2RFP54iTcSRWYKwxT447iYM3udjp5WjpGWwBpq10MoT1pJm8H9C3Db3jH7y0hL4C7kyitcIAR80JcYjK6YVSQU9j+FoufQKgwV74E64tBXgNSSykZ92SDjFYNMyghMKWtIjYnjUtOmNV7C1XAXzKdApjf6ji1DV1yYQSw5HIbuJMb05I5+UbX3HxjNjsDYyRfhTBWwVGkmppg13FePTBKbSGuivwyxMIgF4OXMoEAyE0jkxEdIAvlEsAaDl06YlwVcXzegP2MH+o+uwXDyGsqEG0LpnOTUi+ZRFKhPoJiZVvo0aRGXLhUKd948CqT9DH0nKHB8NbqSyDGTP5Oj7Ifb1VDZWGJoshuux7fgfNAC97ftUPt/wEjZXgwmrdF/F8NdF2/IUUqITZeWLpW1kin4CoFn0HcqCPaUMMJJPzVJJpSyp27E4JVkyP3fm1NMHgO1SUxrtfkJGD4fBwfFhZRIajSFaaWItMLhFIlZUhkhLMccQ8CRsQT29FB0p6+CPY2kklPkpJCyCEdPbiQGamJ1HBV70J22ZTyt3twoHXvyBpaS3yUQUcp4/on4MPTwcy+/1+H7gePLWQofUyBrMbpznkd39kp0Mxo77w32DAFXRZrAkqKIkNLFOMEJ4pGWzpQSdnFZ6/0lhPT+4iulROO7smYZAv25/ugtWI7eMyvQm/8cevJC+G9D0H2aUkIsxxDrzqKULifS8hDzlBNpnSCmmN0Ss/pLiBHR+E6uQF1g8Mx8OEqWoK8kCH3FwegrWobeQiKk8legR5cinlKeaZlSooyT0vKQmpQWEY3vzJhhCAwX+2LAtgADFQvRX76IBMBxNpAshqNUiHGrLqZcEeUsMTOtXlOsR4jpchTT5aYR85ATjS/m1gVG87wxXO2DoXOzMVjti8GqeRis9KPUfEOqglJllCqjFG+hQsrhITWeFqU809ITm1TCif5ypC+dEHBmzeGS8MVYkQ9Gbd4YqSLVM7ikKHZ+li42ZIlVUaySYkxMFyv3N8SempYoJdMScqZYf1bghIArn8+FhUHcnwP5no9oZ/iQUjAXzqI5GCumVOlMjJbPxIjANhPDlbMwbJuN4Qohxdt51bNGWnoZF2GgjBQL/NFfFICBAn8M5PFz7kIMZfthKGsuRtJnGQJjGTM6XHkL+dDArbEkhLfIYN4klnCf9ucNhDKn/bhtzuOe7qsn5cz0YfPw5IyZxJs724wJuKsaMNX/gtE07w6vGwd+EiAkpjvg/4mYvO3gvIB/A57E9CSkdoOeAAAAAElFTkSuQmCC" InformativeScreenshot="7c965f4404675997722651f6c4b11d42.png" Selector="&lt;wnd app='aemshell.exe' ctrlname='MainForm' /&gt;" />
+          </uix:NApplicationCard.TargetApp>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </uix:NApplicationCard>
+      </Sequence>
+      <Assign sap:VirtualizedContainerService.HintSize="658,114" sap2010:WorkflowViewState.IdRef="Assign_9">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[Log_Path]</OutArgument>
         </Assign.To>
@@ -178,9 +838,9 @@
           <InArgument x:TypeArguments="x:String">[IO.Directory.GetCurrentDirectory+"\Reports\Logs\"]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:BuildDataTable DataTable="[dtModifierLogger]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="450,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Column1&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Column2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Column1&gt;text&lt;/Column1&gt;&#xD;&#xA;    &lt;Column2&gt;1&lt;/Column2&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
-      <ui:CopyFile ContinueOnError="{x:Null}" Destination="Reports\Logs" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="450,186" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True" Path="Data\Modifier_log_Template.xlsx" />
-      <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_10">
+      <ui:BuildDataTable DataTable="[dtModifierLogger]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="658,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Column1&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Column2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Column1&gt;text&lt;/Column1&gt;&#xA;    &lt;Column2&gt;1&lt;/Column2&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
+      <ui:CopyFile ContinueOnError="{x:Null}" Destination="Reports\Logs" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="658,186" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True" Path="Data\Modifier_log_Template.xlsx" />
+      <Assign sap:VirtualizedContainerService.HintSize="658,114" sap2010:WorkflowViewState.IdRef="Assign_10">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[File_Name]</OutArgument>
         </Assign.To>

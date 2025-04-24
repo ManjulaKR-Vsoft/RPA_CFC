@@ -1,15 +1,15 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="GetMenuItems" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="CFC_Username" Type="OutArgument(x:String)" />
-    <x:Property Name="CFC_Password" Type="OutArgument(x:String)" />
     <x:Property Name="CFC_API_Version" Type="OutArgument(x:String)" />
-    <x:Property Name="CFC_UAT_URL" Type="OutArgument(x:String)" />
-    <x:Property Name="CFC_Web_Connection_ID" Type="OutArgument(x:Int32)" />
+    <x:Property Name="CFC_API_URL" Type="OutArgument(x:String)" />
+    <x:Property Name="CFC_API_Username" Type="OutArgument(x:String)" />
+    <x:Property Name="CFC_API_Password" Type="OutArgument(x:String)" />
+    <x:Property Name="CFC_API_Web_ConnectionID" Type="OutArgument(x:Int32)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1239,1120</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1239,1080</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetMenuItems_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -102,7 +102,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Get_CFC_API_Details" sap:VirtualizedContainerService.HintSize="496,1015" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Get_CFC_API_Details" sap:VirtualizedContainerService.HintSize="1282,827" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ss:SecureString" Name="CFC_Password_Secure" />
     </Sequence.Variables>
@@ -111,29 +111,28 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="CFC_API_Credentials" CacheStrategy="None" DisplayName="Get Credential" FolderPath="manjula.raju@yum.com's workspace" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[CFC_Password_Secure]" Username="[CFC_Username]" />
-    <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="CFC_API_Credentials" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[CFC_Password_Secure]" Username="[CFC_API_Username]" />
+    <Assign sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[CFC_Password]</OutArgument>
+        <OutArgument x:TypeArguments="x:String">[CFC_API_Password]</OutArgument>
       </Assign.To>
       <Assign.Value>
         <InArgument x:TypeArguments="x:String">[New System.Net.NetworkCredential(String.Empty, CFC_Password_Secure).Password]</InArgument>
       </Assign.Value>
     </Assign>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[CFC_Username +&quot;--------&quot;+CFC_Password]" />
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CFC_API_Version_No" CacheStrategy="None" DisplayName="Get Asset" FolderPath="manjula.raju@yum.com's workspace" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CFC_API_Version_No" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[CFC_API_Version]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CFC_API_WEB_CONNECTION_ID" CacheStrategy="None" DisplayName="Get Asset" FolderPath="manjula.raju@yum.com's workspace" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CFC_API_WEB_CONNECTION_ID" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
       <ui:GetRobotAsset.Value>
-        <OutArgument x:TypeArguments="x:Int32">[CFC_Web_Connection_ID]</OutArgument>
+        <OutArgument x:TypeArguments="x:Int32">[CFC_API_Web_ConnectionID]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CFC_UAT_URL" CacheStrategy="None" DisplayName="Get Asset" FolderPath="manjula.raju@yum.com's workspace" sap:VirtualizedContainerService.HintSize="434,166" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CFC_API_URL" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="434,166" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
       <ui:GetRobotAsset.Value>
-        <OutArgument x:TypeArguments="x:String">[CFC_UAT_URL]</OutArgument>
+        <OutArgument x:TypeArguments="x:String">[CFC_API_URL]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
   </Sequence>
