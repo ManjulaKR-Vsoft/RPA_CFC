@@ -18,6 +18,8 @@
     <x:Property Name="Fillets_LastPosNumber" Type="InOutArgument(x:Int32)" />
     <x:Property Name="CFC_Username" Type="InOutArgument(x:String)" />
     <x:Property Name="CFC_Password" Type="InOutArgument(x:String)" />
+    <x:Property Name="Kwench_LastPosNumber" Type="InOutArgument(x:Int32)" />
+    <x:Property Name="WickedWings_LastPosNumber" Type="InOutArgument(x:Int32)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -143,7 +145,7 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CFC_API" sap:VirtualizedContainerService.HintSize="976,5861" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CFC_API" sap:VirtualizedContainerService.HintSize="1282,5861" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ClientApplication" />
       <Variable x:TypeArguments="x:String" Name="ClientVersion" />
@@ -584,6 +586,8 @@
                         <OutArgument x:TypeArguments="x:Int32" x:Key="Sauce_LastPosNumber">[Sauce_LastPosNumber]</OutArgument>
                         <OutArgument x:TypeArguments="x:Int32" x:Key="Other_LastPosNumber">[Other_LastPosNumber]</OutArgument>
                         <OutArgument x:TypeArguments="x:Int32" x:Key="Misc_LastPosNumber">[Misc_LastPosNumber]</OutArgument>
+                        <OutArgument x:TypeArguments="x:Int32" x:Key="Kwench_LastPosNumber">[Kwench_LastPosNumber]</OutArgument>
+                        <OutArgument x:TypeArguments="x:Int32" x:Key="WickedWings_LastPosNumber">[WickedWings_LastPosNumber]</OutArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                   </Sequence>

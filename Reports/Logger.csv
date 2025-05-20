@@ -1,2 +1,186 @@
-﻿Action,POSNumber,Name,Price,Status,API_Status,API_Response_Content
-Create/Updated Yum,100518,ffwefwef-RPA1,0.00,Success,200,"{""Header"":{""Success"":true,""MessageID"":""5f5ad7cc-bb78-4d61-8fea-45269251aecc"",""Statuses"":[]}}"
+﻿ProductCode,VariantCode,ItemType,Action,POSNumber,Name,Price,Status,API_Status,API_Response_Content
+170506,170506,,,170506,Add Zinger PC,3.00,,,
+182007,182007,,,182007,2 BONELESS H&C,3.45,,,
+184010,184010,,,184010,Nuggets,0.85,,,
+191001,191001,,,191001,Go 1 OR Tender,4.95,,,
+120002,120002,,,120002,Original Pepper Mayo Slider,3.75,,,
+141006,141006_VAR1_TEST,,Create,,4 Reg Drinks,15.00,Failed,400,"ErrorCode: Common.EntityAlreadyExists  ErrorMessage: Menu item 4 Reg Drinks already exists. [Request: 06561e61-5574-4c6b-97c3-9f6ea0c25213, Correlation: 06561e61-5574-4c6b-97c3-9f6ea0c25213, Item: 416ab4be-7125-46ad-b43e-92538b72c26d, ItemID: '', ItemName: '4 Reg Drinks']"
+180089,180089,,,180089,100 HS PC,185.00,,,
+184006,184006,,,184006,4 Nuggets,5.00,,,
+141072,141072,,,141072,1.25L Sunkist,4.45,,,
+141123,141123,,,141123,Pepsi Freeze,1.00,,,
+120004,120004,,,120004,2 CR ZN Sliders,6.95,,,
+100500,100500,,,100500,Zinger Stacker,10.95,,,
+141078,141078_VAR1_TEST,,Create,,Kids Pop Top,3.75,Failed,400,"ErrorCode: Common.EntityAlreadyExists  ErrorMessage: Menu item Kids Pop Top already exists. [Request: 7021276d-7ac6-40b2-bdc9-88300bff88b2, Correlation: 7021276d-7ac6-40b2-bdc9-88300bff88b2, Item: 8200922b-b4ab-4db2-a3a0-70feb2683863, ItemID: '', ItemName: 'Kids Pop Top']"
+205117,205117,,,205117,,0.00,,,
+136066,136066,,,136066,Original Bowl,9.45,,,
+184001,184001,,,184001,10 Nuggets,9.95,,,
+191002,191002,,,191002,Go Popcorn,4.95,,,
+200041,200041,,,200041,4 Dipping Sauce,2.00,,,
+181024,181024,,,181024,11 WWings,11.00,,,
+191009,191009,,,191009,Dip Sweet Sour,0.60,,,
+100068,100068,,,100068,Zinger Crunch Burger™,9.95,,,
+136047,136047,,,136047,4 Dinner Rolls,3.80,,,
+184017,184017,,,184017,20 Nuggets,18.90,,,
+182004,182004,,,182004,10 Hot Crispy,10.00,,,
+136026,136026,,,136026,Gravy Regular,5.45,,,
+100050,100050,,,100050,Fillet Burger,7.95,,,
+100262,100262,,,100262,Triple Stacker,14.45,,,
+120006,120006,,,120006,Pepper Slider,2.00,,,
+141065,141065,,,141065,1.25L Mt Dew,4.45,,,
+136035,136035,,,136035,Gravy 2x110g,10.90,,,
+181001,181001,,,181001,6 Wicked Wings,9.95,,,
+184002,184002,,,184002,12 Nuggets,11.34,,,
+185504,185504,Popcorn,,185504,Popcorn Chicken Regular,5.95,,,
+185001,185001,,,185001,Maxi Popcorn,9.95,,,
+170101,170101,,,170101,Original,3.00,,,
+182002,182002,,,182002,6 Fillets,20.95,,,
+FilletPiece,FilletOriginalCrispy,,Create,,,4.95,Failed,,Cannot create the Item because Variant Name is blank.
+FilletPiece,FilletOriginalRecipe,,Create,,,4.95,Failed,,Cannot create the Item because Variant Name is blank.
+FilletPiece,FilletZinger,,Create,,,4.95,Failed,,Cannot create the Item because Variant Name is blank.
+136040,136040,,,136040,Reg Coleslaw,5.45,,,
+180054,180054,,,180054,4 PC,13.80,,,
+180031,180031,,,180031,11 PC,21.00,,,
+181014,181014,,,181014,10 Wicked Wings,10.00,,,
+180057,180057,,,180057,1 PC,3.45,,,
+120014,120014,,,120014,Super Slider,2.00,,,
+120012,120012,,,120012,Original Supercharged Slider,3.75,,,
+120016,120016,,,120016,Pop N Twister,8.95,,,
+191013,191013,,,191013,Go 1 Hot&Crispy,4.95,,,
+145168,145168,Drinks,,145168,ffwefwef,0.00,,,
+170703,170703,,,170703,3 Wicked Wings,6.95,,,
+185003,185003,,,185003,Popcorn Bucket,10.00,,,
+120024,120024,,,120024,Nugget Slider,3.95,,,
+180055,180055,,,180055,5 PC,13.29,,,
+191004,191004,,,191004,Go 3 Nuggets,4.95,,,
+191005,191005,,,191005,Dip Tomato,0.60,,,
+182005,182005,,,182005,2 OC Fillets,7.80,,,
+182019,182019,,,182019,6 Hot & Crispy,6.95,,,
+141002,141002,,,141002,NO DRINK,0.00,,,
+180053,180053,,,180053,3 PC,9.95,,,
+170605,170605,,,170605,3 Tenders,8.95,,,
+170102,170102,,,170102,Hot & Spicy,3.00,,,
+170601,170601,,,170601,Original Tender,3.95,,,
+185002,185002,,,185002,Snack Popcorn Chicken®,2.95,,,
+191000,191000,,,191000,Go 2 WickedWing,4.95,,,
+183004,183004,,,183004,8 OR Tenders,18.32,,,
+136025,136025,,,136025,Reg Pot/Gravy,5.45,,,
+136018,136018,,,136018,$1 Reg Chips,1.00,,,
+180052,180052,,,180052,2 Pieces,6.90,,,
+136004,136004,,,136004,2 Cup Chips,6.90,,,
+PD0001,Lg7up,,Create,,,4.75,Failed,,Cannot create the Item because Variant Name is blank.
+PD0001,LgAppleJuice,,Create,,,4.75,Failed,,Cannot create the Item because Variant Name is blank.
+PD0001,LgMountDew,,Create,,,4.75,Failed,,Cannot create the Item because Variant Name is blank.
+PD0001,LgPeachTea,,Create,,,4.75,Failed,,Cannot create the Item because Variant Name is blank.
+PD0001,LgPepsi,,Create,,,4.75,Failed,,Cannot create the Item because Variant Name is blank.
+PD0001,LgPepsiMax,,Create,,,4.75,Failed,,Cannot create the Item because Variant Name is blank.
+PD0001,LgSolo,,Create,,,4.75,Failed,,Cannot create the Item because Variant Name is blank.
+PD0001,LgSunkist,,Create,,,4.75,Failed,,Cannot create the Item because Variant Name is blank.
+PD0001,LgSunkistNoSugar,,Create,,,4.75,Failed,,Cannot create the Item because Variant Name is blank.
+PD0001,Reg7up,,Create,,,3.75,Failed,,Cannot create the Item because Variant Name is blank.
+PD0001,RegAppleJuice,,Create,,,3.75,Failed,,Cannot create the Item because Variant Name is blank.
+PD0001,RegWater,,Create,,,3.75,Failed,,Cannot create the Item because Variant Name is blank.
+PD0001,RegMountDew,,Create,,,3.75,Failed,,Cannot create the Item because Variant Name is blank.
+PD0001,RegPepsi,,Create,,,3.75,Failed,,Cannot create the Item because Variant Name is blank.
+PD0001,RegPepsiMax,,Create,,,3.75,Failed,,Cannot create the Item because Variant Name is blank.
+PD0001,RegSolo,,Create,,,3.75,Failed,,Cannot create the Item because Variant Name is blank.
+PD0001,RegSparklWater,,Create,,,3.75,Failed,,Cannot create the Item because Variant Name is blank.
+PD0001,RegSunkist,,Create,,,3.75,Failed,,Cannot create the Item because Variant Name is blank.
+PD0001,RegSunkistNoSugar,,Create,,,3.75,Failed,,Cannot create the Item because Variant Name is blank.
+PD0001,XL7up,,Create,,,5.45,Failed,,Cannot create the Item because Variant Name is blank.
+PD0001,XLMountDew,,Create,,,5.45,Failed,,Cannot create the Item because Variant Name is blank.
+PD0001,XLPepsi,,Create,,,5.45,Failed,,Cannot create the Item because Variant Name is blank.
+PD0001,XLPepsiMax,,Create,,,5.45,Failed,,Cannot create the Item because Variant Name is blank.
+PD0001,XLSolo,,Create,,,5.45,Failed,,Cannot create the Item because Variant Name is blank.
+PD0001,XLSunkist,,Create,,,5.45,Failed,,Cannot create the Item because Variant Name is blank.
+PD0001,XLSunkistNoSugar,,Create,,,5.45,Failed,,Cannot create the Item because Variant Name is blank.
+184000,184000,,,184000,6 Nuggets,7.95,,,
+181003,181003,,,181003,15 Wicked Wings,100.00,,,
+191008,191008,,,191008,Dip Sweet Chili,0.60,,,
+141019,141019,,,141019,1.25L Pepsi,3.00,,,
+183005,183005,,,183005,1 Tender,2.95,,,
+205121,205121,,,205121,,0.00,,,
+100501,100501,,,100501,Zinger B&C,8.95,,,
+185000,185000,,,185000,Reg Popcorn,5.95,,,
+191007,191007,,,191007,Dip Supercharge,0.60,,,
+Pepsi,xf,,Create,,,0.00,Failed,,Cannot create the Item because Variant Name is blank.
+180051,180051,,,180051,1 Piece,3.45,,,
+180088,180088,,,180088,100 OR PC,185.00,,,
+141125,141125,,,141125,Rasp Freeze,1.00,,,
+COB-1PC,COB-HS-Breast,,Create,,,3.00,Failed,,Cannot create the Item because Variant Name is blank.
+COB-1PC,COB-OR-Breast,,Create,,,3.00,Failed,,Cannot create the Item because Variant Name is blank.
+COB-1PC,COB-HS-Leg,,Create,,,3.00,Failed,,Cannot create the Item because Variant Name is blank.
+COB-1PC,COB-OR-Leg,,Create,,,3.00,Failed,,Cannot create the Item because Variant Name is blank.
+COB-1PC,COB-HS-Rib,,Create,,,3.00,Failed,,Cannot create the Item because Variant Name is blank.
+COB-1PC,COB-OR-Rib,,Create,,,3.00,Failed,,Cannot create the Item because Variant Name is blank.
+COB-1PC,COB-HS-Thigh,,Create,,,3.00,Failed,,Cannot create the Item because Variant Name is blank.
+COB-1PC,COB-OR-Thigh,,Create,,,3.00,Failed,,Cannot create the Item because Variant Name is blank.
+COB-1PC,COB-HS-Wing,,Create,,,3.00,Failed,,Cannot create the Item because Variant Name is blank.
+COB-1PC,COB-OR-Wing,,Create,,,3.00,Failed,,Cannot create the Item because Variant Name is blank.
+120009,120009,,,120009,Zinger® Crunch Twister®,9.95,,,
+141062,141062,,,141062,CT 1.25L Pepsi Max,4.45,,,
+200038,200038,,,200038,2 Dipping Sauce,1.20,,,
+182012,182012,,,182012,Crispy Fillet,4.95,,,
+182014,182014,,,182014,3 Hot & Crispy,7.95,,,
+100510,100510,Burger,,100510,Test001,1.11,,,
+141099,141099,,,141099,Pepsi Freeze,5.00,,,
+170502,170502,,,170502,Zinger Fillet,4.95,,,
+100057,100057,,,100057,Double Tender,5.95,,,
+182000,182000,,,182000,Fillet Pc,4.95,,,
+100089,100089,,,100089,Orig Crispy B&C Burger,8.95,,,
+180060,180060,,,180060,10 PC,19.95,,,
+170504,170504,tslug,,170504,LT,2.00,,,
+120007,120007,,,120007,BBQ Slider $2,2.00,,,
+136067,136067,,,136067,Zinger Bowl,9.45,,,
+183049,183049,,,183049,4 OR Tenders,19.16,,,
+180101,180101,,,180101,6 PC,16.95,,,
+141124,141124,,,141124,Dew Freeze,1.00,,,
+191006,191006,,,191006,Dip BBQ,0.60,,,
+120023,120023,,Create,120023,Nacho Twister,9.95,Failed,400,"ErrorCode: Common.EntityAlreadyExists  ErrorMessage: Menu item Nacho Twister already exists. [Request: 77146bcb-8ced-4e6b-a13c-b0100fc5601c, Correlation: 77146bcb-8ced-4e6b-a13c-b0100fc5601c, Item: 69368c4e-e40b-45d5-9da6-0b7837c8bff7, ItemID: '', ItemName: 'Nacho Twister']"
+180033,180033,,,180033,15 PC,27.95,,,
+100088,100088,,,100088,Original Crispy Burger,7.95,,,
+170608,170608,,,170608,2 Tenders,4.95,,,
+100260,100260,,,100260,Zinger Stacker,10.95,,,
+141013,141013,,,141013,Sparkling Water,3.75,,,
+181004,181004,,,181004,1 Wicked Wing,2.00,,,
+183008,183008,,,183008,4 Tenders,9.16,,,
+170512,170512,,,170512,2xOC Fillets,6.00,,,
+170707,170707,,,170707,3 Nuggets,2.95,,,
+141029,141029,,,141029,1.25L 7Up,3.00,,,
+100502,100502,,,100502,OC BBQ Stacker,11.95,,,
+141126,141126,,,141126,Lipton Iced Tea,4.75,,,
+100062,100062,,,100062,Zinger B&C,7.45,,,
+136056,136056,,,136056,ADD 2 Choc Mous,5.95,,,
+136064,136064,,,136064,Jalapeno Bowl,5.95,,,
+136046,136046,,,136046,Dinner Roll,1.00,,,
+200036,200036,,,200036,3 Dipping Sauce,1.80,,,
+145169,145169,Drinks,,145169,NO 1.25LT DRINK,0.00,,,
+136050,136050,,,136050,Chocolate Mousse,3.25,,,
+181013,181013,,,181013,4 WWings,7.93,,,
+183003,183003,,,183003,6 Tenders,15.90,,,
+100250,100250NOTADUPE,,Create,,Zinger Burger,11.11,Failed,400,"ErrorCode: Common.LookupNotUnique  ErrorMessage: Multiple references found with lookup by Zinger Burger,1(MenuItemName,CorporatePOSNumber). [Request: 0dfa1766-7599-4a84-896b-4c397a2a4a2f, Correlation: 0dfa1766-7599-4a84-896b-4c397a2a4a2f, Item: 00000cfc-0000-0000-0000-000000000000, ItemID: '', ItemName: 'Zinger Burger']"
+180085,180085,,,180085,125 HS PC,243.75,,,
+183032,183032,,,183032,100 OR Tenders,195.00,,,
+120008,120008,,,120008,Original Twist,9.45,,,
+136062,136062,,,136062,4 Rg Coleslaw,7.45,,,
+184011,184011,,,184011,5 Nuggets,6.20,,,
+180076,180076,,,180076,10 PC,16.95,,,
+180066,180066,,,180066,21 PC,37.95,,,
+191010,191010,,,191010,Dip Aioli,0.60,,,
+184005,184005,,,184005,18 Nuggets,17.01,,,
+100252,100252NOTADUPE,,Create,,Zing Burger $5,5.00,Failed,400,"ErrorCode: Common.UnknownError  ErrorMessage: UnknownError: Exception while processing request: Specified Item lookup is not supported. [Request: c604ba89-b790-4274-a59d-bea003948d08, Correlation: c604ba89-b790-4274-a59d-bea003948d08, Entity: UNKNOWN]"
+136007,136007,,,136007,Share Pk Chips,0.00,,,
+120003,120003,,,120003,BBQ Slider,3.75,,,
+183001,183001,,,183001,3 Tenders,8.95,,,
+141070,141070,,,141070,Water 600mL,3.75,,,
+141076,141076,,,141076,Apple Juice,3.75,,,
+183002,183002,,,183002,5 Tenders,11.95,,,
+Mountain Dew,141020,,,141020,Reg Mt Dew,3.75,,,
+Mountain Dew,141025,,,141025,Reg Mt Dew,4.75,,,
+Mountain Dew,141026,,,141026,Reg Mt Dew,5.45,,,
+170709,170709,,,170709,10 Nuggets,9.95,,,
+183006,183006,,,183006,10 Tenders,30.00,,,
+141066,141066,,,141066,1.25L Solo,4.45,,,
+182008,182008,,,182008,2 Zing Fillets,7.80,,,
+181002,181002,,,181002,10 Wicked Wings,12.95,,,
+100059,100059,,,100059,Zinger Chipster,7.45,,,

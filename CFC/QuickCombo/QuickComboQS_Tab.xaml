@@ -117,7 +117,7 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="QuickComboQS_Tab" sap:VirtualizedContainerService.HintSize="688,3407" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="QuickComboQS_Tab" sap:VirtualizedContainerService.HintSize="1282,3342" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Regular_Name" />
       <Variable x:TypeArguments="x:String" Name="Regular_Price" />
@@ -143,7 +143,7 @@
               <OutArgument x:TypeArguments="x:String">[Regular_Name]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[if(Not String.IsNullOrWhiteSpace(currentDataRow("name").ToString.Trim), currentDataRow("name").ToString.Trim, "")]</InArgument>
+              <InArgument x:TypeArguments="x:String">[if(Not String.IsNullOrWhiteSpace(currentDataRow("brandDistinctAttribute1").ToString.Trim), currentDataRow("brandDistinctAttribute1").ToString.Trim, currentDataRow("name").ToString.Trim)]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">

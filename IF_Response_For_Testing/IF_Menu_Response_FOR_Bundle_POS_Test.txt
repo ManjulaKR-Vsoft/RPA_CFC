@@ -1,0 +1,192 @@
+{
+  "menuCode": "Menu 01",
+  "name": "Base Menu",
+  "products": [ ],
+  "bundleChoices": [],
+  "bundles": [
+    {
+      "bundleCode": "10 Wicked Wings",
+      "name": "10 Wicked Wings® Combo",
+      "description": "Wicked Wings® with 1 Regular Chips and 1 Regular Drink.",
+      "maxCartQuantityAllowed": null,
+      "legalText": null,
+      "brandTags": [
+        "Combo"
+      ],
+      "promoTags": [
+        
+      ],
+      "brandDistinctAttribute1": null,
+      "brandDistinctAttribute2": null,
+      "brandDistinctAttribute3": null,
+      "slug": "Shared Meals",
+      "pricingMode": "FIXED",
+      "pricingModeSettings": null,
+      "price": {
+        "amount": 1695,
+        "currencyCode": "AUD"
+      },
+      "privateMetafields": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "nutritionInformation": [
+        
+      ],
+      "choices": [
+        
+        
+      ],
+      "images": [
+        
+      ],
+      "availability": {
+        "daypartCodes": [
+          
+        ],
+        "schedule": [
+          
+        ]
+      }
+    },
+
+{
+      "bundleCode": "Wicked",
+      "name": "10 Wicked Wings® Combo",
+      "description": "Wicked Wings® with 1 Regular Chips and 1 Regular Drink.",
+      "maxCartQuantityAllowed": null,
+      "legalText": null,
+      "brandTags": [
+        "Combo"
+      ],
+      "promoTags": [
+        
+      ],
+      "brandDistinctAttribute1": null,
+      "brandDistinctAttribute2": null,
+      "brandDistinctAttribute3": null,
+      "slug": "1Dip/Chicken Combo",
+      "pricingMode": "FIXED",
+      "pricingModeSettings": null,
+      "price": {
+        "amount": 1695,
+        "currencyCode": "AUD"
+      },
+      "privateMetafields": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "nutritionInformation": [
+        
+      ],
+      "choices": [
+        {
+          "choiceCode": "Combo Drinks",
+          "defaultVariantCodes": [
+            
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        },
+        {
+          "choiceCode": "Combo Sides Choice",
+          "defaultVariantCodes": [
+            
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        }
+      ],
+      "images": [
+        
+      ],
+      "availability": {
+        "daypartCodes": [
+          
+        ],
+        "schedule": [
+          
+        ]
+      }
+    },
+{
+      "bundleCode": "Wings",
+      "name": "10 Wicked Wings® Combo",
+      "description": "Wicked Wings® with 1 Regular Chips and 1 Regular Drink.",
+      "maxCartQuantityAllowed": null,
+      "legalText": null,
+      "brandTags": [
+        "Combo"
+      ],
+      "promoTags": [
+        
+      ],
+      "brandDistinctAttribute1": null,
+      "brandDistinctAttribute2": null,
+      "brandDistinctAttribute3": null,
+      "slug": "Burger/Twister Combo",
+      "pricingMode": "FIXED",
+      "pricingModeSettings": null,
+      "price": {
+        "amount": 1695,
+        "currencyCode": "AUD"
+      },
+      "privateMetafields": [
+        
+      ],
+      "metafields": [
+        
+      ],
+      "nutritionInformation": [
+        
+      ],
+      "choices": [
+        {
+          "choiceCode": "Combo Drinks",
+          "defaultVariantCodes": [
+            
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        },
+        {
+          "choiceCode": "Combo Sides Choice",
+          "defaultVariantCodes": [
+            
+          ],
+          "excludedVariantCodes": [
+            
+          ],
+          "minAllowedSelections": 1,
+          "maxAllowedSelections": 1
+        }
+      ],
+      "images": [
+        
+      ],
+      "availability": {
+        "daypartCodes": [
+          
+        ],
+        "schedule": [
+          
+        ]
+      }
+    }
+
+
+  ]
+}
