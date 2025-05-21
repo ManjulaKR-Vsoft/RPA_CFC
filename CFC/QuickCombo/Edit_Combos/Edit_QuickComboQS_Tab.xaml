@@ -117,7 +117,7 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="QuickComboQS_Tab" sap:VirtualizedContainerService.HintSize="610,2017" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="QuickComboQS_Tab" sap:VirtualizedContainerService.HintSize="1282,2066" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Regular_Name" />
       <Variable x:TypeArguments="x:String" Name="Regular_Price" />
@@ -223,6 +223,14 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
+    <Assign sap:VirtualizedContainerService.HintSize="548,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[Regular_Price]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[(CDbl(Regular_Price) / 100).ToString("0.00")]</InArgument>
+      </Assign.Value>
+    </Assign>
     <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Aloha Configuration Center : Yum Restaurants Australia UAT" sap:VirtualizedContainerService.HintSize="548,1502" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="IfNotOpen" ScopeGuid="78cad56b-e09f-46bf-ad97-d92fe7561767" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
