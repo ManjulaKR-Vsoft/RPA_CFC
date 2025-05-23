@@ -128,7 +128,7 @@
       <AssemblyReference>netstandard</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Promotion_Tab" sap:VirtualizedContainerService.HintSize="1282,4371" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Promotion_Tab" sap:VirtualizedContainerService.HintSize="1282,4250" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="Taco Burger Combo" Name="Promotion_Name" />
       <Variable x:TypeArguments="x:String" Default="Yes" Name="Promo_Active" />
@@ -233,13 +233,6 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <Sequence DisplayName="QC POS Ranges" sap:VirtualizedContainerService.HintSize="588,121" sap2010:WorkflowViewState.IdRef="Sequence_26">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </Sequence>
     <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Aloha Configuration Center : Yum Restaurants Australia UAT" sap:VirtualizedContainerService.HintSize="588,3486" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="IfNotOpen" ScopeGuid="48b3ef0e-398d-41f3-85e7-c75f62ac40b9" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">

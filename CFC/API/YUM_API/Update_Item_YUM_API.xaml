@@ -120,7 +120,7 @@
       <AssemblyReference>System.Collections.Specialized</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Update_YUM_API" sap:VirtualizedContainerService.HintSize="1282,4948" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Update_YUM_API" sap:VirtualizedContainerService.HintSize="1282,4945" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="YUM_API_AUTH_URL" />
       <Variable x:TypeArguments="x:String" Name="YUM_AUTH_Client_ID" />
@@ -246,7 +246,7 @@
         <OutArgument x:TypeArguments="x:String" x:Key="YUM_BASE_URL">[YUM_BASE_URL]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <If Condition="[auth_token_status = 200]" sap:VirtualizedContainerService.HintSize="684,4518" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[auth_token_status = 200]" sap:VirtualizedContainerService.HintSize="684,4515" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -254,7 +254,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="682,4163" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="682,4160" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -282,7 +282,7 @@
               </Sequence>
             </ui:CommentOut.Body>
           </ui:CommentOut>
-          <ui:Comment sap:VirtualizedContainerService.HintSize="648,167" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// &quot;{&quot;&quot;query&quot;&quot;:&quot;&quot;query ProductDefinitionByCode {\n    productDefinitionByCode(productCode: \&quot;&quot;141006\&quot;&quot;) {\n        productId\n        productCode\n    }\n}&quot;&quot;}&quot;" />
+          <ui:Comment sap:VirtualizedContainerService.HintSize="648,164" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// &quot;{&quot;&quot;query&quot;&quot;:&quot;&quot;query ProductDefinitionByCode {\n    productDefinitionByCode(productCode: \&quot;&quot;141006\&quot;&quot;) {\n        productId\n        productCode\n    }\n}&quot;&quot;}&quot;" />
           <Sequence DisplayName="Get productId and variantId" sap:VirtualizedContainerService.HintSize="648,3800" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -290,7 +290,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" AuthenticationType="None" Body="[&quot;{&quot;&quot;query&quot;&quot;:&quot;&quot;query ProductDefinitionByCode {\n    productDefinitionByCode(productCode: \&quot;&quot;&quot; + Product_Code + &quot;\&quot;&quot;) {\n        productId\n        productCode\n        variants {\n            variantId\n            variantCode\n        }\n}\n}&quot;&quot;}&quot;]" BodyFormat="application/xml" DisplayName="HTTP Request - Get productId and variantId" EnableSSLVerification="True" EndPoint="[YUM_BASE_URL]" sap:VirtualizedContainerService.HintSize="614,102" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="POST" Result="[ProductResponse]" StatusCode="[ProductResponse_Status]" TimeoutMS="6000">
+            <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" AuthenticationType="None" Body="[&quot;{&quot;&quot;query&quot;&quot;:&quot;&quot;query ProductDefinitionByCode {\n    productDefinitionByCode(productCode: \&quot;&quot;&quot; + Product_Code + &quot;\&quot;&quot;) {\n        productId\n        productCode\n        variants {\n            variantId\n            variantCode\n        }\n}\n}&quot;&quot;}&quot;]" BodyFormat="application/xml" DisplayName="HTTP Request - Get productId and variantId" EnableSSLVerification="True" EndPoint="[YUM_BASE_URL]" sap:VirtualizedContainerService.HintSize="614,102" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="POST" Result="[ProductResponse]" StatusCode="[ProductResponse_Status]" TimeoutMS="30000">
               <ui:HttpClient.Attachments>
                 <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
               </ui:HttpClient.Attachments>
