@@ -624,7 +624,7 @@
                                     <OutArgument x:TypeArguments="x:String">[ItemType]</OutArgument>
                                   </Assign.To>
                                   <Assign.Value>
-                                    <InArgument x:TypeArguments="x:String">[currentJToken("slug").ToString]</InArgument>
+                                    <InArgument x:TypeArguments="x:String">[currentJToken("slug").ToString.Trim]</InArgument>
                                   </Assign.Value>
                                 </Assign>
                                 <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_215">
