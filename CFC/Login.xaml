@@ -98,7 +98,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="1690,3586" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="1662,3551" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Username" />
       <Variable x:TypeArguments="x:String" Default="Corporate " Name="Owner" />
@@ -109,36 +109,36 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1690,3563" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1662,3528" sap2010:WorkflowViewState.IdRef="Sequence_8">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1656,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;CFC automation started at &quot;+DateTime.Now.ToString]" />
-      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Aloha Configuration Center" sap:VirtualizedContainerService.HintSize="1656,3097" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" ScopeGuid="ec9f6d42-c8db-468d-98ea-f82fbbdfc993" Version="V2">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1628,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;CFC automation started at &quot;+DateTime.Now.ToString]" />
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Aloha Configuration Center" sap:VirtualizedContainerService.HintSize="1628,3062" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" ScopeGuid="ec9f6d42-c8db-468d-98ea-f82fbbdfc993" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1622,2734" sap2010:WorkflowViewState.IdRef="Sequence_19">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1594,2739" sap2010:WorkflowViewState.IdRef="Sequence_19">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="1588,122" sap2010:WorkflowViewState.IdRef="Delay_3" />
-              <uix:NCheckState DisplayName="Check App State '&amp;Sign In'" sap:VirtualizedContainerService.HintSize="1588,2550" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="ec9f6d42-c8db-468d-98ea-f82fbbdfc993" Version="V3">
+              <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="1560,122" sap2010:WorkflowViewState.IdRef="Delay_3" />
+              <uix:NCheckState DisplayName="Check App State '&amp;Sign In'" sap:VirtualizedContainerService.HintSize="1560,2555" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="ec9f6d42-c8db-468d-98ea-f82fbbdfc993" Version="V3">
                 <uix:NCheckState.IfExists>
-                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="1084,2308" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="1056,2313" sap2010:WorkflowViewState.IdRef="Sequence_17">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="CFC_Login_Credentials" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="1050,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[Password]" Username="[Username]" />
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1050,286" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="ec9f6d42-c8db-468d-98ea-f82fbbdfc993" Text="[Username]" Version="V3">
+                    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="CFC_Login_Credentials" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="1022,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[Password]" Username="[Username]" />
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1022,286" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="ec9f6d42-c8db-468d-98ea-f82fbbdfc993" Text="[Username]" Version="V3">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable CVScreenId="40618ca9-e051-424b-8561-e733facebf18" CvElementArea="142, 240, 191, 21" CvType="InputBox" DesignTimeRectangle="146, 243, 184, 14" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='userIdTextEdit' /&gt;&lt;wnd cls='WindowsForms10.EDIT.*' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='userIdTextEdit' /&gt;&lt;wnd cls='WindowsForms10.EDIT.*' /&gt;" Guid="4739f77f-7629-4ad2-a4f5-2992df6e996c" InformativeScreenshot="ae0bc0f115f8378db90154d3db2fc501.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' ctrlname='LoginForm' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -159,7 +159,7 @@
                         </uix:VerifyExecutionTypeIntoOptions>
                       </uix:NTypeInto.VerifyOptions>
                     </uix:NTypeInto>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1050,286" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="ec9f6d42-c8db-468d-98ea-f82fbbdfc993" SecureText="[Password]" Version="V3">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1022,286" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="ec9f6d42-c8db-468d-98ea-f82fbbdfc993" SecureText="[Password]" Version="V3">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable CVScreenId="40618ca9-e051-424b-8561-e733facebf18" CvElementArea="142, 269, 191, 22" CvType="InputBox" DesignTimeRectangle="146, 273, 184, 14" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='passwordTextEdit' /&gt;&lt;wnd aaname='PasswordTextEdit' cls='WindowsForms10.EDIT.*' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='passwordTextEdit' /&gt;&lt;wnd aaname='PasswordTextEdit' cls='WindowsForms10.EDIT.*' /&gt;" Guid="e569bc45-702b-4116-964f-6181240b389f" InformativeScreenshot="293ff0c2b38d28e0b71604ed66fd48d1.png" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' ctrlname='LoginForm' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -180,7 +180,7 @@
                         </uix:VerifyExecutionTypeIntoOptions>
                       </uix:NTypeInto.VerifyOptions>
                     </uix:NTypeInto>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Owner'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1050,250" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="ec9f6d42-c8db-468d-98ea-f82fbbdfc993" Text="[Owner + &quot;[k(enter)]&quot;]" Version="V3">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Owner'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1022,250" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="ec9f6d42-c8db-468d-98ea-f82fbbdfc993" Text="[Owner + &quot;[k(enter)]&quot;]" Version="V3">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable CVScreenId="40618ca9-e051-424b-8561-e733facebf18" CvElementArea="142, 300, 191, 21" CvType="InputBox" DesignTimeRectangle="143, 300, 190, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;ctrl idx='3' role='editable text' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;ctrl automationid='' role='editable text' /&gt;" Guid="aca799b8-4055-4924-becb-67a4907cce5b" InformativeScreenshot="1fe2107cf53da91bb22b6216986c66ff.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' ctrlname='LoginForm' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -191,7 +191,7 @@
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Sign In'" sap:VirtualizedContainerService.HintSize="1050,225" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ec9f6d42-c8db-468d-98ea-f82fbbdfc993" Version="V3">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Sign In'" sap:VirtualizedContainerService.HintSize="1022,225" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ec9f6d42-c8db-468d-98ea-f82fbbdfc993" Version="V3">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable CVScreenId="40618ca9-e051-424b-8561-e733facebf18" CvElementArea="258, 353, 74, 22" CvTextArea="277, 359, 35, 13" CvTextArgument="Sign In" CvType="Button" DesignTimeRectangle="258, 353, 75, 23" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='okButton' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='okButton' check:text='&amp;amp;Sign In' /&gt;" Guid="90f2323f-75a6-449e-854d-cd4485586c33" InformativeScreenshot="9879c63678fb6612e69f093f341cfd7f.png" ScopeSelectorArgument="&lt;wnd app='aemshell.exe' ctrlname='LoginForm' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -212,38 +212,39 @@
                         </uix:VerifyExecutionOptions>
                       </uix:NClick.VerifyOptions>
                     </uix:NClick>
-                    <Delay Duration="00:00:15" sap:VirtualizedContainerService.HintSize="1050,122" sap2010:WorkflowViewState.IdRef="Delay_4" />
-                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Aloha Configuration Center : Yum Restaurants Australia UAT" sap:VirtualizedContainerService.HintSize="1050,902" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" ScopeGuid="9646673e-ba4f-4a92-90c6-88d80cb5aebf" Version="V2">
+                    <Delay Duration="00:00:15" sap:VirtualizedContainerService.HintSize="1022,122" sap2010:WorkflowViewState.IdRef="Delay_4" />
+                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Aloha Configuration Center : Yum Restaurants Australia UAT" sap:VirtualizedContainerService.HintSize="1022,907" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" ScopeGuid="9646673e-ba4f-4a92-90c6-88d80cb5aebf" Version="V2">
                       <uix:NApplicationCard.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,588" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="988,591" sap2010:WorkflowViewState.IdRef="Sequence_16">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <uix:NCheckState DisplayName="Check App State 'Maintenance Labor'" sap:VirtualizedContainerService.HintSize="954,500" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="9646673e-ba4f-4a92-90c6-88d80cb5aebf" Version="V3">
+                            <uix:NCheckState DisplayName="Check App State 'Maintenance Labor'" sap:VirtualizedContainerService.HintSize="954,529" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="9646673e-ba4f-4a92-90c6-88d80cb5aebf" Version="V3">
                               <uix:NCheckState.IfExists>
-                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,287" sap2010:WorkflowViewState.IdRef="Sequence_14">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,168" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Aloha CFC login successful&quot;]" />
+                                  <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Trace" Message="[&quot;Aloha CFC login successful&quot;]" />
                                 </Sequence>
                               </uix:NCheckState.IfExists>
                               <uix:NCheckState.IfNotExists>
-                                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,230" sap2010:WorkflowViewState.IdRef="Sequence_15">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,168" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Error" Message="[&quot;Login failed or something went wrong.&quot;]" />
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Error" Message="[&quot;Login failed or something went wrong.&quot;]" />
                                 </Sequence>
                               </uix:NCheckState.IfNotExists>
                               <uix:NCheckState.Target>
@@ -286,7 +287,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uix:NApplicationCard>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1656,210" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1628,210" sap2010:WorkflowViewState.IdRef="CommentOut_1">
         <ui:CommentOut.Body>
           <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_20">
             <sap:WorkflowViewStateService.ViewState>
