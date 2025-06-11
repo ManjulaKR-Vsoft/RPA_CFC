@@ -1,10 +1,10 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="Update_Product_Metafield_YUM" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="Product_Code" Type="InArgument(x:String)" />
     <x:Property Name="metaKey" Type="InArgument(x:String)" />
     <x:Property Name="metaNamespace" Type="InArgument(x:String)" />
     <x:Property Name="metaValueType" Type="InArgument(x:String)" />
     <x:Property Name="UpdateMetaStatusCode" Type="OutArgument(x:Int32)" />
+    <x:Property Name="Slot_Code" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -123,9 +123,9 @@
       <Variable x:TypeArguments="x:String" Name="YUM_API_AUTH_URL" />
       <Variable x:TypeArguments="x:String" Name="YUM_AUTH_Client_ID" />
       <Variable x:TypeArguments="x:String" Name="auth_token" />
-      <Variable x:TypeArguments="x:String" Name="ProductResponse" />
-      <Variable x:TypeArguments="x:Int32" Name="ProductResponse_Status" />
-      <Variable x:TypeArguments="njl:JObject" Name="productJObject" />
+      <Variable x:TypeArguments="x:String" Name="SlotResponse" />
+      <Variable x:TypeArguments="x:Int32" Name="SlotResponse_Status" />
+      <Variable x:TypeArguments="njl:JObject" Name="slotJObject" />
       <Variable x:TypeArguments="njl:JObject" Name="access_token" />
       <Variable x:TypeArguments="x:String" Name="updateMetaResponse" />
     </Sequence.Variables>
@@ -147,7 +147,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="560,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Yum Meatfield Update for &quot;+&quot;ProductCode: &quot;+Product_Code]" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="560,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Yum Meatfield Update for &quot;+&quot;SlotCode: &quot;+Slot_Code]" />
       <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="560,57" sap2010:WorkflowViewState.IdRef="CommentOut_5">
         <ui:CommentOut.Body>
           <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="468,444" sap2010:WorkflowViewState.IdRef="Sequence_19">
@@ -248,10 +248,10 @@
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
                     <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:String">[Product_Code]</OutArgument>
+                      <OutArgument x:TypeArguments="x:String">[Slot_Code]</OutArgument>
                     </ui:AssignOperation.To>
                     <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[Product_Code]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[Slot_Code]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
@@ -287,13 +287,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:MultipleAssign>
-            <Sequence DisplayName="get ProductId" sap:VirtualizedContainerService.HintSize="524,2277" sap2010:WorkflowViewState.IdRef="Sequence_13">
+            <Sequence DisplayName="get SlotID" sap:VirtualizedContainerService.HintSize="524,2277" sap2010:WorkflowViewState.IdRef="Sequence_13">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" AuthenticationType="None" Body="[&quot;{&quot;&quot;query&quot;&quot;:&quot;&quot;query ProductDefinitionByCode {\n    productDefinitionByCode(productCode: \&quot;&quot;&quot; + Product_Code + &quot;\&quot;&quot;) {\n        productId\n        productCode\n    \n}\n}&quot;&quot;}&quot;]" BodyFormat="application/xml" DisplayName="HTTP Request - Get productId and variantId" EnableSSLVerification="True" EndPoint="[YUM_BASE_URL]" sap:VirtualizedContainerService.HintSize="490,102" sap2010:WorkflowViewState.IdRef="HttpClient_8" Method="POST" Result="[ProductResponse]" StatusCode="[ProductResponse_Status]" TimeoutMS="6000">
+              <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" AuthenticationType="None" Body="[&quot;{&quot;&quot;query&quot;&quot;:&quot;&quot;query SlotDefinitionByCode {\n   slotDefinitionByCode(slotCode: \&quot;&quot;&quot; + Slot_Code + &quot;\&quot;&quot;) {\n        slotId\n        slotCode\n    \n}\n}&quot;&quot;}&quot;]" BodyFormat="application/xml" DisplayName="HTTP Request - Get productId and variantId" EnableSSLVerification="True" EndPoint="[YUM_BASE_URL]" sap:VirtualizedContainerService.HintSize="490,102" sap2010:WorkflowViewState.IdRef="HttpClient_8" Method="POST" Result="[SlotResponse]" StatusCode="[SlotResponse_Status]" TimeoutMS="6000">
                 <ui:HttpClient.Attachments>
                   <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                 </ui:HttpClient.Attachments>
@@ -311,7 +311,7 @@
                   <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                 </ui:HttpClient.UrlSegments>
               </ui:HttpClient>
-              <If Condition="[ProductResponse_Status=200]" sap:VirtualizedContainerService.HintSize="490,2083" sap2010:WorkflowViewState.IdRef="If_3">
+              <If Condition="[SlotResponse_Status=200]" sap:VirtualizedContainerService.HintSize="490,2083" sap2010:WorkflowViewState.IdRef="If_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -321,23 +321,23 @@
                 <If.Then>
                   <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="488,1730" sap2010:WorkflowViewState.IdRef="Sequence_7">
                     <Sequence.Variables>
-                      <Variable x:TypeArguments="x:String" Name="productID" />
+                      <Variable x:TypeArguments="x:String" Name="slotID" />
                     </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="454,122" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_2" JsonObject="[productJObject]" JsonString="[ProductResponse]" />
+                    <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="454,122" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_2" JsonObject="[slotJObject]" JsonString="[SlotResponse]" />
                     <Assign sap:VirtualizedContainerService.HintSize="454,114" sap2010:WorkflowViewState.IdRef="Assign_3">
                       <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[productID]</OutArgument>
+                        <OutArgument x:TypeArguments="x:String">[slotID]</OutArgument>
                       </Assign.To>
                       <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[productJObject("data")("productDefinitionByCode")("productId").ToString]</InArgument>
+                        <InArgument x:TypeArguments="x:String">[slotJObject("data")("slotDefinitionByCode")("slotId").ToString]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <If Condition="[Not String.IsNullOrWhiteSpace(productID)]" sap:VirtualizedContainerService.HintSize="454,857" sap2010:WorkflowViewState.IdRef="If_4">
+                    <If Condition="[Not String.IsNullOrWhiteSpace(slotID)]" sap:VirtualizedContainerService.HintSize="454,857" sap2010:WorkflowViewState.IdRef="If_4">
                       <If.Then>
                         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="452,630" sap2010:WorkflowViewState.IdRef="Sequence_17">
                           <sap:WorkflowViewStateService.ViewState>
@@ -347,7 +347,7 @@
                           </sap:WorkflowViewStateService.ViewState>
                           <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,570" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                             <TryCatch.Try>
-                              <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[&quot;{&quot;&quot;query&quot;&quot;:&quot;&quot;mutation updateProductDefinition { updateProductDefinition( input: { productId: \&quot;&quot;&quot;+ productID+&quot;\&quot;&quot;, productCode: \&quot;&quot;&quot;+Product_Code+&quot;\&quot;&quot;, metafields: { key: \&quot;&quot;&quot;+metaKey+&quot;\&quot;&quot;, namespace: \&quot;&quot;&quot;+ metaNamespace+&quot;\&quot;&quot;, value: \&quot;&quot;0\&quot;&quot;, valueType: INTEGER } } ) { ... on UpdateProductDefinitionSuccess { product { productId productCode } } } }&quot;&quot;}&quot;]" BodyFormat="application/json" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[YUM_BASE_URL]" sap:VirtualizedContainerService.HintSize="416,70" sap2010:WorkflowViewState.IdRef="HttpClient_4" Method="POST" Result="[updateMetaResponse]" StatusCode="[UpdateMetaStatusCode]" TimeoutMS="30000">
+                              <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[&quot;{&quot;&quot;query&quot;&quot;:&quot;&quot;mutation UpdateSlotDefinition { updateSlotDefinition( input: { slotId: \&quot;&quot;&quot;+ slotID+&quot;\&quot;&quot;, slotCode: \&quot;&quot;&quot;+Slot_Code+&quot;\&quot;&quot;, metafields: { key: \&quot;&quot;&quot;+metaKey+&quot;\&quot;&quot;, namespace: \&quot;&quot;&quot;+ metaNamespace+&quot;\&quot;&quot;, value: \&quot;&quot;0\&quot;&quot;, valueType: INTEGER } } ) { ... on UpdateSlotDefinitionSuccess { slot { slotId slotCode } } } }&quot;&quot;}&quot;]" BodyFormat="application/json" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[YUM_BASE_URL]" sap:VirtualizedContainerService.HintSize="416,70" sap2010:WorkflowViewState.IdRef="HttpClient_4" Method="POST" Result="[updateMetaResponse]" StatusCode="[UpdateMetaStatusCode]" TimeoutMS="30000">
                                 <ui:HttpClient.Attachments>
                                   <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                                 </ui:HttpClient.Attachments>
@@ -378,7 +378,7 @@
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,164" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Failed to update Metafield for Product&quot;+ Product_Code]" />
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,164" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Failed to update Metafield for Product&quot;+ Slot_Code]" />
                                   </Sequence>
                                 </ActivityAction>
                               </Catch>
@@ -419,7 +419,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Metadata for &quot;+Product_Code +&quot; is set to 0 in YUM admin &quot;]" />
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Metadata for &quot;+Slot_Code +&quot; is set to 0 in YUM admin &quot;]" />
                         </Sequence>
                       </If.Then>
                       <If.Else>
@@ -429,7 +429,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,164" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Metadata is not updated for the product &quot;+Product_Code+&quot;Error: &quot; +updateMetaResponse]" />
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,164" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Metadata is not updated for the product &quot;+Slot_Code+&quot;Error: &quot; +updateMetaResponse]" />
                         </Sequence>
                       </If.Else>
                     </If>

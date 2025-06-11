@@ -107,7 +107,7 @@
       <AssemblyReference>System.Collections.Specialized</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="PublishMenu_YUM" sap:VirtualizedContainerService.HintSize="1282,3087" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="PublishMenu_YUM" sap:VirtualizedContainerService.HintSize="1299,474.04" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="menuChannel" />
       <Variable x:TypeArguments="x:String" Name="menuchannelID" />
@@ -123,18 +123,19 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="488,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Publish menu from YUM&quot;]" />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="YUM_Auth_Token - Invoke Workflow File (CFC\API\YUM_API\YUM_Auth_Token.xaml)" sap:VirtualizedContainerService.HintSize="488,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="CFC\API\YUM_API\YUM_Auth_Token.xaml">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Publish menu from YUM&quot;]" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="YUM_Auth_Token - Invoke Workflow File (CFC\API\YUM_API\YUM_Auth_Token.xaml)" sap:VirtualizedContainerService.HintSize="450,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="CFC\API\YUM_API\YUM_Auth_Token.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="x:String" x:Key="auth_token">[auth_token]</OutArgument>
         <OutArgument x:TypeArguments="x:Int32" x:Key="auth_token_status">[auth_token_status]</OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="YUM_BASE_URL">[YUM_BASE_URL]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <Sequence DisplayName="Yum Publish" sap:VirtualizedContainerService.HintSize="488,2714" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Yum Publish" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_11">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If Condition="[auth_token_status = 200]" sap:VirtualizedContainerService.HintSize="454,2631" sap2010:WorkflowViewState.IdRef="If_2">

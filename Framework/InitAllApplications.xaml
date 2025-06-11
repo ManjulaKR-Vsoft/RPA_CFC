@@ -133,11 +133,13 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="1282,1436" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="1282,2733" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="listOfFiles" />
       <Variable x:TypeArguments="x:String" Name="Archive_Folder_Path" />
       <Variable x:TypeArguments="x:Boolean" Name="Archive_Folder_Exist" />
+      <Variable x:TypeArguments="x:Boolean" Name="Screenshot_Path_exists" />
+      <Variable x:TypeArguments="x:String" Name="Screenshot_Path" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -168,7 +170,7 @@
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
     <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="538,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
-    <Sequence DisplayName="Move Log files to Archive" sap:VirtualizedContainerService.HintSize="538,1104" sap2010:WorkflowViewState.IdRef="Sequence_29">
+    <Sequence DisplayName="Move Log files to Archive" sap:VirtualizedContainerService.HintSize="538,2401" sap2010:WorkflowViewState.IdRef="Sequence_29">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -183,7 +185,7 @@
           <InArgument x:TypeArguments="x:String">["C:\Users\USER_NAME\Documents\CFC_RPA\Archive".Replace("USER_NAME", Environment.UserName)]</InArgument>
         </Assign.Value>
       </Assign>
-      <Sequence DisplayName="Log Archive" sap:VirtualizedContainerService.HintSize="504,898" sap2010:WorkflowViewState.IdRef="Sequence_30">
+      <Sequence DisplayName="Log Archive" sap:VirtualizedContainerService.HintSize="504,1470" sap2010:WorkflowViewState.IdRef="Sequence_30">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:String" Name="Log_Path" />
           <Variable x:TypeArguments="x:Boolean" Name="Log_Path_Exists" />
@@ -194,10 +196,10 @@
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Sequence DisplayName="Archive Folder " sap:VirtualizedContainerService.HintSize="470,57" sap2010:WorkflowViewState.IdRef="Sequence_38">
+        <Sequence DisplayName="Archive Folder " sap:VirtualizedContainerService.HintSize="470,620" sap2010:WorkflowViewState.IdRef="Sequence_38">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -287,6 +289,12 @@
         </Assign>
         <ui:PathExists Resource="{x:Null}" DisplayName="Path Exists" Exists="[Log_Path_Exists]" sap:VirtualizedContainerService.HintSize="470,147" sap2010:WorkflowViewState.IdRef="PathExists_3" Path="[Log_Path]" PathType="Folder" />
         <If Condition="[Log_Path_Exists]" sap:VirtualizedContainerService.HintSize="470,440" sap2010:WorkflowViewState.IdRef="If_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
           <If.Then>
             <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,222" sap2010:WorkflowViewState.IdRef="Sequence_42">
               <sap:WorkflowViewStateService.ViewState>
@@ -352,6 +360,43 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
+            </Sequence>
+          </If.Else>
+        </If>
+      </Sequence>
+      <Sequence DisplayName="Screenshots" sap:VirtualizedContainerService.HintSize="504,725" sap2010:WorkflowViewState.IdRef="Sequence_44">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_4">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[Screenshot_Path]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">ScreenShots\</InArgument>
+          </Assign.Value>
+        </Assign>
+        <ui:PathExists Resource="{x:Null}" DisplayName="Path Exists" Exists="[Screenshot_Path_exists]" sap:VirtualizedContainerService.HintSize="434,147" sap2010:WorkflowViewState.IdRef="PathExists_4" Path="[Screenshot_Path]" PathType="File" />
+        <If Condition="[Screenshot_Path_exists]" sap:VirtualizedContainerService.HintSize="434,381" sap2010:WorkflowViewState.IdRef="If_5">
+          <If.Then>
+            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_46">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Sequence>
+          </If.Then>
+          <If.Else>
+            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,163" sap2010:WorkflowViewState.IdRef="Sequence_45">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="382,103" sap2010:WorkflowViewState.IdRef="CreateDirectory_3" Path="[Screenshot_Path]" />
             </Sequence>
           </If.Else>
         </If>

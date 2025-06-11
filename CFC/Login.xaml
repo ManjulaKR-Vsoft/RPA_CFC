@@ -96,6 +96,8 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="1662,3551" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -115,7 +117,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1628,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;CFC automation started at &quot;+DateTime.Now.ToString]" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1628,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;CFC Login &quot;+DateTime.Now.ToString]" />
       <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Aloha Configuration Center" sap:VirtualizedContainerService.HintSize="1628,3062" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" ScopeGuid="ec9f6d42-c8db-468d-98ea-f82fbbdfc993" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">

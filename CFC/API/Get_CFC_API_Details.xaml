@@ -4,7 +4,7 @@
     <x:Property Name="CFC_API_URL" Type="OutArgument(x:String)" />
     <x:Property Name="CFC_API_Username" Type="OutArgument(x:String)" />
     <x:Property Name="CFC_API_Password" Type="OutArgument(x:String)" />
-    <x:Property Name="CFC_API_Web_ConnectionID" Type="OutArgument(x:Int32)" />
+    <x:Property Name="CFC_API_Web_ConnectionID" Type="OutArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -102,7 +102,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Get_CFC_API_Details" sap:VirtualizedContainerService.HintSize="1282,827" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Get_CFC_API_Details" sap:VirtualizedContainerService.HintSize="1282,1165" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ss:SecureString" Name="CFC_Password_Secure" />
     </Sequence.Variables>
@@ -111,8 +111,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="CFC_API_Credentials" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[CFC_Password_Secure]" Username="[CFC_API_Username]" />
-    <Assign sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="CFC_API_Credentials" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="486,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[CFC_Password_Secure]" Username="[CFC_API_Username]" />
+    <Assign sap:VirtualizedContainerService.HintSize="486,114" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[CFC_API_Password]</OutArgument>
       </Assign.To>
@@ -120,17 +120,33 @@
         <InArgument x:TypeArguments="x:String">[New System.Net.NetworkCredential(String.Empty, CFC_Password_Secure).Password]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CFC_API_Version_No" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CFC_API_Version_No" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="486,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[CFC_API_Version]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CFC_API_WEB_CONNECTION_ID" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CFC_API_WEB_CONNECTION_ID" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="486,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_5">
       <ui:GetRobotAsset.Value>
-        <OutArgument x:TypeArguments="x:Int32">[CFC_API_Web_ConnectionID]</OutArgument>
+        <OutArgument x:TypeArguments="x:String">[CFC_API_Web_ConnectionID]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CFC_API_URL" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="434,166" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
+    <ui:CommentOut DisplayName="Comment Out INT" sap:VirtualizedContainerService.HintSize="486,337" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CFC_API_WEB_CONNECTION_ID" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+            <ui:GetRobotAsset.Value>
+              <OutArgument x:TypeArguments="x:Int32">[CFC_API_Web_ConnectionID]</OutArgument>
+            </ui:GetRobotAsset.Value>
+          </ui:GetRobotAsset>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CFC_API_URL" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="486,166" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[CFC_API_URL]</OutArgument>
       </ui:GetRobotAsset.Value>

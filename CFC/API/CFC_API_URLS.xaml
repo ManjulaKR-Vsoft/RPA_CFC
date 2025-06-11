@@ -99,7 +99,7 @@
         <Variable x:TypeArguments="x:String" Name="CFC_API_URL" />
         <Variable x:TypeArguments="x:String" Name="CFC_API_Username" />
         <Variable x:TypeArguments="x:String" Name="CFC_API_Password" />
-        <Variable x:TypeArguments="x:Int32" Name="CFC_API_Web_ConnectionID" />
+        <Variable x:TypeArguments="x:String" Name="CFC_API_Web_ConnectionID" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -113,7 +113,7 @@
           <OutArgument x:TypeArguments="x:String" x:Key="CFC_API_URL">[CFC_API_URL]</OutArgument>
           <OutArgument x:TypeArguments="x:String" x:Key="CFC_API_Username">[CFC_API_Username]</OutArgument>
           <OutArgument x:TypeArguments="x:String" x:Key="CFC_API_Password">[CFC_API_Password]</OutArgument>
-          <OutArgument x:TypeArguments="x:Int32" x:Key="CFC_API_Web_ConnectionID">[CFC_API_Web_ConnectionID]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="CFC_API_Web_ConnectionID">[CFC_API_Web_ConnectionID]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
       <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,210" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">

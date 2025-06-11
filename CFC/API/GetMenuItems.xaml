@@ -129,7 +129,7 @@
       <Variable x:TypeArguments="x:String" Name="CFC_Username" />
       <Variable x:TypeArguments="x:String" Name="CFC_Password" />
       <Variable x:TypeArguments="x:String" Name="CFC_API_Version" />
-      <Variable x:TypeArguments="x:Int32" Name="CFC_Web_Connection_ID" />
+      <Variable x:TypeArguments="x:String" Name="CFC_Web_Connection_ID" />
       <Variable x:TypeArguments="x:String" Name="CFC_API_URL" />
       <Variable x:TypeArguments="x:String" Name="Menu_Response" />
       <Variable x:TypeArguments="x:Int32" Name="ResponseStatus" />
@@ -149,7 +149,7 @@
         <OutArgument x:TypeArguments="x:String" x:Key="CFC_API_URL">[CFC_API_URL]</OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="CFC_API_Username">[CFC_Username]</OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="CFC_API_Password">[CFC_Password]</OutArgument>
-        <OutArgument x:TypeArguments="x:Int32" x:Key="CFC_API_Web_ConnectionID">[CFC_Web_Connection_ID]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="CFC_API_Web_ConnectionID">[CFC_Web_Connection_ID]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <Sequence DisplayName="Sequence - Menu CFC API" sap:VirtualizedContainerService.HintSize="538,3130" sap2010:WorkflowViewState.IdRef="Sequence_2">
@@ -217,7 +217,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[&quot;{ &quot;&quot;Header&quot;&quot;:{ &quot;&quot;ClientApplication&quot;&quot;: &quot;&quot;Dynamic Menu&quot;&quot;, &quot;&quot;ClientVersion&quot;&quot;: &quot;&quot;1.0.0.0&quot;&quot;, &quot;&quot;ApiVersion&quot;&quot;: &quot;&quot;19.3.0.0&quot;&quot;, &quot;&quot;MessageID&quot;&quot;: &quot;&quot;dvdhvhdvh&quot;&quot;}}&quot;]" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[CFC_API_URL]" sap:VirtualizedContainerService.HintSize="382,102" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" Password="[CFC_Password]" Result="[Menu_Response]" StatusCode="[ResponseStatus]" TimeoutMS="6000" Username="[CFC_Username]">
+            <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[&quot;{ &quot;&quot;Header&quot;&quot;:{ &quot;&quot;ClientApplication&quot;&quot;: &quot;&quot;Dynamic Menu&quot;&quot;, &quot;&quot;ClientVersion&quot;&quot;: &quot;&quot;1.0.0.0&quot;&quot;, &quot;&quot;ApiVersion&quot;&quot;: &quot;&quot;19.3.0.0&quot;&quot;, &quot;&quot;MessageID&quot;&quot;: &quot;&quot;dvdhvhdvh&quot;&quot;}}&quot;]" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[CFC_API_URL]" sap:VirtualizedContainerService.HintSize="382,102" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" Password="[CFC_Password]" Result="[Menu_Response]" StatusCode="[ResponseStatus]" TimeoutMS="180000" Username="[CFC_Username]">
               <ui:HttpClient.Attachments>
                 <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
               </ui:HttpClient.Attachments>
@@ -258,7 +258,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="382,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
-                <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[&quot;{ &quot;&quot;Header&quot;&quot;:{ &quot;&quot;ClientApplication&quot;&quot;: &quot;&quot;Dynamic Menu&quot;&quot;, &quot;&quot;ClientVersion&quot;&quot;: &quot;&quot;1.0.0.0&quot;&quot;, &quot;&quot;ApiVersion&quot;&quot;: &quot;&quot;19.3.0.0&quot;&quot;, &quot;&quot;MessageID&quot;&quot;: &quot;&quot;dvdhvhdvh&quot;&quot;}}&quot;]" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[CFC_API_URL]" sap:VirtualizedContainerService.HintSize="382,102" sap2010:WorkflowViewState.IdRef="HttpClient_6" Method="POST" Password="[CFC_Password]" Result="[Menu_Response]" StatusCode="[ResponseStatus]" TimeoutMS="6000" Username="[CFC_Username]">
+                <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[&quot;{ &quot;&quot;Header&quot;&quot;:{ &quot;&quot;ClientApplication&quot;&quot;: &quot;&quot;Dynamic Menu&quot;&quot;, &quot;&quot;ClientVersion&quot;&quot;: &quot;&quot;1.0.0.0&quot;&quot;, &quot;&quot;ApiVersion&quot;&quot;: &quot;&quot;19.3.0.0&quot;&quot;, &quot;&quot;MessageID&quot;&quot;: &quot;&quot;dvdhvhdvh&quot;&quot;}}&quot;]" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[CFC_API_URL]" sap:VirtualizedContainerService.HintSize="382,102" sap2010:WorkflowViewState.IdRef="HttpClient_6" Method="POST" Password="[CFC_Password]" Result="[Menu_Response]" StatusCode="[ResponseStatus]" TimeoutMS="180000" Username="[CFC_Username]">
                   <ui:HttpClient.Attachments>
                     <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                   </ui:HttpClient.Attachments>
