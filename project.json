@@ -6,7 +6,7 @@
   "dependencies": {
     "UiPath.Excel.Activities": "[2.23.4]",
     "UiPath.Mail.Activities": "[1.23.10]",
-    "UiPath.System.Activities": "25.2.4",
+    "UiPath.System.Activities": "[25.4.4]",
     "UiPath.Testing.Activities": "[24.10.0]",
     "UiPath.UIAutomation.Activities": "[24.10.0]",
     "UiPath.WebAPI.Activities": "[1.20.1]"
@@ -15,7 +15,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "24.10.1.0",
-  "projectVersion": "1.0.12",
+  "projectVersion": "1.0.60",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -51,7 +51,8 @@
         "ModifierGroupList.csv",
         "Modifiers.csv",
         "CFC/API/Call_CFC_ModifierGroup.xaml",
-        "CFC/ItemCreation/ItemCreation_Process_OCt14.xaml"
+        "CFC/ItemCreation/ItemCreation_Process_OCt14.xaml",
+        "CFC/ItemCreation/ItemCreation_Process.xaml"
       ]
     },
     "fileInfoCollection": [

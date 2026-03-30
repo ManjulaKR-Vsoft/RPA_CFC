@@ -89,19 +89,19 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Get_YUM_API_Details" sap:VirtualizedContainerService.HintSize="1002,539" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Get_YUM_API_Details" sap:VirtualizedContainerService.HintSize="1282,539" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="YUM_API_AUTH_URL" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="YUM_API_AUTH_URL" CacheStrategy="None" DisplayName="Get Asset" FolderPath="PROD" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[YUM_API_AUTH_URL]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="YUM_API_Auth_Creds" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[YUM_AUTH_Client_Secret]" Username="[YUM_AUTH_Client_ID]" />
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="YUM_API_Base_URL" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="YUM_API_Auth_Creds" CacheStrategy="None" DisplayName="Get Credential" FolderPath="PROD" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[YUM_AUTH_Client_Secret]" Username="[YUM_AUTH_Client_ID]" />
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="YUM_API_Base_URL" CacheStrategy="None" DisplayName="Get Asset" FolderPath="PROD" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[YUM_BASE_URL]</OutArgument>
       </ui:GetRobotAsset.Value>

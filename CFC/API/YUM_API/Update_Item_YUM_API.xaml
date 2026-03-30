@@ -120,7 +120,7 @@
       <AssemblyReference>System.Collections.Specialized</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Update_YUM_API" sap:VirtualizedContainerService.HintSize="1282,4945" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Update_YUM_API" sap:VirtualizedContainerService.HintSize="1282,5660" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="YUM_API_AUTH_URL" />
       <Variable x:TypeArguments="x:String" Name="YUM_AUTH_Client_ID" />
@@ -246,7 +246,54 @@
         <OutArgument x:TypeArguments="x:String" x:Key="YUM_BASE_URL">[YUM_BASE_URL]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <If Condition="[auth_token_status = 200]" sap:VirtualizedContainerService.HintSize="684,4515" sap2010:WorkflowViewState.IdRef="If_1">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="684,57" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="513,261" sap2010:WorkflowViewState.IdRef="Sequence_27">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,201" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+            <ui:MultipleAssign.AssignOperations>
+              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[Product_Code]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">100509</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[Variant_Code]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">55559</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[POSNumber]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">100519</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+              </scg:List>
+            </ui:MultipleAssign.AssignOperations>
+          </ui:MultipleAssign>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <If Condition="[auth_token_status = 200]" sap:VirtualizedContainerService.HintSize="684,5173" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -254,19 +301,19 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="682,4160" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="682,4820" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="648,136" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="648,57" sap2010:WorkflowViewState.IdRef="CommentOut_5">
             <ui:CommentOut.Body>
-              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_24">
+              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="468,287" sap2010:WorkflowViewState.IdRef="Sequence_24">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -281,9 +328,15 @@
                 </Assign>
               </Sequence>
             </ui:CommentOut.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
           </ui:CommentOut>
           <ui:Comment sap:VirtualizedContainerService.HintSize="648,164" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// &quot;{&quot;&quot;query&quot;&quot;:&quot;&quot;query ProductDefinitionByCode {\n    productDefinitionByCode(productCode: \&quot;&quot;141006\&quot;&quot;) {\n        productId\n        productCode\n    }\n}&quot;&quot;}&quot;" />
-          <Sequence DisplayName="Get productId and variantId" sap:VirtualizedContainerService.HintSize="648,3800" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence DisplayName="Get productId and variantId" sap:VirtualizedContainerService.HintSize="648,4539" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -310,7 +363,8 @@
             </ui:HttpClient>
             <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="Reports\YUM_API\ProductResponse" sap:VirtualizedContainerService.HintSize="614,165" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[ProductResponse]" />
             <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="614,122" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[ProductResponse]" />
-            <If Condition="[ProductResponse_Status = 200]" sap:VirtualizedContainerService.HintSize="614,3328" sap2010:WorkflowViewState.IdRef="If_2">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="614,173" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[ProductResponse]" />
+            <If Condition="[ProductResponse_Status = 200]" sap:VirtualizedContainerService.HintSize="614,3894" sap2010:WorkflowViewState.IdRef="If_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -318,16 +372,16 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="612,2796" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="612,3364" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="578,122" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_2" JsonObject="[Product_JSON_Object]" JsonString="[ProductResponse]" />
-                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="578,2614" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="578,3182" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                     <TryCatch.Try>
-                      <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="576,2136" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                      <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="576,2704" sap2010:WorkflowViewState.IdRef="Sequence_18">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -370,6 +424,12 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <If Condition="[currentJToken(&quot;variantCode&quot;).ToString.Trim = Variant_Code.Trim]" sap:VirtualizedContainerService.HintSize="470,518" sap2010:WorkflowViewState.IdRef="If_4">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
                                         <If.Then>
                                           <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,165" sap2010:WorkflowViewState.IdRef="Sequence_9">
                                             <sap:WorkflowViewStateService.ViewState>
@@ -401,6 +461,12 @@
                                     </Sequence>
                                   </ActivityAction>
                                 </ui:ForEach.Body>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
                               </ui:ForEach>
                             </Sequence>
                           </If.Then>
@@ -415,7 +481,7 @@
                             </Sequence>
                           </If.Else>
                         </If>
-                        <Sequence DisplayName="Update Variant Code in YUM admin" sap:VirtualizedContainerService.HintSize="542,749" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                        <Sequence DisplayName="Update Variant Code in YUM admin" sap:VirtualizedContainerService.HintSize="542,1317" sap2010:WorkflowViewState.IdRef="Sequence_12">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -423,15 +489,51 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="418,122" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;ProducId: &quot;+ productID +&quot;--------&quot;+&quot;variantId: &quot;+variantID]" />
-                          <If Condition="[Not String.IsNullOrWhiteSpace(productID) And Not String.IsNullOrWhiteSpace(variantID)]" sap:VirtualizedContainerService.HintSize="418,544" sap2010:WorkflowViewState.IdRef="If_5">
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="418,173" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;productID: &quot;+ productID +&quot;--------&quot;+&quot;variantId: &quot;+variantID]" />
+                          <If Condition="[Not String.IsNullOrWhiteSpace(productID) And Not String.IsNullOrWhiteSpace(variantID)]" sap:VirtualizedContainerService.HintSize="418,939" sap2010:WorkflowViewState.IdRef="If_5">
                             <If.Then>
-                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,326" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,721" sap2010:WorkflowViewState.IdRef="Sequence_13">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[&quot;{&quot;&quot;query&quot;&quot;:&quot;&quot;mutation updateProductDefinition { updateProductDefinition ( input: { productId: \&quot;&quot;&quot;+productID+&quot;\&quot;&quot;, productCode: \&quot;&quot;&quot;+POSNumber+&quot;\&quot;&quot;, variants: { update: { variantId: \&quot;&quot;&quot;+variantId+&quot;\&quot;&quot;, variantCode: \&quot;&quot;&quot;+POSNumber+&quot;\&quot;&quot; } } }) { ... on UpdateProductDefinitionSuccess { product { productId productCode internalName name description legalText regulatoryTags brandTags promoTags disableSpecialInstructions brandDistinctAttribute1 brandDistinctAttribute2 brandDistinctAttribute3 slug nutritionInformation } } } }&quot;&quot;}&quot;]" BodyFormat="application/json" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[YUM_BASE_URL]" sap:VirtualizedContainerService.HintSize="382,102" sap2010:WorkflowViewState.IdRef="HttpClient_3" Method="POST" Result="[updateResponse]" StatusCode="[UpdateStatusCode]" TimeoutMS="6000">
+                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                                  <ui:CommentOut.Body>
+                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,153" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[&quot;{&quot;&quot;query&quot;&quot;:&quot;&quot;mutation updateProductDefinition { updateProductDefinition ( input: { productId: \&quot;&quot;&quot;+productID+&quot;\&quot;&quot;, productCode: \&quot;&quot;&quot;+POSNumber+&quot;\&quot;&quot;, variants: { update: { variantId: \&quot;&quot;&quot;+variantId+&quot;\&quot;&quot;, variantCode: \&quot;&quot;&quot;+POSNumber+&quot;\&quot;&quot; } } }) { ... on UpdateProductDefinitionSuccess { product { productId productCode internalName name description legalText regulatoryTags brandTags promoTags disableSpecialInstructions brandDistinctAttribute1 brandDistinctAttribute2 brandDistinctAttribute3 slug nutritionInformation } } } }&quot;&quot;}&quot;]" BodyFormat="application/json" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[YUM_BASE_URL]" sap:VirtualizedContainerService.HintSize="416,93" sap2010:WorkflowViewState.IdRef="HttpClient_3" Method="POST" Result="[updateResponse]" StatusCode="[UpdateStatusCode]" TimeoutMS="6000">
+                                        <ui:HttpClient.Attachments>
+                                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                        </ui:HttpClient.Attachments>
+                                        <ui:HttpClient.Cookies>
+                                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                        </ui:HttpClient.Cookies>
+                                        <ui:HttpClient.Headers>
+                                          <InArgument x:TypeArguments="x:String" x:Key="Content-Type">application/json</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="Authorization">["Bearer "+auth_token]</InArgument>
+                                        </ui:HttpClient.Headers>
+                                        <ui:HttpClient.Parameters>
+                                          <InArgument x:TypeArguments="x:String" x:Key="Parameters">POST</InArgument>
+                                        </ui:HttpClient.Parameters>
+                                        <ui:HttpClient.UrlSegments>
+                                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                        </ui:HttpClient.UrlSegments>
+                                      </ui:HttpClient>
+                                    </Sequence>
+                                  </ui:CommentOut.Body>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:CommentOut>
+                                <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[&quot;{&quot;&quot;query&quot;&quot;:&quot;&quot;mutation updateProductDefinition { updateProductDefinition ( input: { productId: \&quot;&quot;&quot;+productID+&quot;\&quot;&quot;, variants: { update: { variantId: \&quot;&quot;&quot;+variantId+&quot;\&quot;&quot;, variantCode: \&quot;&quot;&quot;+POSNumber+&quot;\&quot;&quot; } } }) { ... on UpdateProductDefinitionSuccess { product { productId productCode internalName name } } } }&quot;&quot;}&quot;]" BodyFormat="application/json" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[YUM_BASE_URL]" sap:VirtualizedContainerService.HintSize="382,102" sap2010:WorkflowViewState.IdRef="HttpClient_4" Method="POST" Result="[updateResponse]" StatusCode="[UpdateStatusCode]" TimeoutMS="6000">
                                   <ui:HttpClient.Attachments>
                                     <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                                   </ui:HttpClient.Attachments>
@@ -449,7 +551,9 @@
                                     <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                                   </ui:HttpClient.UrlSegments>
                                 </ui:HttpClient>
-                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,164" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Yum Update Satatus: &quot;+UpdateStatusCode.ToString]" />
+                                <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[&quot;Reports\YUM_API\&quot;+POSNumber+&quot;_UpdateResponse&quot;]" sap:VirtualizedContainerService.HintSize="382,165" sap2010:WorkflowViewState.IdRef="WriteTextFile_2" Text="[updateResponse]" />
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,173" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Yum Update Satatus: &quot;+UpdateStatusCode.ToString]" />
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,164" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;Yum Update response written to file : &quot;+&quot;Reports\YUM_API\&quot;+POSNumber+&quot;_UpdateResponse&quot;]" />
                               </Sequence>
                             </If.Then>
                             <If.Else>
@@ -495,14 +599,14 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="612,403" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="612,401" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="488,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;YUM API Error: &quot;+ ProductResponse]" />
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="EmailWithoutAttachment - Invoke Workflow File (Configuration\EmailWithoutAttachment.xaml)" sap:VirtualizedContainerService.HintSize="488,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Configuration\EmailWithoutAttachment.xaml">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="578,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;YUM API Error: &quot;+ ProductResponse]" />
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="EmailWithoutAttachment - Invoke Workflow File (Configuration\EmailWithoutAttachment.xaml)" sap:VirtualizedContainerService.HintSize="578,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Configuration\EmailWithoutAttachment.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="x:String" x:Key="Email_to">Manjula.Raju@yum.com</InArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="Email_Subject">Failed to update the VariantCode to YUM</InArgument>
@@ -516,13 +620,13 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="592,226" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="592,224" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="558,166" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Error" Message="[&quot;Yum Auth token failed &quot;+ auth_token_status.ToString]" />
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="558,164" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Error" Message="[&quot;Yum Auth token failed &quot;+ auth_token_status.ToString]" />
         </Sequence>
       </If.Else>
     </If>

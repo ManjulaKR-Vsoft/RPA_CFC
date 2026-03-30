@@ -62,15 +62,16 @@
       "Path": "Framework/InitAllApplications.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "Screenshot_Path&Sequence_9",
+        "Screenshot_Path_exists&Sequence_9",
+        "Log_Path&Sequence_30",
+        "Log_Path_Exists&Sequence_30",
         "Archive_Folder_Exist&Sequence_9",
         "Archive_Folder_Path&Sequence_9",
         "SMTP_Password&Sequence_32",
         "SMTP_Username&Sequence_32",
         "Report_Receivers&Sequence_32",
-        "listOfFiles&Sequence_9",
-        "Username&Sequence_13",
-        "Password&Sequence_13",
-        "Owner&Sequence_13"
+        "listOfFiles&Sequence_9"
       ],
       "ArgumentsSectionElementsOrder": [
         "dtQuickCombo",
@@ -132,27 +133,29 @@
       "Path": "CFC/ItemCreation/Dynamic_Modifier_Tab.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "Dynamic_Modifier_Count&Sequence_1",
-        "Search_Item_Name&Sequence_1",
-        "index&Sequence_1",
-        "DeleteCount&Sequence_1",
-        "dataDiff&Sequence_1",
-        "RowDiff&Sequence_1",
-        "Web_Included&Sequence_30",
-        "dataDiff&Sequence_27",
-        "Web_Included&Sequence_28",
-        "Web_Included&Sequence_23",
-        "dataDiff&Sequence_19",
-        "dtDataDiff&Sequence_1",
-        "Included&Sequence_1",
+        "DynamicModifiersScreenshot&Sequence_1",
         "Modifier_Group&Sequence_1",
         "ExtractDataTable&Sequence_1",
         "Modifier_Item&Sequence_1",
         "Count&Sequence_1",
         "rowCount&Sequence_1",
+        "Included&Sequence_1",
+        "dtDataDiff&Sequence_1",
+        "RowDiff&Sequence_1",
+        "dataDiff&Sequence_1",
+        "DeleteCount&Sequence_1",
+        "index&Sequence_1",
+        "Search_Item_Name&Sequence_1",
+        "Dynamic_Modifier_Count&Sequence_1",
+        "dataDiff&Sequence_19",
+        "Web_Included&Sequence_23",
+        "dataDiff&Sequence_27",
+        "Web_Included&Sequence_28",
+        "Web_Included&Sequence_30",
         "_8&Sequence_5"
       ],
       "ArgumentsSectionElementsOrder": [
+        "DM_Status",
         "dtDynamicModifiers",
         "POSNumber",
         "currentDataRow"
@@ -266,8 +269,8 @@
       "Path": "Framework/Process.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "updatemetastatuscode&Sequence_1",
-        "UpdateMetaStatusCode&Sequence_327",
+        "dtDMTemp&Sequence_374",
+        "DM_Status&Sequence_1",
         "is_New_Item&Sequence_1",
         "Json_Object&Sequence_1",
         "Product_Array&Sequence_1",
@@ -362,10 +365,12 @@
         "metaKey&Sequence_1",
         "metaNamespace&Sequence_1",
         "metaValueType&Sequence_1",
+        "updatemetastatuscode&Sequence_1",
         "dtTmpModifier&Sequence_300",
         "comparison&Sequence_229",
         "modifieres&Sequence_229",
         "dynamicMod&Sequence_229",
+        "UpdateMetaStatusCode&Sequence_327",
         "CreateJsonObject&Sequence_56",
         "dtTempTable&Sequence_240",
         "SMTP_Password&Sequence_150",
@@ -465,6 +470,7 @@
         "Regular_Name&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "Bundle_Type",
         "currentDataRow"
       ],
       "ConstantsSectionElementsOrder": [],
@@ -474,8 +480,6 @@
       "Path": "CFC/QuickCombo/Promotions.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "UpdateStatusCode&Sequence_58",
-        "Status&Sequence_1",
         "dtBundles&Sequence_1",
         "demoBundles&Sequence_1",
         "dtNewBundles&Sequence_1",
@@ -488,31 +492,36 @@
         "File_Name&Sequence_1",
         "Incremental_POSID&Sequence_1",
         "Bundle_Type&Sequence_1",
+        "Status&Sequence_1",
+        "ChoiceCount&Sequence_1",
+        "BundleUpdateStatus&Sequence_89",
+        "UpdateStatusCode&Sequence_90",
         "BundleUpdateStatus&Sequence_24",
-        "Burger_Twister_BOX_Last_POS_ID&Sequence_57",
+        "UpdateStatusCode&Sequence_58",
         "SMTP_Username&Sequence_28",
         "SMTP_Password&Sequence_28",
         "Report_Receivers&Sequence_28"
       ],
       "ArgumentsSectionElementsOrder": [
-        "Delivery_Last_POS_ID",
-        "Secret_Store_Last_POS_ID",
-        "Catering_Menu_Last_POS_ID",
-        "App_Offers_HE_Last_POS_ID",
-        "App_Offers_LE_Last_POS_ID",
-        "Shared_Meals_Last_POS_ID",
-        "Dip_Box_Meal_Last_POS_ID",
-        "Chicken_Box_Meal_Last_POS_ID",
-        "TwoDip_Chicken_Last_POS_ID",
-        "OneDip_Chicken_Last_POS_ID",
-        "Burger_Twister_Last_POS_ID",
-        "Shared_Log_Path",
-        "Log_Path",
-        "dtCFC_Promo",
-        "bundleChoice_Array",
-        "bundles_Array",
+        "dtQuickCombo",
         "dtItems",
-        "dtQuickCombo"
+        "bundles_Array",
+        "bundleChoice_Array",
+        "dtCFC_Promo",
+        "Log_Path",
+        "Shared_Log_Path",
+        "Burger_Twister_Last_POS_ID",
+        "OneDip_Chicken_Last_POS_ID",
+        "TwoDip_Chicken_Last_POS_ID",
+        "Chicken_Box_Meal_Last_POS_ID",
+        "Dip_Box_Meal_Last_POS_ID",
+        "Shared_Meals_Last_POS_ID",
+        "App_Offers_LE_Last_POS_ID",
+        "App_Offers_HE_Last_POS_ID",
+        "Catering_Menu_Last_POS_ID",
+        "Secret_Store_Last_POS_ID",
+        "Delivery_Last_POS_ID",
+        "Burger_Twister_BOX_Last_POS_ID"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -545,15 +554,16 @@
         "Item_Highlight_2&Sequence_78",
         "Items_Surcharge_2&Sequence_78",
         "Size_Surcharge_2&Sequence_78",
+        "Screenshot&Sequence_135",
         "RowCount&Sequence_15",
         "RowCount&Sequence_21",
         "RowCount&Sequence_22"
       ],
       "ArgumentsSectionElementsOrder": [
-        "Send_Status",
-        "dtComponentItems",
+        "currentDataRow",
         "bundleChoices",
-        "currentDataRow"
+        "dtComponentItems",
+        "Send_Status"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -586,6 +596,11 @@
       "Path": "Practice.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "Screenshot_File&Sequence_19",
+        "screenshot&Sequence_19",
+        "finalJson&Sequence_19",
+        "dtModifiers&Sequence_19",
+        "PromotionID&Sequence_1",
         "dtModifierLogger&Sequence_19",
         "Log_Path&Sequence_1",
         "File_Name&Sequence_1",
@@ -683,8 +698,8 @@
         "arrProductVariants&Sequence_3"
       ],
       "ArgumentsSectionElementsOrder": [
-        "WickedWings_LastPosNumber",
         "Kwench_LastPosNumber",
+        "WickedWings_LastPosNumber",
         "CFC_Username",
         "CFC_Password",
         "Menu_Json_Data",
@@ -721,12 +736,12 @@
       "Path": "CFC/QuickCombo/Get_QC_Data_API.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "TwoDip_Chicken_Last_POS_ID&Sequence_1",
-        "OneDip_Chicken_Last_POS_ID&Sequence_1",
-        "Burger_Twister_Last_POS_ID&Sequence_1",
         "PromotionID&Sequence_1",
         "Promotion_Name&Sequence_1",
         "PromotionUniqueID&Sequence_1",
+        "Burger_Twister_Last_POS_ID&Sequence_1",
+        "OneDip_Chicken_Last_POS_ID&Sequence_1",
+        "TwoDip_Chicken_Last_POS_ID&Sequence_1",
         "CFC_API_Promotion_URL&Sequence_1",
         "CFC_API_Web_ConnectionID&Sequence_43",
         "CFC_API_Password&Sequence_43",
@@ -769,6 +784,8 @@
         "dtMatchingIdentical&Sequence_31"
       ],
       "ArgumentsSectionElementsOrder": [
+        "Delivery_Last_POS_ID",
+        "Burger_Twister_Box_Last_POS_ID",
         "Chicken_Box_Meal_Last_POS_ID",
         "Dip_Box_Meal_Last_POS_ID",
         "Shared_Meals_Last_POS_ID",
@@ -776,8 +793,6 @@
         "App_Offers_HE_Last_POS_ID",
         "Catering_Menu_Last_POS_ID",
         "Secret_Store_Last_POS_ID",
-        "Burger_Twister_Box_Last_POS_ID",
-        "Delivery_Last_POS_ID",
         "Shared_Log_Path",
         "Log_Path",
         "dtMenuList",
@@ -791,7 +806,13 @@
       "Path": "CFC/Input_Files/GetCFCMenu_API.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "MenuList_Array&Sequence_14",
+        "CFC_API_URL&Sequence_1",
+        "CFC_Username&Sequence_1",
+        "CFC_Password&Sequence_1",
+        "CFC_API_Web_ConnectionID&Sequence_1",
+        "CFC_API_Header&Sequence_1",
+        "MenuList_Array&Sequence_1",
+        "CFC_API_MenuItems_URL&Sequence_1",
         "Menu_Json_Data&Sequence_1",
         "ResponseStatus&Sequence_1",
         "Menu_Response&Sequence_1",
@@ -799,9 +820,7 @@
         "Password&Sequence_1",
         "Username&Sequence_1",
         "MessageID&Sequence_1",
-        "ApiVersion&Sequence_1",
-        "ClientVersion&Sequence_1",
-        "ClientApplication&Sequence_1"
+        "ApiVersion&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
         "dtMenuList"
@@ -1004,6 +1023,8 @@
       "Path": "CFC/ModifierGroup/Edit_Layout.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dtTempMenuList&Sequence_78",
+        "dtIgnoreList&Sequence_1",
         "dtslotModifier_YUM&Sequence_1",
         "dtslotModifier_CFC&Sequence_1",
         "MD_JSON_Array&Sequence_1",
@@ -1020,13 +1041,11 @@
         "dt_Add_Items&Sequence_1",
         "dt_Delete_Items&Sequence_1",
         "dt_Existing_Items&Sequence_1",
-        "dtIgnoreList&Sequence_1",
         "Modifier_Item_Array&Sequence_27",
         "ButtonRow&Sequence_44",
         "dtTemp&Sequence_44",
         "dtTmpCFC&Sequence_56",
         "RowIndex&Sequence_63",
-        "dtTempMenuList&Sequence_78",
         "DeleteRowIndex&Sequence_66"
       ],
       "ArgumentsSectionElementsOrder": [
@@ -1390,8 +1409,8 @@
       "Path": "CFC/QuickCombo/Edit_Combos/Edit_ComponentsQS_Tab.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "RowCountExists&Sequence_1",
-        "Component_Row_Exists&Sequence_62",
+        "Screenshot&Sequence_160",
+        "Screenshot&Sequence_158",
         "Component_1&Sequence_1",
         "Items_1&Sequence_1",
         "Component_2&Sequence_1",
@@ -1406,6 +1425,8 @@
         "RowCount&Sequence_1",
         "Affect_Size&Sequence_1",
         "Original_Component_Name&Sequence_1",
+        "RowCountExists&Sequence_1",
+        "Component_Row_Exists&Sequence_62",
         "Item_Highlight&Sequence_78",
         "Item_Surcharge&Sequence_78",
         "Upsell_Item_1&Sequence_78",
@@ -1421,6 +1442,7 @@
         "RowCount&Sequence_22"
       ],
       "ArgumentsSectionElementsOrder": [
+        "Send_Status",
         "currentDataRow",
         "bundleChoices",
         "dtComponentItems"
@@ -1432,6 +1454,9 @@
       "Path": "CFC/QuickCombo/Edit_Combos/Edit_Bundle.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "Edit_Status&Sequence_66",
+        "meta_Key&Sequence_1",
+        "meta_Namespace&Sequence_1",
         "promotionResponseStatus&Sequence_1",
         "promotionResponse&Sequence_1",
         "promotionJObject&Sequence_1",
@@ -1459,6 +1484,7 @@
         "PromotionName&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "Bundle_Type",
         "BundleUpdateStatus",
         "PromotionUniqueID",
         "dtComponentItems",
@@ -1501,6 +1527,7 @@
         "Context_Panel&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "Bundle_Type",
         "currentDataRow"
       ],
       "ConstantsSectionElementsOrder": [],
@@ -1547,7 +1574,9 @@
     {
       "Path": "SendEmail.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "FileList&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -1687,8 +1716,8 @@
         "dtBurger&Sequence_3"
       ],
       "ArgumentsSectionElementsOrder": [
-        "WickedWings_LastPosNumber",
         "Kwench_LastPosNumber",
+        "WickedWings_LastPosNumber",
         "Chicken_LastPosNumber",
         "Fillets_LastPosNumber",
         "Tenders_LastPosNumber",
@@ -1785,6 +1814,19 @@
       "Path": "CFC/ItemCreation/ItemCreation_Process_New.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "Kwench_LastPosNumber&Sequence_1",
+        "WickedWings_LastPosNumber&Sequence_1",
+        "OriginalVariantCode&Sequence_1",
+        "variantSlots&Sequence_1",
+        "Product_Code&Sequence_1",
+        "YumUpdateStatusCode&Sequence_1",
+        "Log_Path&Sequence_187",
+        "dtTmpModifier&Sequence_247",
+        "CreateJsonObject&Sequence_303",
+        "SMTP_Password&Sequence_372",
+        "SMTP_Username&Sequence_372",
+        "Report_Receivers&Sequence_372",
+        "IF_Menu&Sequence_243",
         "is_New_Item&Sequence_1",
         "Product_Array&Sequence_1",
         "ItemType&Sequence_1",
@@ -1853,19 +1895,7 @@
         "Log_POSNumber&Sequence_1",
         "isNewPOS&Sequence_1",
         "errorCode&Sequence_1",
-        "Kwench_LastPosNumber&Sequence_1",
-        "WickedWings_LastPosNumber&Sequence_1",
-        "OriginalVariantCode&Sequence_1",
-        "variantSlots&Sequence_1",
-        "Product_Code&Sequence_1",
-        "YumUpdateStatusCode&Sequence_1",
-        "IF_Menu&Sequence_243",
-        "CreateJsonObject&Sequence_200",
-        "dtTmpModifier&Sequence_247",
-        "CreateJsonObject&Sequence_303",
-        "BundleCode&Sequence_47",
-        "BundleName&Sequence_47",
-        "BundlePrice&Sequence_47"
+        "CreateJsonObject&Sequence_200"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_TransactionItem",
@@ -1887,8 +1917,7 @@
       "Path": "CFC/ModifierGroup/ModifierGroup.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "Kwench_LastPosNumber&Sequence_1",
-        "WickedWings_LastPosNumber&Sequence_1",
+        "updateMetaStatus&Sequence_1",
         "slots_Array&Sequence_1",
         "IF_Response_Content&Sequence_1",
         "ProductVariant_Array&Sequence_1",
@@ -1954,6 +1983,14 @@
         "Fillets_LastPosNumber&Sequence_1",
         "CFC_Username&Sequence_1",
         "CFC_Password&Sequence_1",
+        "Kwench_LastPosNumber&Sequence_1",
+        "WickedWings_LastPosNumber&Sequence_1",
+        "ModifierGroup_StoreUniqueID&Sequence_1",
+        "Effective_Date&Sequence_1",
+        "UpdateSlot&Sequence_1",
+        "metaKey&Sequence_1",
+        "metaNamespace&Sequence_1",
+        "metaValueType&Sequence_1",
         "getMenuListRow&Sequence_19",
         "MenuList_Array&Sequence_72",
         "SMTP_Password&Sequence_105",
@@ -1991,6 +2028,41 @@
       "AddedNamespaces": null
     },
     {
+      "Path": "CFC/API/YUM_API/PublishMenu_YUM.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "menuChannel&Sequence_1",
+        "menuchannelID&Sequence_1",
+        "storeNumber&Sequence_1",
+        "Yum_Menu_publish_Response&Sequence_1",
+        "Yum_Menu_publish_Status&Sequence_1",
+        "auth_token_status&Sequence_1",
+        "auth_token&Sequence_1",
+        "YUM_BASE_URL&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CFC/API/YUM_API/YUM_Auth_Token.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "YUM_API_AUTH_URL&Sequence_1",
+        "YUM_AUTH_Client_ID&Sequence_1",
+        "YUM_AUTH_Client_Secret&Sequence_1",
+        "str_Client_Secret&Sequence_1",
+        "access_token&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "auth_token",
+        "auth_token_status",
+        "YUM_BASE_URL"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
       "Path": "CFC/QuickCombo/QC_POS_Ranges.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
@@ -1998,20 +2070,110 @@
         "Delivery_Last_POS_ID&Sequence_12"
       ],
       "ArgumentsSectionElementsOrder": [
-        "Delivery_Last_POS_ID",
-        "Secret_Store_Last_POS_ID",
-        "Catering_Menu_Last_POS_ID",
-        "App_Offers_HE_Last_POS_ID",
-        "App_Offers_LE_Last_POS_ID",
-        "Shared_Meals_Last_POS_ID",
-        "Dip_Box_Meal_Last_POS_ID",
-        "Chicken_Box_Meal_Last_POS_ID",
-        "Burger_Twister_Box_Last_POS_ID",
-        "TwoDip_Chicken_Last_POS_ID",
-        "OneDip_Chicken_Last_POS_ID",
         "Burger_Twister_Last_POS_ID",
+        "OneDip_Chicken_Last_POS_ID",
+        "TwoDip_Chicken_Last_POS_ID",
+        "Burger_Twister_Box_Last_POS_ID",
+        "Chicken_Box_Meal_Last_POS_ID",
+        "Dip_Box_Meal_Last_POS_ID",
+        "Shared_Meals_Last_POS_ID",
+        "App_Offers_LE_Last_POS_ID",
+        "App_Offers_HE_Last_POS_ID",
+        "Catering_Menu_Last_POS_ID",
+        "Secret_Store_Last_POS_ID",
+        "Delivery_Last_POS_ID",
         "dtPromoList"
       ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CFC/API/YUM_API/Update_Product_Metafield_YUM_API.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "YUM_API_AUTH_URL&Sequence_1",
+        "YUM_AUTH_Client_ID&Sequence_1",
+        "auth_token&Sequence_1",
+        "ProductResponse&Sequence_1",
+        "ProductResponse_Status&Sequence_1",
+        "productJObject&Sequence_1",
+        "access_token&Sequence_1",
+        "updateMetaResponse&Sequence_1",
+        "YUM_AUTH_Client_Secret&Sequence_2",
+        "YUM_BASE_URL&Sequence_2",
+        "str_Client_Secret&Sequence_2",
+        "auth_token_status&Sequence_2",
+        "productID&Sequence_7"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Product_Code",
+        "metaKey",
+        "metaNamespace",
+        "metaValueType",
+        "UpdateMetaStatusCode"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CFC/API/YUM_API/Update_Bundle_Metafield_YUM.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "promotionResponseStatus&Sequence_1",
+        "promotionResponse&Sequence_1",
+        "updateResponse&Sequence_1",
+        "bundleid&Sequence_1",
+        "promotionJObject&Sequence_1",
+        "auth_token&Sequence_1",
+        "auth_token_status&Sequence_1",
+        "YUM_BASE_URL&Sequence_1",
+        "bundlecode&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "PromotionID",
+        "meta_Namespace",
+        "meta_Key",
+        "UpdateStatusCode"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CFC/API/YUM_API/Update_Bundle_YUM_API.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "YUM_API_AUTH_URL&Sequence_1",
+        "YUM_AUTH_Client_ID&Sequence_1",
+        "YUM_AUTH_Client_Secret&Sequence_1",
+        "str_Client_Secret&Sequence_1",
+        "auth_token&Sequence_1",
+        "auth_token_status&Sequence_1",
+        "YUM_BASE_URL&Sequence_1",
+        "Bundle_JSON_Object&Sequence_1",
+        "bundleID&Sequence_1",
+        "variantID&Sequence_1",
+        "variantArray&Sequence_1",
+        "access_token&Sequence_1",
+        "BundleResponse_Status&Sequence_1",
+        "BundleResponse&Sequence_1",
+        "updateBundleResponse&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "UpdateStatusCode",
+        "Bundle_Code",
+        "Promotion_ID"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Configuration/Email_Reports.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Email_to&Sequence_2",
+        "FileList&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -2045,64 +2207,77 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "CFC/API/YUM_API/Update_Product_Metafield_YUM_API.xaml",
+      "Path": "CFC/API/YUM_API/Update_Slot_Metafield_YUM_API.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "updateMetaResponse&Sequence_1",
-        "productID&Sequence_7",
-        "access_token&Sequence_1",
-        "productJObject&Sequence_1",
-        "ProductResponse_Status&Sequence_1",
-        "ProductResponse&Sequence_1",
-        "auth_token&Sequence_1",
-        "YUM_AUTH_Client_ID&Sequence_1",
+        "slotID&Sequence_7",
+        "slotJObject&Sequence_1",
+        "SlotResponse_Status&Sequence_1",
+        "SlotResponse&Sequence_1",
         "YUM_API_AUTH_URL&Sequence_1",
-        "auth_token_status&Sequence_2",
-        "str_Client_Secret&Sequence_2",
+        "YUM_AUTH_Client_ID&Sequence_1",
+        "auth_token&Sequence_1",
+        "access_token&Sequence_1",
+        "updateMetaResponse&Sequence_1",
+        "YUM_AUTH_Client_Secret&Sequence_2",
         "YUM_BASE_URL&Sequence_2",
-        "YUM_AUTH_Client_Secret&Sequence_2"
+        "str_Client_Secret&Sequence_2",
+        "auth_token_status&Sequence_2"
       ],
       "ArgumentsSectionElementsOrder": [
-        "UpdateMetaStatusCode",
-        "metaValueType",
-        "metaNamespace",
+        "Slot_Code",
         "metaKey",
-        "Product_Code"
+        "metaNamespace",
+        "metaValueType",
+        "UpdateMetaStatusCode"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
     {
-      "Path": "CFC/API/YUM_API/PublishMenu_YUM.xaml",
+      "Path": "Configuration/Email_ErrorScreenshot.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "YUM_BASE_URL&Sequence_1",
-        "auth_token&Sequence_1",
-        "auth_token_status&Sequence_1",
-        "Yum_Menu_publish_Status&Sequence_1",
-        "Yum_Menu_publish_Response&Sequence_1",
-        "storeNumber&Sequence_1",
-        "menuchannelID&Sequence_1",
-        "menuChannel&Sequence_1"
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "Email_Subject",
+        "Email_Body",
+        "Screenshot"
       ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CFC/Close_If_Exception.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
     {
-      "Path": "CFC/API/YUM_API/YUM_Auth_Token.xaml",
+      "Path": "CFC/API/YUM_API/Update_DummyProduct_Metafield_YUM_API.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "access_token&Sequence_1",
-        "str_Client_Secret&Sequence_1",
-        "YUM_AUTH_Client_Secret&Sequence_1",
+        "UpdateMetaStatusCode&Sequence_1",
+        "metaValueType&Sequence_1",
+        "YUM_API_AUTH_URL&Sequence_1",
         "YUM_AUTH_Client_ID&Sequence_1",
-        "YUM_API_AUTH_URL&Sequence_1"
+        "auth_token&Sequence_1",
+        "ProductResponse&Sequence_1",
+        "ProductResponse_Status&Sequence_1",
+        "productJObject&Sequence_1",
+        "access_token&Sequence_1",
+        "updateMetaResponse&Sequence_1",
+        "YUM_AUTH_Client_Secret&Sequence_2",
+        "YUM_BASE_URL&Sequence_2",
+        "str_Client_Secret&Sequence_2",
+        "auth_token_status&Sequence_2",
+        "productID&Sequence_7"
       ],
       "ArgumentsSectionElementsOrder": [
-        "YUM_BASE_URL",
-        "auth_token_status",
-        "auth_token"
+        "Product_Code",
+        "metaKey",
+        "metaNamespace"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

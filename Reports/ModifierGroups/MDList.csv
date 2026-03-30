@@ -1,10 +1,12 @@
 ﻿MDPOSNumber,MDName,MDLongName
 11762,Fillet Swap,Fillet Swap
 11750,Burger Recipe,Burger Recipe
+11770,Happy Hour,Happy Hour
 16058,4 Wicked Wings,4 Wicked Wings
 16077,BYO Bucket Mods Delivery price,BYO Bucket Mods Delivery price
 11757,Make it a Combo,Make it a Combo
 16010,2 Dipping Sauce,2 Dipping Sauce
+16079,BYO Bucket Mods Doordash price,BYO Bucket Mods Doordash price
 16063,14 Wicked Wings,14 Wicked Wings
 16045,Modify 125 Pcs,Modify 125 Pcs
 16044,Modify 75 Pcs,Modify 75 Pcs
@@ -31,6 +33,7 @@
 16042,Modify 30 Pcs,Modify 30 Pcs
 16003,Modify 4 Fillet Pcs,Modify 4 Fillet Pcs
 16069,Modify 15 Tenders,Modify 15 Tenders
+17001,Toppings,Toppings
 11763,Flt/Tender Swap,Flt/Tender Swap
 16056,30 Wicked Wings,30 Wicked Wings
 16060,5 Dipping Sauce,5 Dipping Sauce
@@ -39,11 +42,11 @@
 11767,4 Reg Drinks,4 Reg Drinks
 16039,30 Tenders,30 Tenders
 16037,4 Dipping Sauce,4 Dipping Sauce
+17003,Freeze Modification,Freeze Modification
 16052,10 Wicked Wings,10 Wicked Wings
 16078,Add 2 Sides,Add 2 Sides
 16018,Modify 6 Pcs,Modify 6 Pcs
 16046,5 Large Sides,5 Large Sides
-18000,RPA Modifier,RPA Modifier
 11765,Upsize Drink,Upsize Drink
 16062,4 Loaded Chips Sauce,4 Loaded Chips Sauce
 16041,70 Tenders,70 Tenders
@@ -60,6 +63,7 @@
 16071,11 Wicked Wings,11 Wicked Wings
 16032,Modify 5 Tenders,Modify 5 Tenders
 16011,Modify 15 Pcs,Modify 15 Pcs
+12000,BreakF Recipe,BreakF Recipe
 16070,6 Dipping Sauce,6 Dipping Sauce
 11759,Tender/Flt Swap,Tender/Flt Swap
 11756,4 Reg Sides,4 Reg Sides
@@ -81,6 +85,8 @@
 11764,1 Reg Side,1 Reg Side
 11755,Kwench Recipe,Kwench Recipe
 16057,50 Wicked Wings,50 Wicked Wings
+16013,Modify 23 Pcs,Modify 23 Pcs
+17004,Side Salt Amount,Side Salt Amount
 16055,20 Wicked Wings,20 Wicked Wings
 15012,Modify 3 H&C Pcs,Modify 3 H&C Pcs
 11769,Add Flt,Add Flt

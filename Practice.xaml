@@ -61,6 +61,7 @@
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
       <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -143,9 +144,10 @@
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Practice" sap:VirtualizedContainerService.HintSize="1282,8417" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Practice" sap:VirtualizedContainerService.HintSize="1282,9613" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtInput" />
       <Variable x:TypeArguments="scg:IEnumerable(x:String)" Name="arr_Dynamic" />
@@ -164,9 +166,13 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Write ItemLogs and Send Email" sap:VirtualizedContainerService.HintSize="692,5273" sap2010:WorkflowViewState.IdRef="Sequence_19">
+    <Sequence DisplayName="Write ItemLogs and Send Email" sap:VirtualizedContainerService.HintSize="692,6497" sap2010:WorkflowViewState.IdRef="Sequence_19">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dtModifierLogger" />
+        <Variable x:TypeArguments="x:String" Name="finalJson" />
+        <Variable x:TypeArguments="sd:DataTable" Name="dtModifiers" />
+        <Variable x:TypeArguments="ui:Image" Name="screenshot" />
+        <Variable x:TypeArguments="x:String" Name="Screenshot_File" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -174,6 +180,60 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
+      <uix:NTakeScreenshot DisplayName="Take Screenshot" FileName="screenshot.png" FileNameMode="DateTime" sap:VirtualizedContainerService.HintSize="658,263" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" Version="V3">
+        <uix:NTakeScreenshot.SavedTo>
+          <OutArgument x:TypeArguments="x:String">[Screenshot_File]</OutArgument>
+        </uix:NTakeScreenshot.SavedTo>
+      </uix:NTakeScreenshot>
+      <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" Email="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="system exception" DisplayName="Send SMTP Mail Message" EnableSSL="True" From="AU-KFCRPA@yum.com" sap:VirtualizedContainerService.HintSize="658,184" sap2010:WorkflowViewState.IdRef="SendMail_2" IgnoreCRL="False" IsBodyHtml="False" Name="RPA CFC Automation" Port="25" SecureConnection="None" Server="dalmail.tgr.net" Subject="CFC Automation Exception" To="mkr7550@yum.com">
+        <ui:SendMail.Files>
+          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+            <InArgument x:TypeArguments="x:String">
+              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Screenshot_File" />
+            </InArgument>
+          </scg:List>
+        </ui:SendMail.Files>
+      </ui:SendMail>
+      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="658,117" sap2010:WorkflowViewState.IdRef="MessageBox_24" Text="[Date.Today.ToString(&quot;MM/dd/yyyy&quot;)]" />
+      <ui:ReadCsvFile PathResource="{x:Null}" DataTable="[dtModifiers]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Read CSV" FilePath="Modifiers.csv" sap:VirtualizedContainerService.HintSize="658,186" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
+      <ui:InvokeCode ContinueOnError="{x:Null}" Code="try{&#xA; &#xA; &#xA;&#x9;finalJson = &quot;{\&quot;Header\&quot;: &quot; +&#xA; &#xA;&#x9;&quot;{\&quot;ClientApplication\&quot;: \&quot;Dynamic Menu\&quot;,&quot; +&#xA; &#xA;&#x9;&quot;\&quot;ClientVersion\&quot;: \&quot;1.0.0.0\&quot;,&quot; +&#xA; &#xA;&#x9;&quot;\&quot;ApiVersion\&quot;: \&quot;19.3.0.0\&quot;,&quot; +&#xA; &#xA;&#x9;&quot;\&quot;MessageID\&quot;:\&quot;&quot;+ Guid.NewGuid() +&quot;\&quot;&quot;+&#xA; &#xA;&#x9;&quot;},&quot; +&#xA; &#xA;&#x9;&quot;\&quot;Owner\&quot;: {&quot; +&#xA; &#xA;&#x9;&quot;\&quot;CorporatePOSNumber\&quot;: 1&quot; +&#xA; &#xA;&#x9;&quot;},&quot; +&#xA; &#xA;&#x9;&quot;\&quot;POSNumber\&quot;:&quot; + POSNumber + &quot; ,&quot; +&#xA; &#xA;&#x9;&quot;\&quot;Name\&quot;: \&quot;&quot; + Name + &quot;\&quot;,&quot; +&#xA; &#xA;&#x9;&quot;\&quot;LongName\&quot;: \&quot;&quot; + LongName + &quot;\&quot;,&quot; +&#xA; &#xA;&#x9;&quot;\&quot;ChitName\&quot;: \&quot;&quot; + ChitName + &quot;\&quot;,&quot; +&#xA; &#xA;&#x9;&quot;\&quot;AlternateChitName\&quot;: \&quot;\&quot;,&quot; +&#xA; &#xA;&#x9;&quot;\&quot;Category\&quot;: {&quot; +&#xA; &#xA;&#x9;&quot;\&quot;CategoryPOSNumber\&quot;: 100&quot; +&#xA; &#xA;&#x9;&quot;},&quot; +&#xA; &#xA;&#x9;&quot;\&quot;TaxGroup\&quot;: {&quot; +&#xA; &#xA;&#x9;&quot;\&quot;TaxGroupPOSNumber\&quot;: 1&quot; +&#xA; &#xA;&#x9;&quot;},&quot; +&#xA; &#xA;&#x9;&quot;\&quot;PricingMethod\&quot;: \&quot;Price\&quot;,\&quot;Price\&quot;: &quot; + price + &quot;,&quot; +&#xA; &#xA;&#x9;&quot;\&quot;Standard\&quot;: {&quot; +&#xA; &#xA;&#x9;&quot;\&quot;ModifierGroups\&quot;: [&quot;;&#xA; &#xA;int i = 0;&#xA; &#xA;string modifiergrp = &quot;&quot;;&#xA; &#xA;string previousItem = &quot;&quot;;&#xA; &#xA;string pattern = @&quot;^\d+$&quot;;&#xA; &#xA;dt.DefaultView.Sort = &quot;ModifierGroup&quot;;&#xA; &#xA;dt = dt.DefaultView.ToTable();&#xA; &#xA;&#x9;if(dt.Rows.Count&gt;0)&#xA; &#xA;&#x9;{&#xA; &#xA;&#x9;&#x9;foreach (DataRow dr in dt.Rows)&#xA; &#xA;&#x9;&#x9;{&#xA; &#xA;&#x9;&#x9;&#x9;if (i &gt; 0)&#xA; &#xA;&#x9;&#x9;&#x9;{&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;if(previousItem == dr[&quot;ModifierGroup&quot;].ToString())&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;{&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;Console.WriteLine(dr[&quot;ModifierItemUniqID&quot;].ToString() );&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;Console.WriteLine( dr[&quot;ModifierGroupUniqueID&quot;].ToString() );&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;modifiergrp = modifiergrp + &quot;,{\&quot;ModifierItem\&quot;: {\&quot;MenuItemUniqueID\&quot;: \&quot;&quot; +dr[&quot;ModifierItemUniqID&quot;].ToString() + &quot;\&quot;,\&quot;MenuItemPOSNumber\&quot;: &quot;;&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if (Regex.IsMatch(dr[&quot;ModifierItem&quot;].ToString(), pattern))&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;modifiergrp = modifiergrp + dr[&quot;ModifierItem&quot;].ToString();&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;else&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;modifiergrp = modifiergrp + &quot;\&quot;&quot; + dr[&quot;ModifierItem&quot;].ToString() + &quot;\&quot;&quot;;&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;modifiergrp = modifiergrp + &quot;},\&quot;Included\&quot;: true,\&quot;AutoAdd\&quot;: false,\&quot;SubstitutionCharge\&quot;: null}&quot;;&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;}&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;else&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;{&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;//modifiergrp = modifiergrp + &quot;}]&quot;;&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;modifiergrp = modifiergrp + &quot;]},{\&quot;ModifierGroup\&quot;: {\&quot;ModifierGroupUniqueID\&quot;: \&quot;&quot; + dr[&quot;ModifierGroupUniqueID&quot;].ToString() + &quot;\&quot;,\&quot;ModifierGroupPOSNumber\&quot;: &quot;;&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if (Regex.IsMatch(dr[&quot;ModifierGroup&quot;].ToString(), pattern))&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;modifiergrp = modifiergrp + dr[&quot;ModifierGroup&quot;].ToString() + &quot;},&quot;;&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;modifiergrp = modifiergrp + &quot;\&quot;DynamicModifiers\&quot;: [&quot;;&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;else&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;modifiergrp = modifiergrp + &quot;\&quot;&quot; + dr[&quot;ModifierGroup&quot;].ToString() + &quot;\&quot;},&quot;;&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;modifiergrp = modifiergrp + &quot;\&quot;DynamicModifiers\&quot;: [&quot;;&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if (dr[&quot;ModifierItem&quot;] != null &amp;&amp; dr[&quot;ModifierItem&quot;].ToString().Trim().Length &gt; 0)&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;modifiergrp = modifiergrp + &quot;{\&quot;ModifierItem\&quot;: {\&quot;MenuItemUniqueID\&quot;: \&quot;&quot; + dr[&quot;ModifierItemUniqID&quot;].ToString() + &quot;\&quot;,\&quot;MenuItemPOSNumber\&quot;: &quot;;&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;if (Regex.IsMatch(dr[&quot;ModifierItem&quot;].ToString(), pattern))&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;modifiergrp = modifiergrp + dr[&quot;ModifierItem&quot;].ToString();&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;else&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;modifiergrp = modifiergrp + &quot;\&quot;&quot; + dr[&quot;ModifierItem&quot;].ToString() + &quot;\&quot;&quot;;&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;modifiergrp = modifiergrp + &quot;},\&quot;Included\&quot;: true,\&quot;AutoAdd\&quot;: false,\&quot;SubstitutionCharge\&quot;: null}&quot;;&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;else&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;modifiergrp = modifiergrp + &quot;]},&quot;;&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;//if(modifiergrp.Substring(modifiergrp.Length - 2) == &quot;]}&quot;)&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;//{&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;//}&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;//else&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;//{&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;//    modifiergrp = modifiergrp + &quot;]}&quot;;&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;//}&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;}&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;previousItem = dr[&quot;ModifierGroup&quot;].ToString();&#xA; &#xA;&#x9;&#x9;&#x9;}&#xA; &#xA;&#x9;&#x9;&#x9;else&#xA; &#xA;&#x9;&#x9;&#x9;{&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;previousItem = dr[&quot;ModifierGroup&quot;].ToString();&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;modifiergrp = modifiergrp + &quot;{\&quot;ModifierGroup\&quot;: {\&quot;ModifierGroupUniqueID\&quot;: \&quot;&quot; +  dr[&quot;ModifierGroupUniqueID&quot;].ToString()  + &quot;\&quot;,\&quot;ModifierGroupPOSNumber\&quot;: &quot;;&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;if (Regex.IsMatch(dr[&quot;ModifierGroup&quot;].ToString(), pattern))&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;{&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;modifiergrp = modifiergrp + dr[&quot;ModifierGroup&quot;].ToString() + &quot;},&quot;;&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;modifiergrp = modifiergrp + &quot;\&quot;DynamicModifiers\&quot;: [&quot;;&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;}&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;else&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;{&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;modifiergrp = modifiergrp +&quot;\&quot;&quot;+ dr[&quot;ModifierGroup&quot;].ToString() + &quot;\&quot;},&quot;;&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;modifiergrp = modifiergrp + &quot;\&quot;DynamicModifiers\&quot;: [&quot;;&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;}&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;if (dr[&quot;ModifierItem&quot;] != null &amp;&amp; dr[&quot;ModifierItem&quot;].ToString().Trim().Length &gt; 0)&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;{&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;modifiergrp = modifiergrp + &quot;{\&quot;ModifierItem\&quot;: {\&quot;MenuItemUniqueID\&quot;: \&quot;&quot; + dr[&quot;ModifierItemUniqID&quot;].ToString() + &quot;\&quot;,\&quot;MenuItemPOSNumber\&quot;: &quot;;&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if (Regex.IsMatch(dr[&quot;ModifierItem&quot;].ToString(), pattern))&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;modifiergrp = modifiergrp + dr[&quot;ModifierItem&quot;].ToString();&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;else&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;modifiergrp = modifiergrp + &quot;\&quot;&quot; + dr[&quot;ModifierItem&quot;].ToString() + &quot;\&quot;&quot;;&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;modifiergrp = modifiergrp + &quot;},\&quot;Included\&quot;: true,\&quot;AutoAdd\&quot;: false,\&quot;SubstitutionCharge\&quot;: null}&quot;;&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;}&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;else&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;{&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;//modifiergrp = modifiergrp + &quot;]&quot;;&#xA; &#xA;&#x9;&#x9;&#x9;&#x9;}&#xA; &#xA;&#x9;&#x9;&#x9;}&#xA; &#xA;&#x9;&#x9;&#x9;i = i + 1;&#xA; &#xA;&#x9;&#x9;}&#xA; &#xA;&#x9;&#x9;finalJson = finalJson + modifiergrp;&#xA; &#xA;&#x9;&#x9;finalJson = finalJson + &quot;]}]}}&quot;;&#xA; &#xA;&#x9;}&#xA; &#xA;&#x9;else{&#xA; &#xA;&#x9;&#x9;  finalJson = finalJson + &quot;]}}&quot;;&#xA; &#xA;&#x9;}&#xA; &#xA;}&#xA; &#xA;catch(Exception ex){&#xA; &#xA;&#x9;Console.WriteLine(ex.ToString());&#xA; &#xA;&#x9;Console.WriteLine(ex.StackTrace);&#xA; &#xA;}&#xA; " DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="658,197" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+        <ui:InvokeCode.Arguments>
+          <InArgument x:TypeArguments="x:Int32" x:Key="POSNumber">180114</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Name">Test</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="LongName">Test123</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="ChitName">Test</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="price">13.35</InArgument>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="dt">[dtModifiers]</InArgument>
+          <InOutArgument x:TypeArguments="x:String" x:Key="finalJson">[finalJson]</InOutArgument>
+          <InArgument x:TypeArguments="s:Guid" x:Key="GUID">[Guid.NewGuid()]</InArgument>
+        </ui:InvokeCode.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeCode>
+      <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="Practice_JSON_1" sap:VirtualizedContainerService.HintSize="658,165" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[finalJson]" />
+      <ui:InvokeCode ContinueOnError="{x:Null}" Code="try&#xA;{&#xA;    finalJson = &quot;{\&quot;Header\&quot;: &quot; +&#xA;        &quot;{\&quot;ClientApplication\&quot;: \&quot;Dynamic Menu\&quot;,&quot; +&#xA;        &quot;\&quot;ClientVersion\&quot;: \&quot;1.0.0.0\&quot;,&quot; +&#xA;        &quot;\&quot;ApiVersion\&quot;: \&quot;19.3.0.0\&quot;,&quot; +&#xA;        &quot;\&quot;MessageID\&quot;:\&quot;&quot; + Guid.NewGuid() + &quot;\&quot;&quot; +&#xA;        &quot;},&quot; +&#xA;        &quot;\&quot;Owner\&quot;: {\&quot;CorporatePOSNumber\&quot;: 1},&quot; +&#xA;        &quot;\&quot;POSNumber\&quot;: &quot; + POSNumber + &quot;,&quot; +&#xA;        &quot;\&quot;Name\&quot;: \&quot;&quot; + Name + &quot;\&quot;,&quot; +&#xA;        &quot;\&quot;LongName\&quot;: \&quot;&quot; + LongName + &quot;\&quot;,&quot; +&#xA;        &quot;\&quot;ChitName\&quot;: \&quot;&quot; + ChitName + &quot;\&quot;,&quot; +&#xA;        &quot;\&quot;AlternateChitName\&quot;: \&quot;\&quot;,&quot; +&#xA;        &quot;\&quot;Category\&quot;: {\&quot;CategoryPOSNumber\&quot;: 100},&quot; +&#xA;        &quot;\&quot;TaxGroup\&quot;: {\&quot;TaxGroupPOSNumber\&quot;: 1},&quot; +&#xA;        &quot;\&quot;PricingMethod\&quot;: \&quot;Price\&quot;,&quot; +&#xA;        &quot;\&quot;Price\&quot;: &quot; + price + &quot;,&quot; +&#xA;        &quot;\&quot;Standard\&quot;: {\&quot;ModifierGroups\&quot;: [&quot;;&#xA;&#xA;    int i = 0;&#xA;    string modifiergrp = &quot;&quot;;&#xA;    string previousItem = &quot;&quot;;&#xA;    string pattern = @&quot;^\d+$&quot;;&#xA;    dt.DefaultView.Sort = &quot;ModifierGroup&quot;;&#xA;    dt = dt.DefaultView.ToTable();&#xA;&#xA;    if (dt.Rows.Count &gt; 0)&#xA;    {&#xA;        foreach (DataRow dr in dt.Rows)&#xA;        {&#xA;            string currentGroup = dr[&quot;ModifierGroup&quot;].ToString();&#xA;            string currentGroupID = dr[&quot;ModifierGroupUniqueID&quot;].ToString();&#xA;            string currentItem = dr[&quot;ModifierItem&quot;]?.ToString();&#xA;            string currentItemID = dr[&quot;ModifierItemUniqID&quot;]?.ToString();&#xA;&#xA;            if (i &gt; 0 &amp;&amp; previousItem != currentGroup)&#xA;            {&#xA;                modifiergrp += &quot;]}&quot;; // Close previous group&#xA;                modifiergrp += &quot;,&quot;;  // Add comma between groups&#xA;            }&#xA;&#xA;            if (i == 0 || previousItem != currentGroup)&#xA;            {&#xA;                modifiergrp += &quot;{\&quot;ModifierGroup\&quot;: {\&quot;ModifierGroupUniqueID\&quot;: \&quot;&quot; + currentGroupID + &quot;\&quot;,\&quot;ModifierGroupPOSNumber\&quot;: &quot;;&#xA;&#xA;                if (Regex.IsMatch(currentGroup, pattern))&#xA;                {&#xA;                    modifiergrp += currentGroup;&#xA;                }&#xA;                else&#xA;                {&#xA;                    modifiergrp += &quot;\&quot;&quot; + currentGroup + &quot;\&quot;&quot;;&#xA;                }&#xA;&#xA;                modifiergrp += &quot;},\&quot;DynamicModifiers\&quot;: [&quot;;&#xA;            }&#xA;            else&#xA;            {&#xA;                modifiergrp += &quot;,&quot;; // comma between ModifierItems&#xA;            }&#xA;&#xA;            if (!string.IsNullOrWhiteSpace(currentItem))&#xA;            {&#xA;                modifiergrp += &quot;{\&quot;ModifierItem\&quot;: {\&quot;MenuItemUniqueID\&quot;: \&quot;&quot; + currentItemID + &quot;\&quot;,\&quot;MenuItemPOSNumber\&quot;: &quot;;&#xA;&#xA;                if (Regex.IsMatch(currentItem, pattern))&#xA;                {&#xA;                    modifiergrp += currentItem;&#xA;                }&#xA;                else&#xA;                {&#xA;                    modifiergrp += &quot;\&quot;&quot; + currentItem + &quot;\&quot;&quot;;&#xA;                }&#xA;&#xA;                modifiergrp += &quot;},\&quot;Included\&quot;: true,\&quot;AutoAdd\&quot;: false,\&quot;SubstitutionCharge\&quot;: null}&quot;;&#xA;            }&#xA;&#xA;            previousItem = currentGroup;&#xA;            i++;&#xA;        }&#xA;&#xA;        modifiergrp += &quot;]}&quot;; // Close last group&#xA;        finalJson += modifiergrp + &quot;]}}&quot;; // Close ModifierGroups, Standard, and main object&#xA;    }&#xA;    else&#xA;    {&#xA;        finalJson += &quot;]}}&quot;; // If no rows, close empty ModifierGroups and Standard&#xA;    }&#xA;}&#xA;catch (Exception ex)&#xA;{&#xA;    Console.WriteLine(ex.ToString());&#xA;    Console.WriteLine(ex.StackTrace);&#xA;}&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="658,197" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
+        <ui:InvokeCode.Arguments>
+          <InArgument x:TypeArguments="x:Int32" x:Key="POSNumber">180114</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Name">Test</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="LongName">Test123</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="ChitName">Test</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="price">13.35</InArgument>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="dt">[dtModifiers]</InArgument>
+          <InOutArgument x:TypeArguments="x:String" x:Key="finalJson">[finalJson]</InOutArgument>
+          <InArgument x:TypeArguments="s:Guid" x:Key="GUID">[Guid.NewGuid()]</InArgument>
+        </ui:InvokeCode.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeCode>
+      <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="Practice_ChatCPTJSON2" sap:VirtualizedContainerService.HintSize="658,165" sap2010:WorkflowViewState.IdRef="WriteTextFile_2" Text="[finalJson]" />
       <Sequence DisplayName="Search Bundle" sap:VirtualizedContainerService.HintSize="658,2933" sap2010:WorkflowViewState.IdRef="Sequence_25">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -807,7 +867,7 @@
                     </Catch>
                   </TryCatch.Catches>
                   <TryCatch.Finally>
-                    <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="484,89" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                    <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="554,89" sap2010:WorkflowViewState.IdRef="Sequence_47">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -848,9 +908,9 @@
           <InArgument x:TypeArguments="x:String">["Modifier_Logs_"+DateTime.Now.ToString("ddMMyyyy_HHmm")+".xlsx"]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="450,117" sap2010:WorkflowViewState.IdRef="MessageBox_21" Text="[&quot;Before rename&quot;]" />
-      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="450,122" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[Log_Path+File_Name]" />
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="450,84" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="658,117" sap2010:WorkflowViewState.IdRef="MessageBox_21" Text="[&quot;Before rename&quot;]" />
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="658,122" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[Log_Path+File_Name]" />
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="658,57" sap2010:WorkflowViewState.IdRef="CommentOut_4">
         <ui:CommentOut.Body>
           <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,254" sap2010:WorkflowViewState.IdRef="Sequence_20">
             <sap:WorkflowViewStateService.ViewState>
@@ -868,7 +928,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:CommentOut>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="450,84" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="658,57" sap2010:WorkflowViewState.IdRef="CommentOut_7">
         <ui:CommentOut.Body>
           <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,254" sap2010:WorkflowViewState.IdRef="Sequence_24">
             <sap:WorkflowViewStateService.ViewState>
@@ -886,10 +946,10 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:CommentOut>
-      <ui:RenameFileX DisplayName="Rename File" FilePath="Reports\Logs\Modifier_log_Template.xlsx" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="RenameFileX_4" KeepExtension="True" NewName="[Log_Path+File_Name.ToString]" />
-      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="450,117" sap2010:WorkflowViewState.IdRef="MessageBox_22" Text="[&quot;After rename&quot;]" />
-      <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dtModifierLogger]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="450,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="[Log_Path+File_Name]" />
-      <If Condition="[dtModifierLogger.Rows.Count&gt;=1]" sap:VirtualizedContainerService.HintSize="450,895" sap2010:WorkflowViewState.IdRef="If_4">
+      <ui:RenameFileX DisplayName="Rename File" FilePath="Reports\Logs\Modifier_log_Template.xlsx" sap:VirtualizedContainerService.HintSize="658,175" sap2010:WorkflowViewState.IdRef="RenameFileX_4" KeepExtension="True" NewName="[Log_Path+File_Name.ToString]" />
+      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="658,117" sap2010:WorkflowViewState.IdRef="MessageBox_22" Text="[&quot;After rename&quot;]" />
+      <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dtModifierLogger]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="658,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="[Log_Path+File_Name]" />
+      <If Condition="[dtModifierLogger.Rows.Count&gt;=1]" sap:VirtualizedContainerService.HintSize="658,699" sap2010:WorkflowViewState.IdRef="If_4">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -897,7 +957,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <If.Then>
-          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,451" sap2010:WorkflowViewState.IdRef="Sequence_18">
+          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,342" sap2010:WorkflowViewState.IdRef="Sequence_18">
             <Sequence.Variables>
               <Variable x:TypeArguments="ss:SecureString" Name="SMTP_Password" />
               <Variable x:TypeArguments="x:String" Name="SMTP_Username" />
@@ -908,7 +968,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="354,84" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="CommentOut_5">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,429" sap2010:WorkflowViewState.IdRef="Sequence_21">
                   <sap:WorkflowViewStateService.ViewState>
@@ -931,14 +991,14 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="EmailWithAttachment - Invoke Workflow File (Configuration\EmailWithAttachment.xaml)" sap:VirtualizedContainerService.HintSize="354,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Configuration\EmailWithAttachment.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="EmailWithAttachment - Invoke Workflow File (Configuration\EmailWithAttachment.xaml)" sap:VirtualizedContainerService.HintSize="382,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Configuration\EmailWithAttachment.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="Email_Subject">Modifier Group Logger</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="Email_Body">&lt;p&gt;Dear Team,&lt;/p&gt;&lt;p&gt;Please find attached the log of all created or updated Modifer Group of Yum in CFC.&lt;/p&gt;&lt;p&gt;Thanks&lt;br&gt;RPA Team&lt;/p&gt;</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="Log_File_Path">[Log_Path+File_Name]</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="354,75" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="CommentOut_6">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,257" sap2010:WorkflowViewState.IdRef="Sequence_22">
                   <sap:WorkflowViewStateService.ViewState>
@@ -965,13 +1025,13 @@
           </Sequence>
         </If.Then>
         <If.Else>
-          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,283" sap2010:WorkflowViewState.IdRef="Sequence_23">
+          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,228" sap2010:WorkflowViewState.IdRef="Sequence_23">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="EmailWithoutAttachment - Invoke Workflow File (Configuration\EmailWithoutAttachment.xaml)" sap:VirtualizedContainerService.HintSize="354,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Configuration\EmailWithoutAttachment.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="EmailWithoutAttachment - Invoke Workflow File (Configuration\EmailWithoutAttachment.xaml)" sap:VirtualizedContainerService.HintSize="382,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Configuration\EmailWithoutAttachment.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="Email_to">Manjula.Raju@yum.com</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="Email_Subject">No Modifer Logs</InArgument>
@@ -982,9 +1042,9 @@
         </If.Else>
       </If>
     </Sequence>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="637,117" sap2010:WorkflowViewState.IdRef="MessageBox_19" Text="[IO.Directory.GetCurrentDirectory+&quot;\Reports\Logs\&quot;]" />
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="637,117" sap2010:WorkflowViewState.IdRef="MessageBox_20" Text="[Environment.UserName]" />
-    <Sequence DisplayName="Write ItemLogs" sap:VirtualizedContainerService.HintSize="637,944" sap2010:WorkflowViewState.IdRef="Sequence_17">
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="692,117" sap2010:WorkflowViewState.IdRef="MessageBox_19" Text="[IO.Directory.GetCurrentDirectory+&quot;\Reports\Logs\&quot;]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="692,117" sap2010:WorkflowViewState.IdRef="MessageBox_20" Text="[Environment.UserName]" />
+    <Sequence DisplayName="Write ItemLogs" sap:VirtualizedContainerService.HintSize="692,916" sap2010:WorkflowViewState.IdRef="Sequence_17">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>

@@ -304,37 +304,37 @@
     </Assign>
     <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1286,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,136" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="484,1340" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Get CFC API Details from Assets" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Get CFC API Details from Assets" sap:VirtualizedContainerService.HintSize="450,1280" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="CFC_API_Credentials" CacheStrategy="None" DisplayName="Get Credential" FolderPath="manjula.raju@yum.com's workspace" sap:VirtualizedContainerService.HintSize="388,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[CFC_API_Password]" Username="[CFC_API_Username]" />
-            <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CFC_UAT_URL" CacheStrategy="None" DisplayName="Get Asset" FolderPath="manjula.raju@yum.com's workspace" sap:VirtualizedContainerService.HintSize="388,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+            <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="CFC_API_Credentials" CacheStrategy="None" DisplayName="Get Credential" FolderPath="PROD" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[CFC_API_Password]" Username="[CFC_API_Username]" />
+            <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CFC_UAT_URL" CacheStrategy="None" DisplayName="Get Asset" FolderPath="PROD" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
               <ui:GetRobotAsset.Value>
                 <OutArgument x:TypeArguments="x:String">[CFC_UAT_URL]</OutArgument>
               </ui:GetRobotAsset.Value>
             </ui:GetRobotAsset>
-            <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CFC_API_WEB_CONNECTION_ID" CacheStrategy="None" DisplayName="Get Asset" FolderPath="manjula.raju@yum.com's workspace" sap:VirtualizedContainerService.HintSize="388,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+            <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CFC_API_WEB_CONNECTION_ID" CacheStrategy="None" DisplayName="Get Asset" FolderPath="PROD" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
               <ui:GetRobotAsset.Value>
                 <OutArgument x:TypeArguments="x:Int32">[CFC_API_WEB_CONNECTION_ID]</OutArgument>
               </ui:GetRobotAsset.Value>
             </ui:GetRobotAsset>
-            <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CFC_API_Version_No" CacheStrategy="None" DisplayName="Get Asset" FolderPath="manjula.raju@yum.com's workspace" sap:VirtualizedContainerService.HintSize="388,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
+            <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CFC_API_Version_No" CacheStrategy="None" DisplayName="Get Asset" FolderPath="PROD" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
               <ui:GetRobotAsset.Value>
                 <OutArgument x:TypeArguments="x:String">[CFC_API_Version_No]</OutArgument>
               </ui:GetRobotAsset.Value>
             </ui:GetRobotAsset>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[CFC_UAT_URL+CFC_API_WEB_CONNECTION_ID.ToString+&quot;/ws/PriceChanges/GetPriceChange&quot;]" />
-            <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[&quot;{  &#xA;  &quot;&quot;Header&quot;&quot;: {&#xA;    &quot;&quot;ClientApplication&quot;&quot;: &quot;&quot;Dynamic Menu&quot;&quot;,&#xA;    &quot;&quot;ClientVersion&quot;&quot;: &quot;&quot;1.0.0.0&quot;&quot;,&#xA;    &quot;&quot;ApiVersion&quot;&quot;: &quot;&quot;&quot;+CFC_API_Version_No+&quot;&quot;&quot;,&#xA;    &quot;&quot;MessageID&quot;&quot;: &quot;&quot;&quot;+Guid.NewGuid().ToString()+&quot;&quot;&quot;&#xA;  },&#xA;  &quot;&quot;PriceChangeUniqueID&quot;&quot;: &quot;&quot;&quot;+PriceChangeUniqueID.ToString()+&quot;&quot;&quot;,&#xA;  &quot;&quot;OwnerUniqueID&quot;&quot;: &quot;&quot;&quot;+OwnerUniqID.ToString()+&quot;&quot;&quot;&#xA;}&quot;]" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[CFC_UAT_URL+CFC_API_WEB_CONNECTION_ID.ToString+&quot;/ws/PriceChanges/GetPriceChange&quot;]" sap:VirtualizedContainerService.HintSize="388,102" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" Result="[PriceChange_Response_Content]" SecurePassword="[CFC_API_Password]" StatusCode="[PriceChange_Response_Status]" TimeoutMS="6000" Username="[CFC_API_Username]">
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,122" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[CFC_UAT_URL+CFC_API_WEB_CONNECTION_ID.ToString+&quot;/ws/PriceChanges/GetPriceChange&quot;]" />
+            <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[&quot;{  &#xA;  &quot;&quot;Header&quot;&quot;: {&#xA;    &quot;&quot;ClientApplication&quot;&quot;: &quot;&quot;Dynamic Menu&quot;&quot;,&#xA;    &quot;&quot;ClientVersion&quot;&quot;: &quot;&quot;1.0.0.0&quot;&quot;,&#xA;    &quot;&quot;ApiVersion&quot;&quot;: &quot;&quot;&quot;+CFC_API_Version_No+&quot;&quot;&quot;,&#xA;    &quot;&quot;MessageID&quot;&quot;: &quot;&quot;&quot;+Guid.NewGuid().ToString()+&quot;&quot;&quot;&#xA;  },&#xA;  &quot;&quot;PriceChangeUniqueID&quot;&quot;: &quot;&quot;&quot;+PriceChangeUniqueID.ToString()+&quot;&quot;&quot;,&#xA;  &quot;&quot;OwnerUniqueID&quot;&quot;: &quot;&quot;&quot;+OwnerUniqID.ToString()+&quot;&quot;&quot;&#xA;}&quot;]" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[CFC_UAT_URL+CFC_API_WEB_CONNECTION_ID.ToString+&quot;/ws/PriceChanges/GetPriceChange&quot;]" sap:VirtualizedContainerService.HintSize="416,102" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" Result="[PriceChange_Response_Content]" SecurePassword="[CFC_API_Password]" StatusCode="[PriceChange_Response_Status]" TimeoutMS="6000" Username="[CFC_API_Username]">
               <ui:HttpClient.Attachments>
                 <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
               </ui:HttpClient.Attachments>
@@ -352,8 +352,8 @@
                 <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
               </ui:HttpClient.UrlSegments>
             </ui:HttpClient>
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="388,117" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[PriceChange_Response_Status]" />
-            <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="Reports\Combos\EditCombo\PriceChangeResponse" sap:VirtualizedContainerService.HintSize="388,156" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[PriceChange_Response_Content]" />
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,117" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[PriceChange_Response_Status]" />
+            <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="Reports\Combos\EditCombo\PriceChangeResponse" sap:VirtualizedContainerService.HintSize="416,156" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[PriceChange_Response_Content]" />
           </Sequence>
         </Sequence>
       </ui:CommentOut.Body>
